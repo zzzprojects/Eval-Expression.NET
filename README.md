@@ -22,9 +22,6 @@ PM> Install-Package Z.Compiler
 ## Eval.Execute
 Evaluate and execute a code or expression and return the results.
 
-Use Execute if you need to evaluate the expression only once.
-- To execute a code once...
-
 *Using Anonymous Class*
 ```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
@@ -43,10 +40,6 @@ int result = s.Eval<int>(new { x = 1, y = 2 });
 
 ## Eval.Compile
 Compile the code or expression and return a delegate of type Func or Action to execute.
-
-Use Compile if you need to evaluate the same expression more then once.
-- To Evaluate property path
-- To Evaluate the same expression with different parameter
 
 ```csharp
 int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
