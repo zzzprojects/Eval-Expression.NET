@@ -63,7 +63,7 @@ Limited to 2 variables...
 ## Support
 - [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-- Email: [sales@zzzprojects.com](sales@zzzprojects.com)
+- [sales@zzzprojects.com](sales@zzzprojects.com)
 
 ### More Projects
 
