@@ -56,7 +56,7 @@ foreach(var item in list)
 ```
 
 ## Free VS Pro
-Features | FREE Version | PRO Version
+Features | FREE Version | [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 ------------ | ------------- | -------------
 Maximum Characters | 50 | Unlimited
 Maximum Variables | 2 | Unlimited
