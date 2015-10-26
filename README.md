@@ -67,9 +67,7 @@ Learn more about the [PRO Version](https://zzzprojects.uservoice.com/forums/3277
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - [sales@zzzprojects.com](sales@zzzprojects.com)
 
-Contact our outstanding customer support for any request.
-
-We usually answer within the next business day, hour, or minutes!
+Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
 
 ## More Projects
   - [Entity Framework Plus.NET](sales@zzzprojects.com)
