@@ -39,11 +39,14 @@ int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
 
 ## Eval.Compile
-Compile the code or expression and return a delegate of type Func or Action to execute.
+**Compile the code or expression and return a delegate of type Func or Action to execute.**
 
+*Using custom Delegate*
 ```csharp
 int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
 ```
+
+*Using Extension Methods*
 ```csharp
 string code = "x + y";
 var compiled = code.Compile<Func<int, int>>("x", "y");
