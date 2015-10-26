@@ -60,6 +60,7 @@ Features | FREE Version | PRO Version
 ------------ | ------------- | -------------
 Maximum Characters | 50 | Unlimited
 Maximum Variables | 2 | Unlimited
+ | | [Learn More](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 
 
 ## Support
