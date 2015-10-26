@@ -1,8 +1,9 @@
+![NuGet Version](https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square)
+![NuGet Version](https://img.shields.io/nuget/dt/Z.Compiler.svg?link=http%3A%2F%2Fabc.xyz&link=http%3A%2F%2Fabc.xyz)
+
 ```
 PM> Install-Package Z.Compiler
 ```
-![NuGet Version](https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square)
-![NuGet Version](https://img.shields.io/nuget/dt/Z.Compiler.svg?link=http%3A%2F%2Fabc.xyz&link=http%3A%2F%2Fabc.xyz)
 
 # Z.Expressions.Eval
 Evaluate, Compile and Execute code and expression at runtime.
