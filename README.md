@@ -17,17 +17,8 @@ int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
 return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
-## Table of Content
-- Eval.Execute
-- Eval.Compile
-- Free VS Pro
-- Support
-  - [Doc](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-  - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-  - [Email](sales@zzzprojects.com)
-- More Projects
 
-### Eval.Execute
+## Eval.Execute
 Evaluate and execute a code or expression and return the results.
 
 Use Execute if you need to evaluate the expression only once.
@@ -49,7 +40,7 @@ string s = "x + y";
 int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
 
-### Eval.Compile
+## Eval.Compile
 Compile the code or expression and return a delegate of type Func or Action to execute.
 
 Use Compile if you need to evaluate the same expression more then once.
@@ -67,12 +58,12 @@ foreach(var item in list)
 }
 ```
 
-### Free VS Pro
+## Free VS Pro
 Limited to 50 caracters...
 Limited to 2 variables...
 
 
-### Support
+## Support
 - [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - Email: [sales@zzzprojects.com](sales@zzzprojects.com)
