@@ -20,8 +20,6 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ## Table of Content
 - Eval.Execute
 - Eval.Compile
-- Extension Methods
-- Eval Context
 - Free VS Pro
 - Support
   - [Doc](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
@@ -34,6 +32,7 @@ Evaluate and execute a code or expression and return the results.
 
 Use Execute if you need to evaluate the expression only once.
 - To execute a code once...
+
 *Using Anonymous Class*
 ```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
@@ -42,6 +41,12 @@ int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 *Using Ordinal Value*
 ```csharp
 int result = Eval.Execute<int>("{0} + {1}", x, y)
+```
+
+*Using Extension Methods*
+```csharp
+string s = "x + y";
+int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
 
 ### Eval.Compile
@@ -54,28 +59,12 @@ Use Compile if you need to evaluate the same expression more then once.
 ```csharp
 int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
 ```
-
-### Extension Methods
-
-##### String.Eval
-```csharp
-string code = "x + y";
-int result = code.Eval(new { x = 1, y = 2 });
-```
-
-##### String.Compile
 ```csharp
 string code = "x + y";
 var compiled = code.Compile<Func<int, int>>("x", "y");
 foreach(var item in list)
 {
 }
-```
-### Eval Context
-Use EvalContext object if you need to change the context of the Evaluations....
-```csharp
-var context = new EvalContext();
-context
 ```
 
 ### Free VS Pro
