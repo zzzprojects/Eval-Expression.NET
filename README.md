@@ -20,7 +20,7 @@ PM> Install-Package Z.Compiler
 ```
 
 ## Eval.Execute
-Evaluate and execute a code or expression and return the results.
+**Evaluate and execute a code or expression and return the results.**
 
 *Using Anonymous Class*
 ```csharp
