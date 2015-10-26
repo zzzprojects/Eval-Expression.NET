@@ -1,9 +1,4 @@
-![NuGet Version](https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square)
-![NuGet Version](https://img.shields.io/nuget/dt/Z.Compiler.svg?link=http%3A%2F%2Fabc.xyz&link=http%3A%2F%2Fabc.xyz)
 
-```
-PM> Install-Package Z.Compiler
-```
 Evaluate, Compile and Execute code and expression at runtime.
 
 *From simple expression*
@@ -14,6 +9,13 @@ int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```csharp
 var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
 return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
+```
+
+![NuGet Version](https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square)
+![NuGet Version](https://img.shields.io/nuget/dt/Z.Compiler.svg?link=http%3A%2F%2Fabc.xyz&link=http%3A%2F%2Fabc.xyz)
+
+```
+PM> Install-Package Z.Compiler
 ```
 
 ## Eval.Execute
