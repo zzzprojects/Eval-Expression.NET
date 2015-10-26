@@ -3,23 +3,83 @@ Evaluate, Compile and Execute code and expression at runtime.
 
 ### From simple expression
 ```
-Eval.Execute("x + y", new { x = 1, y = 2})
+int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 ### To complex code
 ```
-Eval.Execute(@"var list = new List<int>(x, y, z);
+var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
 return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
 ## Table of Content
-- Eval
-- Compile
+- Eval.Execute
+- Eval.Compile
 - Extension Methods
 - Eval Context
 - Free VS Pro
 - Support
-  - Doc
-  - Forum
-  - Email
+  - [Doc](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+  - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+  - [Email](sales@zzzprojects.com)
 - More Projects
 
+### Eval.Execute
+Evaluate and execute a code or expression and return the results.
+
+Use Execute if you need to evaluate the expression only once.
+- To execute a code once...
+*Using Anonymous Class*
+```
+int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
+```
+
+*Using Ordinal Value*
+```
+int result = Eval.Execute<int>("{0} + {1}", x, y)
+```
+
+### Eval.Compile
+Compile the code or expression and return a delegate of type Func or Action to execute.
+
+Use Compile if you need to evaluate the same expression more then once.
+- To Evaluate property path
+- To Evaluate the same expression with different parameter
+
+```
+int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
+```
+
+### Extension Methods
+
+##### String.Eval
+```
+string code = "x + y";
+int result = code.Eval(new { x = 1, y = 2 });
+```
+
+##### String.Compile
+```
+string code = "x + y";
+var compiled = code.Compile<Func<int, int>>("x", "y");
+foreach(var item in list)
+{
+}
+```
+### Eval Context
+Use EvalContext object if you need to change the context of the Evaluations....
+```
+var context = new EvalContext();
+context
+```
+
+### Free VS Pro
+Limited to 50 caracters...
+Limited to 2 variables...
+
+
+### Support
+- [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- Email: [sales@zzzprojects.com](sales@zzzprojects.com)
+
+### More Projects
 
