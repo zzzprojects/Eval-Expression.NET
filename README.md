@@ -56,14 +56,16 @@ foreach(var item in list)
 ```
 
 ## Free VS Pro
-Limited to 50 caracters...
-Limited to 2 variables...
+Features | FREE Version | PRO Version
+------------ | ------------- | -------------
+Maximum Characters | 50 | Unlimited
+Maximum Variables | 2 | Unlimited
 
 
 ## Support
-* [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-* [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-* [sales@zzzprojects.com](sales@zzzprojects.com)
+- [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- [sales@zzzprojects.com](sales@zzzprojects.com)
 
 todo: friendly message
 
