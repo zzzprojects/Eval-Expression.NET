@@ -37,6 +37,7 @@ int result = Eval.Execute<int>("{0} + {1}", x, y)
 string s = "x + y";
 int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
+[Learn more](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 
 ## Eval.Compile
 **Compile the code or expression and return a delegate of type Func or Action to execute.**
@@ -54,6 +55,7 @@ foreach(var item in list)
 {
 }
 ```
+[Learn more](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 
 ## Free VS Pro
 Features | FREE Version | [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
