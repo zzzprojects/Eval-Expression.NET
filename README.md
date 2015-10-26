@@ -2,11 +2,11 @@
 Evaluate, Compile and Execute code and expression at runtime.
 
 *From simple expression*
-```
+```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 *To complex code*
-```
+```csharp
 var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
 return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
@@ -28,12 +28,12 @@ Evaluate and execute a code or expression and return the results.
 Use Execute if you need to evaluate the expression only once.
 - To execute a code once...
 *Using Anonymous Class*
-```
+```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 
 *Using Ordinal Value*
-```
+```csharp
 int result = Eval.Execute<int>("{0} + {1}", x, y)
 ```
 
@@ -44,20 +44,20 @@ Use Compile if you need to evaluate the same expression more then once.
 - To Evaluate property path
 - To Evaluate the same expression with different parameter
 
-```
+```csharp
 int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
 ```
 
 ### Extension Methods
 
 ##### String.Eval
-```
+```csharp
 string code = "x + y";
 int result = code.Eval(new { x = 1, y = 2 });
 ```
 
 ##### String.Compile
-```
+```csharp
 string code = "x + y";
 var compiled = code.Compile<Func<int, int>>("x", "y");
 foreach(var item in list)
@@ -66,7 +66,7 @@ foreach(var item in list)
 ```
 ### Eval Context
 Use EvalContext object if you need to change the context of the Evaluations....
-```
+```csharp
 var context = new EvalContext();
 context
 ```
