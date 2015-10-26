@@ -7,6 +7,8 @@ int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 *To complex code*
 ```csharp
+// Support Generic Type
+// Support Lambda Expression
 var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
 return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
