@@ -4,8 +4,6 @@
 ```
 PM> Install-Package Z.Compiler
 ```
-
-# Z.Expressions.Eval
 Evaluate, Compile and Execute code and expression at runtime.
 
 *From simple expression*
