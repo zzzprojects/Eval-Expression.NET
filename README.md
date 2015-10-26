@@ -71,4 +71,11 @@ todo: friendly message
 
 
 ## More Projects
+- Bulk Operation
+  - [NET Bulk Operations](sales@zzzprojects.com)
+  - [Entity Framework Plus.NET](sales@zzzprojects.com)
+- Eval
+  - [Eval Expression.NET](sales@zzzprojects.com)
+  - [Eval SQL.NET](sales@zzzprojects.com)
+
 
