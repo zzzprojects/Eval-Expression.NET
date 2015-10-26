@@ -67,8 +67,7 @@ Learn more about the [PRO Version](https://zzzprojects.uservoice.com/forums/3277
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - [sales@zzzprojects.com](sales@zzzprojects.com)
 
-todo: friendly message
-
+Contact our outstanding customer support for any request.
 
 ## More Projects
   - [Entity Framework Plus.NET](sales@zzzprojects.com)
