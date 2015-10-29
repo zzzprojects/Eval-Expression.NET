@@ -12,8 +12,8 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
 
 ## Download
-<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank"><img src="https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square" /></a>
-<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank"><img src="https://img.shields.io/nuget/dt/Z.Compiler.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Compiler.svg?style=flat-square" /></a>
 
 ```
 PM> Install-Package Z.Compiler
@@ -22,17 +22,20 @@ PM> Install-Package Z.Compiler
 ## Eval.Execute
 **Evaluate and execute a code or expression.**
 
-*Using Anonymous Class*
+> *Using Anonymous Class*
+
 ```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 
-*Using Ordinal Value*
+> *Using Ordinal Value*
+
 ```csharp
 int result = Eval.Execute<int>("{0} + {1}", x, y)
 ```
 
-*Using Extension Methods*
+> *Using Extension Methods*
+
 ```csharp
 string s = "x + y";
 int result = s.Eval<int>(new { x = 1, y = 2 });
@@ -59,7 +62,7 @@ foreach(var item in list)
 
 ## Free VS Pro
 Features | FREE Version | [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
------------- | ------------- | -------------
+------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
 Maximum Variables | 2 | Unlimited
 Learn more about the [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
