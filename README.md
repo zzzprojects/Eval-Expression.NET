@@ -19,6 +19,9 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 PM> Install-Package Z.Compiler
 ```
 
+Enjoy all free features for an unlimited period and PRO features during the current month.
+
+
 ## Eval.Execute
 **Evaluate and execute a code or expression.**
 
