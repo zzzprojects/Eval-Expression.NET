@@ -40,7 +40,7 @@ int result = Eval.Execute<int>("{0} + {1}", x, y)
 string s = "x + y";
 int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
-[Learn more](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+[Learn more](http://eval-expression.net/documentations/#more-eval-execute)
 
 ## Eval.Compile
 **Compile a code or expression and return a delegate of type Func or Action to execute.**
@@ -59,27 +59,27 @@ foreach(var item in list)
 {
 }
 ```
-[Learn more](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+[Learn more](http://eval-expression.net/documentations/#more-eval-compile)
 
 ## Free VS Pro
-Features | FREE Version | [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
 Maximum Variables | 2 | Unlimited
-Learn more about the [PRO Version](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+Learn more about the [PRO Version](http://eval-expression.net/#pro)
 
 ## Support
-- [Website](http://eval-sql.net/)
-- [Documentation](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- [Website](http://eval-expression.net/)
+- [Documentation](http://eval-expression.net/documentations/)
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - sales@zzzprojects.com
 
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
 
 ## More Projects
-  - [NET Entity Framework Ext](sales@zzzprojects.com)
-  - [NET Bulk Operations](sales@zzzprojects.com)
-  - [Eval Expression.NET](sales@zzzprojects.com)
-  - [Eval SQL.NET](sales@zzzprojects.com)
+  - [NET Entity Framework Ext.](http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/)
+  - [NET Bulk Operations](http://www.zzzprojects.com/products/dotnet-development/bulk-operations/)
+  - [Eval Expression.NET](http://eval-expression.net/)
+  - [Eval SQL.NET](http://eval-sql.net/)
 
 
