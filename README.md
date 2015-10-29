@@ -76,7 +76,7 @@ Learn more about the [PRO Version](https://zzzprojects.uservoice.com/forums/3277
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
 
 ## More Projects
-  - [Entity Framework Plus.NET](sales@zzzprojects.com)
+  - [NET Entity Framework Ext](sales@zzzprojects.com)
   - [NET Bulk Operations](sales@zzzprojects.com)
   - [Eval Expression.NET](sales@zzzprojects.com)
   - [Eval SQL.NET](sales@zzzprojects.com)
