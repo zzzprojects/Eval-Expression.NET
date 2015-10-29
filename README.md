@@ -22,7 +22,7 @@ PM> Install-Package Z.Compiler
 ## Eval.Execute
 **Evaluate and execute a code or expression.**
 
-<u>*Using Anonymous Class*</u>
+*Using Anonymous Class*
 ```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
