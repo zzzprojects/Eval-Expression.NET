@@ -12,8 +12,8 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
 
 ## Download
-<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square" /></a>
-<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Compiler.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Expressions.Eval.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Expressions.Eval.svg?style=flat-square" /></a>
 
 ```
 PM> Install-Package Z.Compiler
