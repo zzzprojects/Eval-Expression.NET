@@ -12,8 +12,8 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
 
 ## Download
-![NuGet Version](https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square)
-![NuGet Version](https://img.shields.io/nuget/dt/Z.Compiler.svg?link=http%3A%2F%2Fabc.xyz&link=http%3A%2F%2Fabc.xyz)
+<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank"><img src="https://img.shields.io/nuget/v/Z.Compiler.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/EntityFramework/" target="_blank"><img src="https://img.shields.io/nuget/dt/Z.Compiler.svg?style=flat-square" /></a>
 
 ```
 PM> Install-Package Z.Compiler
@@ -22,7 +22,7 @@ PM> Install-Package Z.Compiler
 ## Eval.Execute
 **Evaluate and execute a code or expression.**
 
-*Using Anonymous Class*
+<u>*Using Anonymous Class*</u>
 ```csharp
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
