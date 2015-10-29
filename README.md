@@ -28,7 +28,7 @@ PM> Install-Package Z.Compiler
 int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
 ```
 
-> *Using Ordinal Value*
+> *Using Ordinal Position*
 
 ```csharp
 int result = Eval.Execute<int>("{0} + {1}", x, y)
@@ -43,11 +43,12 @@ int result = s.Eval<int>(new { x = 1, y = 2 });
 [Learn more](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 
 ## Eval.Compile
-**Compile the code or expression and return a delegate of type Func or Action to execute.**
+**Compile a code or expression and return a delegate of type Func or Action to execute.**
 
 *Using custom Delegate*
 ```csharp
-int result = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
+Func<int> compiled = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
+int result = compiled(1);
 ```
 
 *Using Extension Methods*
