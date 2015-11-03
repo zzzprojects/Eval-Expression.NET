@@ -24,7 +24,6 @@ Enjoy all free features for an unlimited period and PRO features for the current
 
 To unlock all PRO features, visit http://eval-expression.net/
 
-
 ## Eval.Execute
 **Evaluate and execute a code or an expression.**
 
