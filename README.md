@@ -21,11 +21,11 @@ PM> Install-Package Z.Compiler
 
 Enjoy all free features for an unlimited period and PRO features during the current month.
 
-To unlock all PRO features, visit <a href="http://eval-expression.net/ " target="_blank" alt="visit website">http://eval-expression.net/</a>
+To unlock all PRO features, visit http://eval-expression.net/
 
 
 ## Eval.Execute
-**Evaluate and execute a code or expression.**
+**Evaluate and execute a code or an expression.**
 
 > *Using Anonymous Class*
 
