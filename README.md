@@ -15,6 +15,11 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Expressions.Eval.svg?style=flat-square" /></a>
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Expressions.Eval.svg?style=flat-square" /></a>
 
+You will find the Z.Expressions.Eval library on nuget.org via package name
+```
+Z.Compiler.
+```
+To install EntityFramework.Extended, run the following command in the Package Manager Console
 ```
 PM> Install-Package Z.Compiler
 ```
