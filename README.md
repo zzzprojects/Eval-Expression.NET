@@ -68,7 +68,9 @@ foreach(var item in list)
 Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
-Maximum Variables | 2 | Unlimited
+Commercial License | 50 | Unlimited
+Royalty-Free | 50 | Unlimited
+Support & Upgrades (1 year) | 50 | Unlimited
 Learn more about the [PRO Version](http://eval-expression.net/#pro)
 
 ## Support
