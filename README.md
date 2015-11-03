@@ -19,7 +19,7 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 PM> Install-Package Z.Compiler
 ```
 
-Enjoy all free features for an unlimited period and PRO features during the current month.
+Enjoy all free features for an unlimited period and PRO features for the current month.
 
 To unlock all PRO features, visit http://eval-expression.net/
 
