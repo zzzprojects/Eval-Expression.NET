@@ -15,13 +15,10 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Expressions.Eval.svg?style=flat-square" /></a>
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Expressions.Eval.svg?style=flat-square" /></a>
 
-You will find the Z.Expressions.Eval library on nuget.org via package name ```Z.Compiler```.
 ```
-PM> Install-Package Z.Compiler
+PM> Install-Package Z.Expressions.Eval
 ```
-Enjoy all free features for an unlimited period and PRO features for the current month.
-
-To unlock all PRO features, visit http://eval-expression.net/
+FREE Version - up to 50 characters
 
 ## Eval.Execute
 **Evaluate and execute a code or an expression.**
