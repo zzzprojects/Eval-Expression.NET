@@ -18,7 +18,7 @@ return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
 ```
 PM> Install-Package Z.Expressions.Eval
 ```
-FREE Version - up to 50 characters
+*FREE Version - up to 50 characters
 
 ## Eval.Execute
 **Evaluate and execute a code or an expression.**
