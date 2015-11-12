@@ -41,7 +41,7 @@ int result = Eval.Execute<int>("{0} + {1}", x, y)
 string s = "x + y";
 int result = s.Eval<int>(new { x = 1, y = 2 });
 ```
-[Learn more](http://eval-expression.net/docs/#more-eval-execute)
+[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)
 
 ## Eval.Compile
 **Compile a code or an expression and return a delegate of type Func or Action to execute.**
@@ -60,7 +60,7 @@ foreach(var item in list)
 {
 }
 ```
-[Learn more](http://eval-expression.net/docs/#more-eval-compile)
+[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)
 
 ## Free VS Pro
 Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
@@ -73,8 +73,7 @@ Learn more about the [PRO Version](http://eval-expression.net/#pro)
 
 ## Support
 - [Website](http://eval-expression.net/)
-- [Documentation](http://eval-expression.net/docs/)
-- [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
+- [Documentation](https://github.com/zzzprojects/Eval-Expression.NET/wiki)
 - sales@zzzprojects.com
 
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
