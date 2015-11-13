@@ -63,13 +63,13 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 
 **Support:**
 
-*Using custom Delegate*
+*Custom Delegate*
 ```csharp
 Func<int> compiled = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
 int result = compiled(1);
 ```
 
-*Using Extension Methods*
+*Extension Methods*
 ```csharp
 string code = "x + y";
 var compiled = code.Compile<Func<int, int>>("x", "y");
