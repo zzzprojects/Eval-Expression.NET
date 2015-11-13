@@ -79,25 +79,6 @@ foreach(var item in list)
 ```
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
-## API - Cheat Sheet
-Eval | Extension Methods | EvalManager
------------- | ------------ | ------------
-Eval.Compile | "string".Compile | Cache
-Eval.Compile&lt;TDelegate&gt; | "string".Compile&lt;TDelegate&gt; | DefaultContext
-Eval.Execute | "string:.Execute | AddLicense
-Eval.Execute&lt;TResult&gt; | "string:.Execute&lt;TResult&gt;
-
-EvalContext | Options | Register
------------- | ------------ | ------------
-Compile | CacheKeyPrefix | RegisterAlias
-Compile&lt;TDelegate&gt; | UseCache | RegisterAssembly
-Execute | UseCaretForExponent | RegisterDomainAssemblies
-Execute&lt;TResult&gt; | | RegisterExtensionMethod
-Clone | | RegisterGlobalConstant
- | | RegisterGlobalVariable
- | | RegisterStaticMember
- | | RegisterType
-
 ## Free VS Pro
 Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
