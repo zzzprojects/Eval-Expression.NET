@@ -94,7 +94,7 @@ Contact our outstanding customer support for any request. We usually answer with
 - [Website](http://eval-expression.net/)
 - [Documentation](https://github.com/zzzprojects/Eval-Expression.NET/wiki)
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
-- [support@zzzprojects.com]
+- support@zzzprojects.com
 
 
 ## More Projects
