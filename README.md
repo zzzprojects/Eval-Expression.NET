@@ -59,7 +59,9 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)**
 
 ## Eval.Compile
-**Compile a code or an expression and return a delegate of type Func or Action to execute.**
+**Compile the code or expression and return a delegate.**
+
+**Support:**
 
 *Using custom Delegate*
 ```csharp
