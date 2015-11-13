@@ -30,25 +30,25 @@ PM> Install-Package Z.Expressions.Eval
 ## Eval.Execute
 **Evaluate and execute a code or an expression.**
 
- _Using Class Member_
+_Using Class Member_
 
 ```csharp
 var price = Eval.Execute("ItemPrice * Quantity", orderItem)
 ```
 
-> _Using Anonymous Class_
+_Using Anonymous Class_
 
 ```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2})
 ```
 
-> _Using Argument Position_
+_Using Argument Position_
 
 ```csharp
 int result = Eval.Execute<int>("{0} + {1}", 1, 2)
 ```
 
-> _Using Extension Methods_
+_Using Extension Methods_
 
 ```csharp
 string s = "X + Y";
