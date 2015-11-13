@@ -30,7 +30,7 @@ PM> Install-Package Z.Expressions.Eval
 ## Eval.Execute
 **Evaluate and execute a code or an expression.**
 
-> _Using Class Member_
+ _Using Class Member_
 
 ```csharp
 var price = Eval.Execute("ItemPrice * Quantity", orderItem)
