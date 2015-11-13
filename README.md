@@ -28,7 +28,7 @@ PM> Install-Package Z.Expressions.Eval
 *FREE Version - up to 50 characters
 
 ## Eval.Execute
-**Evaluate and execute a code or an expression.**
+**Evaluate and execute the code or expression.**
 
 _Using Class Member_
 
