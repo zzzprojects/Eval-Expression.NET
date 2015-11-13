@@ -30,8 +30,6 @@ PM> Install-Package Z.Expressions.Eval
 ## Eval.Execute
 **Evaluate and execute the code or expression.**
 
-**Support:**
-
 _Class Member_
 
 ```csharp
