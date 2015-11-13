@@ -3,12 +3,19 @@
 
 *From simple expression...*
 ```csharp
-int result = Eval.Execute<int>("x + y", new { x = 1, y = 2})
+// Eval using Class Member
+var price = Eval.Execute("ItemPrice * Quantity", orderItem)
+
+
+// Eval using Anonymous Type
+int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2})
 ```
 *To complex code.*
 ```csharp
-var sum = Eval.Execute(@"var list = new List<int>(x, y, z);
-return list.Where(x => x > 2).Sum(x);", new { x = 1, y = 2, z = 3 });
+int result = Eval.Execute<int>(@"
+	var list = new List<int>() { 1..100 };
+	var filter = list.Where(x => x < 3);
+	return result.Sum(x => x);");
 ```
 
 ## Download
