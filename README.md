@@ -79,8 +79,8 @@ foreach(var item in list)
 ```
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
-## Free VS Pro
-Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
+## Free vs PRO
+Features | Free Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
 Commercial License | No | Yes
