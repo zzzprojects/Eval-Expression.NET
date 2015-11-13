@@ -48,7 +48,7 @@ int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2})
 int result = Eval.Execute<int>("{0} + {1}", 1, 2)
 ```
 
-> -Using Extension Methods_
+> _Using Extension Methods_
 
 ```csharp
 string s = "X + Y";
