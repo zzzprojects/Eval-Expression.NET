@@ -56,7 +56,7 @@ _Extension Methods_
 string s = "X + Y";
 int result = s.Eval<int>(new { X = 1, Y = 2 });
 ```
-**_[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)_**
+**[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)**
 
 ## Eval.Compile
 **Compile a code or an expression and return a delegate of type Func or Action to execute.**
@@ -75,7 +75,7 @@ foreach(var item in list)
 {
 }
 ```
-[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)
+**[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## API - Cheat Sheet
 Eval | Extension Methods | EvalManager
