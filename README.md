@@ -80,7 +80,7 @@ foreach(var item in list)
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## FREE vs PRO
-Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
+Features | FREE | [PRO](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
 Commercial License | No | Yes
