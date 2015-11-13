@@ -25,7 +25,7 @@ int result = Eval.Execute<int>(@"
 ```
 PM> Install-Package Z.Expressions.Eval
 ```
-*FREE Version - up to 50 characters
+*FREE version - up to 50 characters
 
 ## Eval.Execute
 **Evaluate and execute the code or expression.**
