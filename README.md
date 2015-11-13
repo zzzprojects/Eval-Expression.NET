@@ -91,7 +91,7 @@ Learn more about the **[PRO Version](http://eval-expression.net/#pro)**
 ## Support
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
 
-- [Website](http://eval-expression.net/)
+- http://eval-expression.net/
 - [Documentation](https://github.com/zzzprojects/Eval-Expression.NET/wiki)
 - [Forum](https://zzzprojects.uservoice.com/forums/327759-eval-expression-net)
 - sales@zzzprojects.com
