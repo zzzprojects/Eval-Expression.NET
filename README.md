@@ -25,7 +25,7 @@ int result = Eval.Execute<int>(@"
 ```
 PM> Install-Package Z.Expressions.Eval
 ```
-*FREE version - up to 50 characters
+*FREE Version - up to 50 characters
 
 ## Eval.Execute
 **Evaluate and execute the code or expression.**
@@ -80,13 +80,13 @@ foreach(var item in list)
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## FREE vs PRO
-Features | FREE | [PRO](http://eval-expression.net/#pro)
+Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
 Maximum Characters | 50 | Unlimited
 Commercial License | No | Yes
 Royalty-Free | No | Yes
 Support & Upgrades (1 year) | No | Yes
-Learn more about the **[PRO version](http://eval-expression.net/#pro)**
+Learn more about the **[PRO Version](http://eval-expression.net/#pro)**
 
 ## Support
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
