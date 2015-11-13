@@ -86,7 +86,7 @@ Maximum Characters | 50 | Unlimited
 Commercial License | No | Yes
 Royalty-Free | No | Yes
 Support & Upgrades (1 year) | No | Yes
-Learn more about the **[PRO Version](http://eval-expression.net/#pro)**
+Learn more about the **[PRO version](http://eval-expression.net/#pro)**
 
 ## Support
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
