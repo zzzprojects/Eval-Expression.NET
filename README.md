@@ -45,7 +45,7 @@ int result = Eval.Execute<int>("{0} + {1}", 1, 2)
 _Class Member_
 
 ```csharp
-var price = Eval.Execute("ItemPrice * Quantity", orderItem)
+var price = Eval.Execute<double>("ItemPrice * Quantity", orderItem)
 ```
 
 _Extension Methods_
