@@ -59,7 +59,7 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 
 *Custom Delegate*
 ```csharp
-Func<int> compiled = Eval.Compile<Func<int, int ,int>>("X + Y", "X", "Y);
+Func<int> compiled = Eval.Compile<Func<int, int ,int>>("X + Y", "X", "Y");
 foreach(var item in list)
 {
 	int result = compiled(item.Value1, item.Value2);
