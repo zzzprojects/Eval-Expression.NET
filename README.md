@@ -29,19 +29,19 @@ PM> Install-Package Z.Expressions.Eval
 _Anonymous Class_
 
 ```csharp
-int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2})
+int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
 
 _Argument Position_
 
 ```csharp
-int result = Eval.Execute<int>("{0} + {1}", 1, 2)
+int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 ```
 
 _Class Member_
 
 ```csharp
-var price = Eval.Execute<decimal>("ItemPrice * Quantity", orderItem)
+var price = Eval.Execute<decimal>("ItemPrice * Quantity", orderItem);
 ```
 
 _Extension Methods_
