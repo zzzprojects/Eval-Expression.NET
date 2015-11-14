@@ -59,16 +59,20 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 
 *Custom Delegate*
 ```csharp
-Func<int> compiled = Eval.Compile<Func<int>>("x + y", new { x = 1, y = 2})
-int result = compiled(1);
+Func<int> compiled = Eval.Compile<Func<int, int ,int>>("X + Y", "X", "Y);
+foreach(var item in list)
+{
+	int result = compiled(item.Value1, item.Value2);
+}
 ```
 
 *Extension Methods*
 ```csharp
-string code = "x + y";
-var compiled = code.Compile<Func<int, int>>("x", "y");
+string code = "X + Y";
+var compiled = code.Compile<Func<int, int>>("X", "Y");
 foreach(var item in list)
 {
+	int result = compiled(item.Value1, item.Value2);
 }
 ```
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
