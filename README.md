@@ -68,8 +68,8 @@ foreach(var item in list)
 
 *Extension Methods*
 ```csharp
-string code = "X + Y";
-var compiled = code.Compile<Func<int, int>>("X", "Y");
+string s = "X + Y";
+var compiled = s.Compile<Func<int, int>>("X", "Y");
 foreach(var item in list)
 {
 	int result = compiled(item.Value1, item.Value2);
