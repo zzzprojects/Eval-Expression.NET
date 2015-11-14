@@ -2,12 +2,7 @@
 
 *From simple expression...*
 ```csharp
-// Eval using Class Member
-var price = Eval.Execute("ItemPrice * Quantity", orderItem)
-
-
-// Eval using Anonymous Type
-int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2})
+int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
 *To complex code.*
 ```csharp
