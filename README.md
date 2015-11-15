@@ -41,7 +41,10 @@ int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 _Class Member_
 
 ```csharp
-var price = Eval.Execute<decimal>("ItemPrice * Quantity", orderItem);
+dynamic expandoObject = new ExpandoObject();
+expandoObject.X = 1;
+expandoObject.Y = 2;
+int result = Eval.Execute<int>("X + Y", expandoObject);
 ```
 
 _Extension Methods_
