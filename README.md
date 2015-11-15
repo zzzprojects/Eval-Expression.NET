@@ -1,4 +1,4 @@
-##Evaluate, Compile and Execute code and expression in .NET at runtime##
+##Evaluate, Compile and Execute C# code and expression at runtime##
 
 *From simple expression...*
 ```csharp
