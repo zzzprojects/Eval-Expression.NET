@@ -102,7 +102,7 @@ Contact our outstanding customer support for any request. We usually answer with
 ## More Projects
   - [NET Entity Framework Extensions](http://www.zzzprojects.com/products/dotnet-development/entity-framework-extensions/)
   - [NET Bulk Operations](http://www.zzzprojects.com/products/dotnet-development/bulk-operations/)
-  - [Eval Expression.NET](http://eval-expression.net/)
-  - [Eval SQL.NET](http://eval-sql.net/)
-
+  - [Eval Expression.NET](https://github.com/zzzprojects/Eval-Expression.NET)
+  - [Eval SQL.NET](https://github.com/zzzprojects/Eval-SQL.NET)
+  - [Extension Methods Library](https://github.com/zzzprojects/Z.ExtensionMethods/)
 
