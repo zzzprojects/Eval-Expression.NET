@@ -1,0 +1,9 @@
+[Bb]in/
+[Oo]bj/
+[Pp]ackages/
+*.suo
+*.user
+*.userprefs
+_ReSharper.*
+*.ReSharper.user
+*.resharper.user 
