@@ -4,7 +4,7 @@
 ```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
-*To complex code.*
+*To complex code to parse.*
 ```csharp
 int result = Eval.Execute<int>(@"
 	var list = new List<int>() { 1..100 };
