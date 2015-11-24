@@ -24,7 +24,7 @@ PM> Install-Package Z.Expressions.Eval
 *FREE Version limited to 50 characters
 
 ## Eval.Execute
-**Evaluate and execute the C# code or expression.**
+**Evaluate and execute the code or expression.**
 
 **Support:**
 
@@ -62,7 +62,7 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)**
 
 ## Eval.Compile
-**Compile the C# code or expression and return a delegate.**
+**Compile the code or expression and return a delegate.**
 
 **Support:**
 
