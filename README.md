@@ -1,4 +1,4 @@
-##Evaluate, Compile and Execute C# code and expression at runtime##
+## C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime##
 
 *From simple C# math expression...*
 ```csharp
