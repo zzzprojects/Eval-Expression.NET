@@ -1,36 +1,22 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+// Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
+// Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
+// License: http://www.zzzprojects.com/license-agreement/
+// More projects: http://www.zzzprojects.com/
+// Copyright (c) 2015 ZZZ Projects. All rights reserved.
+
+using System.Reflection;
 using System.Runtime.InteropServices;
 
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-[assembly: AssemblyTitle("Z.Expressions.Eval.NET40")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Z.Expressions.Eval")]
+[assembly: AssemblyDescription("Evaluate, Compile and Execute code and expression at runtime.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Z.Expressions.Eval.NET40")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("ZZZ Projects")]
+[assembly: AssemblyProduct("Z.Expressions.Eval")]
+[assembly: AssemblyCopyright("ZZZ Projects Inc. Copyright ©  2015")]
+[assembly: AssemblyTrademark("SQL & .NET Tools")]
 [assembly: AssemblyCulture("")]
-
-// Setting ComVisible to false makes the types in this assembly not visible 
-// to COM components.  If you need to access a type in this assembly from 
-// COM, set the ComVisible attribute to true on that type.
 [assembly: ComVisible(false)]
-
-// The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("21c48960-9b19-4fbd-9805-07a2b4f9a406")]
-
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Build and Revision Numbers 
-// by using the '*' as shown below:
-// [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.0.3")]
+[assembly: AssemblyFileVersion("0.0.3")]
