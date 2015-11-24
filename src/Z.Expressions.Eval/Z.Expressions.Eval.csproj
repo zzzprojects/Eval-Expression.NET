@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39647661-E2A5-4D80-B0BD-2A8C8B93E0B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Z.Expressions.Eval</RootNamespace>
+    <AssemblyName>Z.Expressions.Eval</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EvalCompilerParameterKind.cs" />
+    <Compile Include="EvalCompiler\EvalCompiler.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveCacheKey.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameter.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterDictionary.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterEnumerable.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterSingleDictionary.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterSingleObject.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterTyped.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveParameterUntyped.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveToParameterDictionary.cs" />
+    <Compile Include="EvalContext\Compile\EvalContext.Compile.cs" />
+    <Compile Include="EvalContext\Compile\EvalContext.CompileAsync.cs" />
+    <Compile Include="EvalContext\Compile\EvalContext.CompileAsync`.cs" />
+    <Compile Include="EvalContext\Compile\EvalContext.Compile`.cs" />
+    <Compile Include="EvalContext\EvalContext.Clone.cs" />
+    <Compile Include="EvalContext\EvalContext.RegisterDefaultAlias.cs" />
+    <Compile Include="EvalContext\Execute\EvalContext.Execute.cs" />
+    <Compile Include="EvalContext\Execute\EvalContext.ExecuteAsync.cs" />
+    <Compile Include="EvalContext\Execute\EvalContext.ExecuteAsync`.cs" />
+    <Compile Include="EvalContext\Execute\EvalContext.Execute`.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterAlias.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterAssembly.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterDomainAssemblies.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterExtensionMethod.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterGlobalConstant.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterGlobalVariable.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterStaticMember.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterType.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterAlias.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterAll.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterAssembly.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterExtensionMethod.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterGlobalConstant.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterGlobalVariable.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterStaticMember.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterType.cs" />
+    <Compile Include="EvalContext\_EvalContext.cs" />
+    <Compile Include="EvalManager\EvalManager.cs" />
+    <Compile Include="Eval\Eval.Compile.cs" />
+    <Compile Include="Eval\Eval.CompileAsync.cs" />
+    <Compile Include="Eval\Eval.CompileAsync`.cs" />
+    <Compile Include="Eval\Eval.Compile`.cs" />
+    <Compile Include="Eval\Eval.Execute.cs" />
+    <Compile Include="Eval\Eval.ExecuteAsync.cs" />
+    <Compile Include="Eval\Eval.ExecuteAsync`.cs" />
+    <Compile Include="Eval\Eval.Execute`.cs" />
+    <Compile Include="ExceptionMessage.cs" />
+    <Compile Include="ExtensionMethods\String.Compile.cs" />
+    <Compile Include="ExtensionMethods\String.CompileAsync.cs" />
+    <Compile Include="ExtensionMethods\String.CompileAsync`.cs" />
+    <Compile Include="ExtensionMethods\String.Compile`.cs" />
+    <Compile Include="ExtensionMethods\String.Execute.cs" />
+    <Compile Include="ExtensionMethods\String.ExecuteAsync.cs" />
+    <Compile Include="ExtensionMethods\String.ExecuteAsync`.cs" />
+    <Compile Include="ExtensionMethods\String.Execute`.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\zzzproject\zCompiler\Z.Expressions.Compiler\Z.Expressions.Compiler.csproj">
+      <Project>{6ada59fe-2316-4568-8fa9-84222c7dbef0}</Project>
+      <Name>Z.Expressions.Compiler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
