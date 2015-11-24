@@ -89,7 +89,7 @@ foreach(var item in list)
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## FREE vs PRO
-Every month, a new trial of the PRO Version is available to let you evaluate all its features without limitations.
+Every month, a new monthly trial of the PRO Version is available to let you evaluate all its features without limitations.
 
 Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
 ------------ | :-------------: | :-------------:
