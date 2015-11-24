@@ -38,12 +38,14 @@ int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 _Argument Position_
 
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 ```
 
 _Class Member_
 
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 dynamic expandoObject = new ExpandoObject();
 expandoObject.X = 1;
 expandoObject.Y = 2;
@@ -53,6 +55,7 @@ int result = Eval.Execute<int>("X + Y", expandoObject);
 _Extension Methods_
 
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 string s = "X + Y";
 int result = s.Eval<int>(new { X = 1, Y = 2 });
 ```
@@ -75,6 +78,7 @@ foreach(var item in list)
 
 *Extension Methods*
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 string s = "X + Y";
 var compiled = s.Compile<Func<int, int, int>>("X", "Y");
 foreach(var item in list)
