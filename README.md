@@ -1,6 +1,6 @@
 ##Evaluate, Compile and Execute C# code and expression at runtime##
 
-*From simple C# expression...*
+*From simple C# math expression...*
 ```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
