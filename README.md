@@ -31,6 +31,7 @@ PM> Install-Package Z.Expressions.Eval
 _Anonymous Class_
 
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
 
@@ -64,6 +65,7 @@ int result = s.Eval<int>(new { X = 1, Y = 2 });
 
 *Custom Delegate*
 ```csharp
+// using Z.Expressions; // Don't forget to include this.
 var compiled = Eval.Compile<Func<int, int, int>>("X + Y", "X", "Y");
 foreach(var item in list)
 {
