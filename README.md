@@ -12,6 +12,8 @@ int result = Eval.Execute<int>(@"
 	return result.Sum(x => x);");
 ```
 
+> Drastically improve C# reflection performance and lisibility by using Eval Expression.NET.
+
 ## Download
 **_Stable version available on December 01 2015_**
 
