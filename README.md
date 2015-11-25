@@ -91,7 +91,7 @@ foreach(var item in list)
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## What's supported?
-The Eval Expression.NET support all C# Syntax:
+Eval Expression.NET support all C# Syntax:
 - All C# Keywords ([MSDN Documentation](https://msdn.microsoft.com/en-us/library/x53a06bb.aspx))
 - All C# Operators ([MSDN Documentation](https://msdn.microsoft.com/en-CA/library/6a71f45d.aspx))
 - Constant Folding
