@@ -12,7 +12,7 @@ int result = Eval.Execute<int>(@"
 	return result.Sum(x => x);");
 ```
 
-> Improve dramatically C# reflection performance by using Eval Expression.NET. Access to public and private property value or to create instance with an easy to use API.
+> Improve dramatically C# reflection performance by using Eval Expression.NET. Access to public and private property value or to create a new object instance with an easy to use API.
 
 ## Download
 **_Stable version available on December 01 2015_**
