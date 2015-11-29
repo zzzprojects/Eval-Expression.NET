@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -24,10 +24,10 @@ namespace Z.Expressions
         {
             var parameters = new List<ParameterExpression>();
 
-            var parameterEnumerable = scope.CreateOuterParameter(typeof (IEnumerable), scope.GenerateUniqueParameterName());
+            var parameterEnumerable = scope.CreateParameter(typeof (IEnumerable));
             parameters.Add(parameterEnumerable);
 
-            var dictParameter = scope.CreateBlockParameter(typeof (Dictionary<string, object>), scope.GenerateUniqueParameterName());
+            var dictParameter = scope.CreateVariable(typeof (Dictionary<string, object>));
             var methodConvert = typeof (EvalCompiler).GetMethod("ResolveToParameterDictionary", BindingFlags.NonPublic | BindingFlags.Static);
             var expressionConvert = Expression.Call(methodConvert, new Expression[] {parameterEnumerable});
             var expressionAssign = Expression.Assign(dictParameter, expressionConvert);
@@ -35,9 +35,9 @@ namespace Z.Expressions
 
             foreach (var parameter in parameterTypes)
             {
-                scope.CreateLazyBlockParameter(parameter.Key, new Lazy<Expression>(() =>
+                scope.CreateLazyVariable(parameter.Key, new Lazy<Expression>(() =>
                 {
-                    var innerParameter = scope.CreateBlockParameter(parameter.Value, parameter.Key);
+                    var innerParameter = scope.CreateVariable(parameter.Value, parameter.Key);
 
                     Expression innerExpression = Expression.Property(dictParameter, DictionaryItemPropertyInfo, Expression.Constant(parameter.Key));
 

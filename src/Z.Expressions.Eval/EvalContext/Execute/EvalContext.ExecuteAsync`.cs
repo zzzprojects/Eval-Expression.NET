@@ -1,12 +1,11 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
 // More projects: http://www.zzzprojects.com/
 // Copyright (c) 2015 ZZZ Projects. All rights reserved.
 
-
-#if !NET40
+#if NET45
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -32,40 +31,19 @@ namespace Z.Expressions
         /// <returns>The evaluated result of type TResult or null that represents the evaluted code or expression.</returns>
         public Task<TResult> ExecuteAsync<TResult>(string code, object parameters)
         {
-            EvalCompilerParameterKind parameterKind;
-
             var parameterTypes = new Dictionary<string, Type> {{"{0}", parameters.GetType()}};
-
 
             if (parameters is IDictionary)
             {
-                parameterKind = EvalCompilerParameterKind.SingleDictionary;
-
                 foreach (DictionaryEntry entry in (IDictionary) parameters)
                 {
                     parameterTypes.Add(entry.Key.ToString(), entry.Value.GetType());
                 }
 
-                return Task.Run(() => EvalCompiler.Compile<Func<IDictionary, TResult>>(this, code, parameterTypes, typeof (TResult), parameterKind)((IDictionary) parameters));
+                return Task.Run(() => EvalCompiler.Compile<Func<IDictionary, TResult>>(this, code, parameterTypes, typeof (TResult), EvalCompilerParameterKind.SingleDictionary)((IDictionary) parameters));
             }
 
-            parameterKind = EvalCompilerParameterKind.SingleObject;
-
-            var type = parameters.GetType();
-            var parameterProperties = type.GetProperties();
-            var parameterFields = type.GetFields();
-
-            foreach (var propertyInfo in parameterProperties)
-            {
-                parameterTypes.Add(propertyInfo.Name, propertyInfo.PropertyType);
-            }
-
-            foreach (var fieldInfo in parameterFields)
-            {
-                parameterTypes.Add(fieldInfo.Name, fieldInfo.FieldType);
-            }
-
-            return Task.Run(() => EvalCompiler.Compile<Func<object, TResult>>(this, code, parameterTypes, typeof (TResult), parameterKind)(parameters));
+            return Task.Run(() => EvalCompiler.Compile<Func<object, TResult>>(this, code, parameterTypes, typeof (TResult), EvalCompilerParameterKind.Untyped)(parameters));
         }
 
         /// <summary>Compile and evaluate the code or expression and return the result of type TResult.</summary>

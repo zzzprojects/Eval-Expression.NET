@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -9,11 +9,11 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Z.Expressions.Eval")]
-[assembly: AssemblyDescription("Evaluate, Compile and Execute code and expression at runtime.")]
+[assembly: AssemblyDescription("C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ZZZ Projects")]
 [assembly: AssemblyProduct("Z.Expressions.Eval")]
-[assembly: AssemblyCopyright("ZZZ Projects Inc. Copyright ©  2015")]
+[assembly: AssemblyCopyright("ZZZ Projects Inc. Copyright © 2015")]
 [assembly: AssemblyTrademark("SQL & .NET Tools")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

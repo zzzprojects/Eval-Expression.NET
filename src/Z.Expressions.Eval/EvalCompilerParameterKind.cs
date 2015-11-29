@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -21,9 +21,6 @@ namespace Z.Expressions
 
         /// <summary>An enum constant representing the option when a single dictionary parameter is specified.</summary>
         SingleDictionary,
-
-        /// <summary>An enum constant representing the option when a single object parameter is specified.</summary>
-        SingleObject,
 
         /// <summary>An enum constant representing the option when parameter are typed.</summary>
         Typed,

@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Z.Expressions.CodeCompiler.CSharp;
 
@@ -24,7 +25,16 @@ namespace Z.Expressions
 
             foreach (var parameter in parameterTypes)
             {
-                parameters.Add(scope.CreateOuterParameter(parameter.Value, parameter.Key));
+                parameters.Add(scope.CreateParameter(parameter.Value, parameter.Key));
+            }
+
+            if (parameterTypes.Count == 1)
+            {
+                var keyValue = parameterTypes.First();
+                if (Type.GetTypeCode(keyValue.Value) == TypeCode.Object)
+                {
+                    ResolzeLazyMember(scope, parameterTypes, keyValue.Key, keyValue.Value);
+                }
             }
 
             return parameters;

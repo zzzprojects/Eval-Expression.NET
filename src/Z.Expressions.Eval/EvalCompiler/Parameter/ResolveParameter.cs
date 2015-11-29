@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -35,9 +35,6 @@ namespace Z.Expressions
                     break;
                 case EvalCompilerParameterKind.SingleDictionary:
                     parameterExpressions = ResolveParameterSingleDictionary(scope, parameterTypes);
-                    break;
-                case EvalCompilerParameterKind.SingleObject:
-                    parameterExpressions = ResolveParameterSingleObject(scope, parameterTypes);
                     break;
                 case EvalCompilerParameterKind.Typed:
                     parameterExpressions = ResolveParameterTyped(scope, parameterTypes);

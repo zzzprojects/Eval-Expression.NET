@@ -17,7 +17,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;NET45</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -38,6 +38,10 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Z.Expressions.Compiler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Expressions.Compiler.1.0.0\lib\Z.Expressions.Compiler.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EvalCompilerParameterKind.cs" />
@@ -47,7 +51,7 @@
     <Compile Include="EvalCompiler\Parameter\ResolveParameterDictionary.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveParameterEnumerable.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveParameterSingleDictionary.cs" />
-    <Compile Include="EvalCompiler\Parameter\ResolveParameterSingleObject.cs" />
+    <Compile Include="EvalCompiler\Parameter\ResolveLazyMember.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveParameterTyped.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveParameterUntyped.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveToParameterDictionary.cs" />
@@ -99,10 +103,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\zzzproject\zCompiler\Z.Expressions.Compiler\Z.Expressions.Compiler.csproj">
-      <Project>{6ada59fe-2316-4568-8fa9-84222c7dbef0}</Project>
-      <Name>Z.Expressions.Compiler</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

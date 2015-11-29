@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -48,8 +48,8 @@ namespace Z.Expressions
             var scope = new ExpressionScope
             {
                 AliasExtensionMethods = context.AliasExtensionMethods,
-                AliasGlobalConstants = context.AliasGlobalConstants,
-                AliasGlobalVariables = context.AliasGlobalVariables,
+                //AliasGlobalConstants = context.AliasGlobalConstants,
+                //AliasGlobalVariables = context.AliasGlobalVariables,
                 AliasNames = context.AliasNames,
                 AliasStaticMembers = context.AliasStaticMembers,
                 AliasTypes = context.AliasTypes,
@@ -59,6 +59,27 @@ namespace Z.Expressions
 
             // Resolve Parameter
             var parameterExpressions = ResolveParameter(scope, parameterKind, parameterTypes);
+
+            // ADD global constants
+            if (context.AliasGlobalConstants.Count > 0)
+            {
+                scope.Constants = new Dictionary<string, ConstantExpression>(context.AliasGlobalConstants);
+            }
+
+            // ADD global variables
+            if (context.AliasGlobalVariables.Count > 0)
+            {
+                foreach (var keyValue in context.AliasGlobalVariables)
+                {
+                    scope.CreateLazyVariable(keyValue.Key, new Lazy<Expression>(() =>
+                    {
+                        var innerParameter = scope.CreateVariable(keyValue.Value.GetType(), keyValue.Key);
+                        var innerExpression = Expression.Assign(innerParameter, Expression.Constant(keyValue.Value));
+                        scope.Expressions.Add(innerExpression);
+                        return innerParameter;
+                    }));
+                }
+            }
 
             // CodeAnalysis
             var syntaxRoot = SyntaxParser.ParseText(code);
@@ -77,7 +98,7 @@ namespace Z.Expressions
             return compiled;
         }
 
-#if !NET40
+#if NET45
         /// <summary>Compile the code or expression and return a TDelegate of type Func or Action to execute.</summary>
         /// <typeparam name="TDelegate">Type of the delegate (Func or Action) to use to compile the code or expression.</typeparam>
         /// <param name="context">The eval context used to compile the code or expression.</param>

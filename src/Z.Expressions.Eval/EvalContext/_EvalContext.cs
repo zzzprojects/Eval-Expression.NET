@@ -1,4 +1,4 @@
-﻿// Description: Evaluate, Compile and Execute C# code and expression at runtime
+﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
 // Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
 // Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
 // License: http://www.zzzprojects.com/license-agreement/
@@ -7,6 +7,7 @@
 
 using System;
 using System.Collections.Concurrent;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace Z.Expressions
@@ -16,12 +17,12 @@ namespace Z.Expressions
         public EvalContext()
         {
             AliasExtensionMethods = new ConcurrentDictionary<string, ConcurrentDictionary<MethodInfo, byte>>();
-            AliasGlobalConstants = new ConcurrentDictionary<string, object>();
+            AliasGlobalConstants = new ConcurrentDictionary<string, ConstantExpression>();
             AliasGlobalVariables = new ConcurrentDictionary<string, object>();
             AliasNames = new ConcurrentDictionary<string, string>();
             AliasStaticMembers = new ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>>();
             AliasTypes = new ConcurrentDictionary<string, Type>();
-            BindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy;
+            BindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy | BindingFlags.IgnoreCase;
             CacheKeyPrefix = GetType().FullName;
             UseCache = true;
             UseCaretForExponent = false;
@@ -35,7 +36,7 @@ namespace Z.Expressions
 
         /// <summary>Gets or sets the alias list for global constants.</summary>
         /// <value>The alias list for global constants.</value>
-        public ConcurrentDictionary<string, object> AliasGlobalConstants { get; set; }
+        public ConcurrentDictionary<string, ConstantExpression> AliasGlobalConstants { get; set; }
 
         /// <summary>Gets or sets the alias list for global variables.</summary>
         /// <value>The alias list for global variables.</value>
