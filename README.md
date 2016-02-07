@@ -23,6 +23,11 @@ PM> Install-Package Z.Expressions.Eval
 ```
 *FREE Version limited to 50 characters
 
+Stay updated with latest changes
+
+<a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
+<a href="https://www.facebook.com/zzzprojects/" target="_blank"><img src="http://www.zzzprojects.com/images/facebook_like.png" alt="Facebook Like" height="24" /></a>
+
 ## Eval.Execute
 **Evaluate and execute the code or expression.**
 
