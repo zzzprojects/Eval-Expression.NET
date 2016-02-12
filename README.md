@@ -130,6 +130,8 @@ Supporting & developing FREE features takes **hundreds** and **thousands** of ho
 Contribution isn't all about money!
  - Blog it
  - Comment it
+ - Fork it
+ - Star it
  - Share it
 
 A **HUGE thanks** for your extra support.
