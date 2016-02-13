@@ -15,8 +15,9 @@ int result = Eval.Execute<int>(@"
 > Eval Expression.NET improve dramatically performance to access public and private method, field, property value or to create object instance over using C# reflection.
 
 ## Download
-<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/v/Z.Expressions.Eval.svg?style=flat-square" /></a>
-<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" alt="download nuget"><img src="https://img.shields.io/nuget/dt/Z.Expressions.Eval.svg?style=flat-square" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="http://entityframework-plus.net/images/nuget/eval-expression-net-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="http://entityframework-plus.net/images/nuget/eval-expression-net-d.svg" alt="" /></a>
+
 
 ```
 PM> Install-Package Z.Expressions.Eval
