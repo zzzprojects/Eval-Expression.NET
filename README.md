@@ -9,7 +9,7 @@ int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 int result = Eval.Execute<int>(@"
 	var list = new List<int>() { 1..100 };
 	var filter = list.Where(x => x < 3);
-	return result.Sum(x => x);");
+	return filter.Sum(x => x);");
 ```
 
 > Eval Expression.NET improve dramatically performance to access public and private method, field, property value or to create object instance over using C# reflection.
