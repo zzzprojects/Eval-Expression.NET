@@ -11,6 +11,10 @@
     <AssemblyName>Z.Expressions.Eval</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +33,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -38,12 +45,9 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="Z.Expressions.Compiler, Version=1.0.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\Z.Expressions.Compiler.1.0.0\lib\Z.Expressions.Compiler.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EvalLinq.cs" />
     <Compile Include="EvalCompilerParameterKind.cs" />
     <Compile Include="EvalCompiler\EvalCompiler.cs" />
     <Compile Include="EvalCompiler\Parameter\ResolveCacheKey.cs" />
@@ -92,19 +96,66 @@
     <Compile Include="Eval\Eval.ExecuteAsync`.cs" />
     <Compile Include="Eval\Eval.Execute`.cs" />
     <Compile Include="ExceptionMessage.cs" />
-    <Compile Include="ExtensionMethods\String.Compile.cs" />
-    <Compile Include="ExtensionMethods\String.CompileAsync.cs" />
-    <Compile Include="ExtensionMethods\String.CompileAsync`.cs" />
-    <Compile Include="ExtensionMethods\String.Compile`.cs" />
-    <Compile Include="ExtensionMethods\String.Execute.cs" />
-    <Compile Include="ExtensionMethods\String.ExecuteAsync.cs" />
-    <Compile Include="ExtensionMethods\String.ExecuteAsync`.cs" />
-    <Compile Include="ExtensionMethods\String.Execute`.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\OrderByDynamic.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\OrderByDescendingDynamic.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\SelectDynamic.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\SelectMany.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\SkipWhile.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\TakeWhile.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Deferred\Where.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\All.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\Any.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\Count.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\First.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\FirstOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\Last.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\LastOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\LongCount.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\Single.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Immediate\SingleOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IEnumerable`\Execute.cs" />
+    <Compile Include="ExtensionMethods\IOrderedEnumerable`\Deferred\ThenByDynamic.cs" />
+    <Compile Include="ExtensionMethods\IOrderedEnumerable`\Deferred\ThenByDescendingDynamic.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\OrderByDescendingDynamic.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\OrderByDynamic.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\SelectDynamic.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\SelectMany.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\SkipWhile.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\TakeWhile.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Deferred\Where.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Execute.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\All.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\Any.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\Count.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\First.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\FirstOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\Last.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\LastOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\LongCount.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\Single.cs" />
+    <Compile Include="ExtensionMethods\IQueryable`\Immediate\SingleOrDefault.cs" />
+    <Compile Include="ExtensionMethods\IOrderedQueryable`\Deferred\ThenByDescendingDynamic.cs" />
+    <Compile Include="ExtensionMethods\IOrderedQueryable`\Deferred\ThenByDynamic.cs" />
+    <Compile Include="ExtensionMethods\String\String.Compile.cs" />
+    <Compile Include="ExtensionMethods\String\String.CompileAsync.cs" />
+    <Compile Include="ExtensionMethods\String\String.CompileAsync`.cs" />
+    <Compile Include="ExtensionMethods\String\String.Compile`.cs" />
+    <Compile Include="ExtensionMethods\String\String.Execute.cs" />
+    <Compile Include="ExtensionMethods\String\String.ExecuteAsync.cs" />
+    <Compile Include="ExtensionMethods\String\String.ExecuteAsync`.cs" />
+    <Compile Include="ExtensionMethods\String\String.Execute`.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Z.Expressions.Compiler\Z.Expressions.Compiler\Z.Expressions.Compiler.csproj">
+      <Project>{6ada59fe-2316-4568-8fa9-84222c7dbef0}</Project>
+      <Name>Z.Expressions.Compiler</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

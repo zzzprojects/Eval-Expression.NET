@@ -1,12 +1,14 @@
 ﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
-// Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
-// Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
-// License: http://www.zzzprojects.com/license-agreement/
+// Website: http://eval-expression.net/
+// Documentation: https://github.com/zzzprojects/Eval-Expression.NET/wiki
+// Forum & Issues: https://github.com/zzzprojects/Eval-Expression.NET/issues
+// License: https://github.com/zzzprojects/Eval-Expression.NET/blob/master/LICENSE
 // More projects: http://www.zzzprojects.com/
-// Copyright (c) 2015 ZZZ Projects. All rights reserved.
+// Copyright © ZZZ Projects Inc. 2014 - 2016. All rights reserved.
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Z.Expressions.CodeCompiler.CSharp;
 
@@ -23,7 +25,7 @@ namespace Z.Expressions
         {
             if (Type.GetTypeCode(memberType) == TypeCode.Object)
             {
-                var parameterProperties = memberType.GetProperties();
+                var parameterProperties = memberType.GetProperties().Where(x => x.GetIndexParameters().Count() == 0).ToArray();
                 var parameterFields = memberType.GetFields();
 
                 foreach (var propertyInfo in parameterProperties)

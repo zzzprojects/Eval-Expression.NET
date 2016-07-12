@@ -1,13 +1,15 @@
 ﻿// Description: C# Expression Evaluator | Evaluate, Compile and Execute C# code and expression at runtime.
-// Website & Documentation: https://github.com/zzzprojects/Eval-Expression.NET
-// Forum: https://zzzprojects.uservoice.com/forums/327759-eval-expression-net
-// License: http://www.zzzprojects.com/license-agreement/
+// Website: http://eval-expression.net/
+// Documentation: https://github.com/zzzprojects/Eval-Expression.NET/wiki
+// Forum & Issues: https://github.com/zzzprojects/Eval-Expression.NET/issues
+// License: https://github.com/zzzprojects/Eval-Expression.NET/blob/master/LICENSE
 // More projects: http://www.zzzprojects.com/
-// Copyright (c) 2015 ZZZ Projects. All rights reserved.
+// Copyright © ZZZ Projects Inc. 2014 - 2016. All rights reserved.
 
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace Z.Expressions
 {
@@ -39,6 +41,19 @@ namespace Z.Expressions
                 }
 
                 return EvalCompiler.Compile<Func<IDictionary, TResult>>(this, code, parameterTypes, typeof (TResult), EvalCompilerParameterKind.SingleDictionary)((IDictionary) parameters);
+            }
+            else if (parameters is ExpandoObject)
+            {
+                var dictValues = new Dictionary<string, object>();
+                dictValues.Add("{0}", parameters);
+
+                foreach (var entry in (IDictionary<string, object>)parameters)
+                {
+                    parameterTypes.Add(entry.Key, entry.Value.GetType());
+                    dictValues.Add(entry.Key, entry.Value);
+                }
+
+                return EvalCompiler.Compile<Func<Dictionary<string, object>, TResult>>(this, code, parameterTypes, typeof(TResult), EvalCompilerParameterKind.SingleDictionary)(dictValues);
             }
 
             return EvalCompiler.Compile<Func<object, TResult>>(this, code, parameterTypes, typeof (TResult), EvalCompilerParameterKind.Untyped)(parameters);
