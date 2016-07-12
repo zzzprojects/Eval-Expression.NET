@@ -62,7 +62,7 @@ _Extension Methods_
 ```csharp
 // using Z.Expressions; // Don't forget to include this.
 string s = "X + Y";
-int result = s.Eval<int>(new { X = 1, Y = 2 });
+int result = s.Execute<int>(new { X = 1, Y = 2 });
 ```
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)**
 
