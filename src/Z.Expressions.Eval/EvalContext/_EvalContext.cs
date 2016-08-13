@@ -21,6 +21,7 @@ namespace Z.Expressions
             AliasGlobalConstants = new ConcurrentDictionary<string, ConstantExpression>();
             AliasGlobalVariables = new ConcurrentDictionary<string, object>();
             AliasNames = new ConcurrentDictionary<string, string>();
+            AliasMembers = new ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>>();
             AliasStaticMembers = new ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>>();
             AliasTypes = new ConcurrentDictionary<string, Type>();
             BindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy | BindingFlags.IgnoreCase;
@@ -51,6 +52,10 @@ namespace Z.Expressions
         /// <value>The alias list for static members.</value>
         public ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>> AliasStaticMembers { get; set; }
 
+        /// <summary>Gets or sets the alias list for static members.</summary>
+        /// <value>The alias list for static members.</value>
+        public ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>> AliasMembers { get; set; }
+
         /// <summary>Gets or sets the alias list for types.</summary>
         /// <value>A alias list for types.</value>
         public ConcurrentDictionary<string, Type> AliasTypes { get; set; }
@@ -73,5 +78,9 @@ namespace Z.Expressions
         /// </summary>
         /// <value>true if the caret should be used for exponent, false if not.</value>
         public bool UseCaretForExponent { get; set; }
+
+        /// <summary>Gets or sets a value indicating whether the safe mode is enabled.</summary>
+        /// <value>true if safe mode is enabled, false if not.</value>
+        public bool SafeMode { get; set; }
     }
 }

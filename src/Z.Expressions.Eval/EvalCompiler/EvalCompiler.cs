@@ -53,9 +53,11 @@ namespace Z.Expressions
                 //AliasGlobalVariables = context.AliasGlobalVariables,
                 AliasNames = context.AliasNames,
                 AliasStaticMembers = context.AliasStaticMembers,
+                AliasMembers = context.AliasMembers,
                 AliasTypes = context.AliasTypes,
                 BindingFlags = context.BindingFlags,
-                UseCaretForExponent = context.UseCaretForExponent
+                UseCaretForExponent = context.UseCaretForExponent,
+                SafeMode = context.SafeMode
             };
 
             // Resolve Parameter

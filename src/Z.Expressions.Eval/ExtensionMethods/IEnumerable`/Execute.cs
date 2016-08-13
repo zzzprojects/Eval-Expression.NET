@@ -19,7 +19,7 @@ namespace Z.Expressions
 
         public static object Execute(this IEnumerable source, string expression, object parameter)
         {
-            return source.Execute<object>(expression, null);
+            return source.Execute<object>(expression, parameter);
         }
 
         public static TValue Execute<TValue>(this IEnumerable source, string expression)

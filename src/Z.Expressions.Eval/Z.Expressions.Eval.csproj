@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EvalContext\EvalContext.RegisterDefaultAliasSafe.cs" />
+    <Compile Include="EvalContext\Register\EvalContext.RegisterMember.cs" />
     <Compile Include="EvalLinq.cs" />
     <Compile Include="EvalCompilerParameterKind.cs" />
     <Compile Include="EvalCompiler\EvalCompiler.cs" />
@@ -64,7 +66,7 @@
     <Compile Include="EvalContext\Compile\EvalContext.CompileAsync`.cs" />
     <Compile Include="EvalContext\Compile\EvalContext.Compile`.cs" />
     <Compile Include="EvalContext\EvalContext.Clone.cs" />
-    <Compile Include="EvalContext\EvalContext.RegisterDefaultAlias.cs" />
+    <Compile Include="EvalContext\EvalContext.RegisterDefaultAliasUnsafe.cs" />
     <Compile Include="EvalContext\Execute\EvalContext.Execute.cs" />
     <Compile Include="EvalContext\Execute\EvalContext.ExecuteAsync.cs" />
     <Compile Include="EvalContext\Execute\EvalContext.ExecuteAsync`.cs" />

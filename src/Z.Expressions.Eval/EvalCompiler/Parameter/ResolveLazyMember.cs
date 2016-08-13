@@ -27,6 +27,7 @@ namespace Z.Expressions
             {
                 var parameterProperties = memberType.GetProperties().Where(x => x.GetIndexParameters().Count() == 0).ToArray();
                 var parameterFields = memberType.GetFields();
+                var instanceMethods = memberType.GetMethods();
 
                 foreach (var propertyInfo in parameterProperties)
                 {
@@ -54,6 +55,11 @@ namespace Z.Expressions
 
                         return innerParameter;
                     }));
+                }
+
+                foreach (var method in instanceMethods)
+                {
+                    scope.InstanceMethods.Add(method, parameterName);
                 }
             }
         }
