@@ -58,6 +58,8 @@ namespace Z.Expressions
         /// <summary>Registers default alias (Extension Methods, Names, Static Members, Types and Values).</summary>
         public void RegisterDefaultAliasUnsafe()
         {
+            RegisterDefaultAliasSafe();
+
             // Extension Methods
             RegisterExtensionMethod(typeof (Enumerable));
             RegisterExtensionMethod(typeof (Queryable));

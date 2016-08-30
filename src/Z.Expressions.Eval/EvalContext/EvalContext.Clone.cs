@@ -26,11 +26,13 @@ namespace Z.Expressions
                 AliasExtensionMethods = new ConcurrentDictionary<string, ConcurrentDictionary<MethodInfo, byte>>(AliasExtensionMethods.Select(pair => new KeyValuePair<string, ConcurrentDictionary<MethodInfo, byte>>(pair.Key, new ConcurrentDictionary<MethodInfo, byte>(pair.Value)))),
                 AliasGlobalConstants = new ConcurrentDictionary<string, ConstantExpression>(AliasGlobalConstants),
                 AliasGlobalVariables = new ConcurrentDictionary<string, object>(AliasGlobalVariables),
+                AliasMembers = new ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>>(AliasMembers.Select(pair => new KeyValuePair<string, ConcurrentDictionary<MemberInfo, byte>>(pair.Key, new ConcurrentDictionary<MemberInfo, byte>(pair.Value)))),
                 AliasNames = new ConcurrentDictionary<string, string>(AliasNames),
                 AliasStaticMembers = new ConcurrentDictionary<string, ConcurrentDictionary<MemberInfo, byte>>(AliasStaticMembers.Select(pair => new KeyValuePair<string, ConcurrentDictionary<MemberInfo, byte>>(pair.Key, new ConcurrentDictionary<MemberInfo, byte>(pair.Value)))),
                 AliasTypes = new ConcurrentDictionary<string, Type>(AliasTypes),
                 BindingFlags = BindingFlags,
                 CacheKeyPrefix = CacheKeyPrefix,
+                SafeMode = SafeMode,
                 UseCache = UseCache,
                 UseCaretForExponent = UseCaretForExponent
             };

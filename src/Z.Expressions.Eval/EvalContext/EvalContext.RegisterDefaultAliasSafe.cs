@@ -11,52 +11,22 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Diagnostics;
-using System.Diagnostics.Eventing;
-using System.Diagnostics.Eventing.Reader;
-using System.Diagnostics.PerformanceData;
 using System.Dynamic;
-using System.Globalization;
-using System.IO;
-using System.IO.Compression;
-using System.IO.IsolatedStorage;
-using System.IO.Pipes;
-using System.IO.Ports;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Net;
-using System.Net.Mail;
-using System.Net.NetworkInformation;
-using System.Net.Security;
-using System.Net.Sockets;
 using System.Reflection;
-using System.Reflection.Emit;
-using System.Resources;
-using System.Security;
-using System.Security.AccessControl;
-using System.Security.Cryptography;
-using System.Security.Cryptography.X509Certificates;
-using System.Security.Principal;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Linq;
 using System.Xml.Schema;
-using System.Xml.Serialization;
 using System.Xml.XPath;
 using System.Xml.Xsl;
-using EventDescriptor = System.ComponentModel.EventDescriptor;
 
 namespace Z.Expressions
 {
     public partial class EvalContext
     {
         /// <summary>Registers default alias (Extension Methods, Names, Static Members, Types and Values).</summary>
-        public void RegisterDefaultAlias()
+        public void RegisterDefaultAliasSafe()
         {
             // Extension Methods
             RegisterExtensionMethod(typeof (Enumerable));
@@ -132,21 +102,21 @@ namespace Z.Expressions
                 // System.IO
 
                 // System.IO.Compression
-                RegisterType(typeof (GZipStream));
+                //RegisterType(typeof (GZipStream));
 
                 // System.IO.IsolatedStorage
-                RegisterType(typeof (IsolatedStorage));
+                //RegisterType(typeof (IsolatedStorage));
 
                 // System.IO.Pipes
-                RegisterType(typeof (AnonymousPipeClientStream));
-                RegisterType(typeof (AnonymousPipeServerStream));
-                RegisterType(typeof (NamedPipeClientStream));
-                RegisterType(typeof (NamedPipeServerStream));
-                RegisterType(typeof (PipeSecurity));
-                RegisterType(typeof (PipeStream));
+                //RegisterType(typeof (AnonymousPipeClientStream));
+                //RegisterType(typeof (AnonymousPipeServerStream));
+                //RegisterType(typeof (NamedPipeClientStream));
+                //RegisterType(typeof (NamedPipeServerStream));
+                //RegisterType(typeof (PipeSecurity));
+                //RegisterType(typeof (PipeStream));
 
                 // System.IO.Ports
-                RegisterType(typeof (SerialPort));
+                //RegisterType(typeof (SerialPort));
 
                 // System.Linq
                 RegisterType(typeof (IQueryable<>));
@@ -157,40 +127,40 @@ namespace Z.Expressions
                 RegisterType(typeof (Expression));
 
                 // System.Reflection
-                RegisterType(typeof (Assembly));
-                RegisterType(typeof (ConstructorInfo));
-                RegisterType(typeof (FieldInfo));
-                RegisterType(typeof (MemberInfo));
-                RegisterType(typeof (MethodInfo));
-                RegisterType(typeof (PropertyInfo));
+                //RegisterType(typeof (Assembly));
+                //RegisterType(typeof (ConstructorInfo));
+                //RegisterType(typeof (FieldInfo));
+                //RegisterType(typeof (MemberInfo));
+                //RegisterType(typeof (MethodInfo));
+                //RegisterType(typeof (PropertyInfo));
 
                 // System.Reflection.Emit
-                RegisterType(typeof (AssemblyBuilder));
-                RegisterType(typeof (MethodBuilder));
-                RegisterType(typeof (TypeBuilder));
+                //RegisterType(typeof (AssemblyBuilder));
+                //RegisterType(typeof (MethodBuilder));
+                //RegisterType(typeof (TypeBuilder));
 
                 // System.Resources
-                RegisterType(typeof (ResourceManager));
+                //RegisterType(typeof (ResourceManager));
 
                 // System.Security
-                RegisterType(typeof (SecureString));
-                RegisterType(typeof (SecurityManager));
+                //RegisterType(typeof (SecureString));
+                //RegisterType(typeof (SecurityManager));
 
                 // System.Security.AccessControl
-                RegisterType(typeof (AccessRule));
-                RegisterType(typeof (FileSecurity));
-                RegisterType(typeof (ObjectSecurity));
+                //RegisterType(typeof (AccessRule));
+                //RegisterType(typeof (FileSecurity));
+                //RegisterType(typeof (ObjectSecurity));
 
                 // System.Security.Cryptography
-                RegisterType(typeof (ECDsaCng));
-                RegisterType(typeof (SHA1));
-                RegisterType(typeof (TripleDES));
+                //RegisterType(typeof (ECDsaCng));
+                //RegisterType(typeof (SHA1));
+                //RegisterType(typeof (TripleDES));
 
                 // System.Security.Cruptography.X509Certificates
-                RegisterType(typeof (X509Store));
+                //RegisterType(typeof (X509Store));
 
                 // System.Security.Principal
-                RegisterType(typeof (WindowsIdentity));
+                //RegisterType(typeof (WindowsIdentity));
 
                 // System.Text
                 RegisterType(typeof (Encoding));
@@ -200,107 +170,107 @@ namespace Z.Expressions
                 RegisterType(typeof (Regex));
 
                 // System.Threading
-                RegisterType(typeof (ReaderWriterLockSlim));
-                RegisterType(typeof (Semaphore));
-                RegisterType(typeof (Thread));
-                RegisterType(typeof (WaitHandle));
+                //RegisterType(typeof (ReaderWriterLockSlim));
+                //RegisterType(typeof (Semaphore));
+                //RegisterType(typeof (Thread));
+                //RegisterType(typeof (WaitHandle));
             }
 
             // Communications and Workflow
             {
                 // System.Net
-                RegisterType(typeof (Dns));
-                RegisterType(typeof (FtpWebRequest));
-                RegisterType(typeof (HttpListener));
-                RegisterType(typeof (HttpWebRequest));
-                RegisterType(typeof (WebClient));
+                //RegisterType(typeof (Dns));
+                //RegisterType(typeof (FtpWebRequest));
+                //RegisterType(typeof (HttpListener));
+                //RegisterType(typeof (HttpWebRequest));
+                //RegisterType(typeof (WebClient));
 
                 // System.Net.Mail
-                RegisterType(typeof (MailMessage));
-                RegisterType(typeof (SmtpClient));
+                //RegisterType(typeof (MailMessage));
+                //RegisterType(typeof (SmtpClient));
 
                 // System.Net.NetworkInformation
-                RegisterType(typeof (NetworkInterface));
-                RegisterType(typeof (NetworkChange));
-                RegisterType(typeof (Ping));
+                //RegisterType(typeof (NetworkInterface));
+                //RegisterType(typeof (NetworkChange));
+                //RegisterType(typeof (Ping));
 
                 // System.Net.Security
-                RegisterType(typeof (NegotiateStream));
-                RegisterType(typeof (SslStream));
+                //RegisterType(typeof (NegotiateStream));
+                //RegisterType(typeof (SslStream));
 
                 // System.Net.Sockets
-                RegisterType(typeof (NetworkStream));
-                RegisterType(typeof (Socket));
-                RegisterType(typeof (TcpClient));
-                RegisterType(typeof (TcpListener));
-                RegisterType(typeof (UdpClient));
+                //RegisterType(typeof (NetworkStream));
+                //RegisterType(typeof (Socket));
+                //RegisterType(typeof (TcpClient));
+                //RegisterType(typeof (TcpListener));
+                //RegisterType(typeof (UdpClient));
             }
 
             // DATA, XML, and LINQ
             {
                 // System.Data
-                RegisterType(typeof (DataColumn));
-                RegisterType(typeof (DataRow));
-                RegisterType(typeof (DataSet));
-                RegisterType(typeof (DataTable));
-                RegisterType(typeof (DataView));
+                //RegisterType(typeof (DataColumn));
+                //RegisterType(typeof (DataRow));
+                //RegisterType(typeof (DataSet));
+                //RegisterType(typeof (DataTable));
+                //RegisterType(typeof (DataView));
 
                 // System.Data.Common
-                RegisterType(typeof (DbCommand));
-                RegisterType(typeof (DbConnection));
-                RegisterType(typeof (DbDataAdapter));
-                RegisterType(typeof (DbDataReader));
-                RegisterType(typeof (DbProviderFactory));
+                //RegisterType(typeof (DbCommand));
+                //RegisterType(typeof (DbConnection));
+                //RegisterType(typeof (DbDataAdapter));
+                //RegisterType(typeof (DbDataReader));
+                //RegisterType(typeof (DbProviderFactory));
 
                 // System.Data.SqlClient
-                RegisterType(typeof (SqlCommand));
-                RegisterType(typeof (SqlConnection));
-                RegisterType(typeof (SqlDataAdapter));
-                RegisterType(typeof (SqlDataReader));
+                //RegisterType(typeof (SqlCommand));
+                //RegisterType(typeof (SqlConnection));
+                //RegisterType(typeof (SqlDataAdapter));
+                //RegisterType(typeof (SqlDataReader));
 
                 // System.XML
-                RegisterType(typeof (XmlAttribute));
-                RegisterType(typeof (XmlDocument));
-                RegisterType(typeof (XmlElement));
-                RegisterType(typeof (XmlNode));
-                RegisterType(typeof (XmlReader));
-                RegisterType(typeof (XmlWriter));
+                //RegisterType(typeof (XmlAttribute));
+                //RegisterType(typeof (XmlDocument));
+                //RegisterType(typeof (XmlElement));
+                //RegisterType(typeof (XmlNode));
+                //RegisterType(typeof (XmlReader));
+                //RegisterType(typeof (XmlWriter));
 
                 // System.Xml.Linq
-                RegisterType(typeof (XAttribute));
-                RegisterType(typeof (XDocument));
-                RegisterType(typeof (XElement));
-                RegisterType(typeof (XName));
-                RegisterType(typeof (XNamespace));
-                RegisterType(typeof (XNode));
-                RegisterType(typeof (XText));
+                //RegisterType(typeof (XAttribute));
+                //RegisterType(typeof (XDocument));
+                //RegisterType(typeof (XElement));
+                //RegisterType(typeof (XName));
+                //RegisterType(typeof (XNamespace));
+                //RegisterType(typeof (XNode));
+                //RegisterType(typeof (XText));
 
                 // System.Xml.Schema
-                RegisterType(typeof (XmlSchema));
-                RegisterType(typeof (XmlSchemaSet));
-                RegisterType(typeof (XmlSchemaValidator));
+                //RegisterType(typeof (XmlSchema));
+                //RegisterType(typeof (XmlSchemaSet));
+                //RegisterType(typeof (XmlSchemaValidator));
 
                 // System.Xml.Serialization
-                RegisterType(typeof (XmlSerializer));
+                //RegisterType(typeof (XmlSerializer));
 
                 // System.Xml.XPath
-                RegisterType(typeof (XPathDocument));
-                RegisterType(typeof (XPathExpression));
-                RegisterType(typeof (XPathNavigator));
+                //RegisterType(typeof (XPathDocument));
+                //RegisterType(typeof (XPathExpression));
+                //RegisterType(typeof (XPathNavigator));
 
                 // System.Xml.Xsl
-                RegisterType(typeof (XslCompiledTransform));
-                RegisterType(typeof (XsltArgumentList));
+                //RegisterType(typeof (XslCompiledTransform));
+                //RegisterType(typeof (XsltArgumentList));
             }
 
             // .NET Framework 4 and Extensions
             {
                 // Core
-                RegisterType(typeof (SortedSet<>));
-                RegisterType(typeof (ParallelEnumerable));
-                RegisterType(typeof (LazyInitializer));
-                RegisterType(typeof (SpinLock));
-                RegisterType(typeof (Parallel));
+                //RegisterType(typeof (SortedSet<>));
+                //RegisterType(typeof (ParallelEnumerable));
+                //RegisterType(typeof (LazyInitializer));
+                //RegisterType(typeof (SpinLock));
+                //RegisterType(typeof (Parallel));
 
                 // System.Tuple
                 RegisterType(typeof (Tuple));
@@ -315,12 +285,12 @@ namespace Z.Expressions
             }
 
             // NEW
-            RegisterType(typeof (CommandType));
+            //RegisterType(typeof (CommandType));
             RegisterType(typeof (Match));
 
             // Library
-            RegisterType(typeof (EvalManager));
-            RegisterType(typeof (Eval));
+            //RegisterType(typeof (EvalManager));
+            //RegisterType(typeof (Eval));
         }
     }
 }

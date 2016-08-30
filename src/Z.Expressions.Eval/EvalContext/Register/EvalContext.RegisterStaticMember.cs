@@ -22,12 +22,12 @@ namespace Z.Expressions
             foreach (var type in types)
             {
                 var fields = type.GetFields(BindingFlags.Public | BindingFlags.Static);
-                var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
                 var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Static);
+                var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Static);
 
                 RegisterStaticMember(fields);
-                RegisterStaticMember(properties);
                 RegisterStaticMember(methods);
+                RegisterStaticMember(properties);
             }
 
             return this;

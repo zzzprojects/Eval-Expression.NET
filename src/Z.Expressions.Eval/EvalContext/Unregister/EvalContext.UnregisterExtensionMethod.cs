@@ -40,6 +40,8 @@ namespace Z.Expressions
         {
             foreach (var method in extensionMethods)
             {
+                UnregisterMember(method);
+
                 ConcurrentDictionary<MethodInfo, byte> values;
                 if (AliasExtensionMethods.TryGetValue(method.Name, out values))
                 {

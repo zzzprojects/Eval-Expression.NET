@@ -29,7 +29,7 @@ namespace Z.Expressions
             UseCache = true;
             UseCaretForExponent = false;
 
-            RegisterDefaultAlias();
+            RegisterDefaultAliasUnsafe();
         }
 
         /// <summary>Gets or sets the alias list for extension methods.</summary>

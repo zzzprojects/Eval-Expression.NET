@@ -14,7 +14,10 @@ namespace Z.Expressions
 {
     public partial class EvalContext
     {
-        public EvalContext RegisterMember(params Type[] types)
+        /// <summary>Unregisters member from specified types.</summary>
+        /// <param name="types">A variable-length parameters list containing types to unregister static members from.</param>
+        /// <returns>An Fluent EvalContext.</returns>
+        public EvalContext UnregisterMember(params Type[] types)
         {
             foreach (var type in types)
             {
@@ -23,32 +26,37 @@ namespace Z.Expressions
                 var methods = type.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
                 var properties = type.GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.Static);
 
-                RegisterMember(constructors);
-                RegisterMember(fields);
-                RegisterMember(methods);
-                RegisterMember(properties);
+                UnregisterMember(constructors);
+                UnregisterMember(fields);
+                UnregisterMember(methods);
+                UnregisterMember(properties);
             }
 
             return this;
         }
 
-        /// <summary>Registers specified static members.</summary>
-        /// <param name="members">A variable-length parameters list containing members to register.</param>
+        /// <summary>Unregisters member from specified types.</summary>
+        /// <param name="members">A variable-length parameters list containing members.</param>
         /// <returns>An Fluent EvalContext.</returns>
-        public EvalContext RegisterMember(params MemberInfo[] members)
+        public EvalContext UnregisterMember(params MemberInfo[] members)
         {
             foreach (var member in members)
             {
-                AliasMembers.AddOrUpdate(member.Name, s =>
+                if (member.DeclaringType != null)
                 {
-                    var dict = new ConcurrentDictionary<MemberInfo, byte>();
-                    dict.TryAdd(member, 1);
-                    return dict;
-                }, (s, list) =>
+                    if (AliasTypes.ContainsKey(member.DeclaringType.FullName))
+                    {
+                        UnregisterType(member.DeclaringType);
+                        RegisterMember(member.DeclaringType);
+                    }
+                }
+
+                ConcurrentDictionary<MemberInfo, byte> values;
+                if (AliasMembers.TryGetValue(member.Name, out values))
                 {
-                    list.TryAdd(member, 1);
-                    return list;
-                });
+                    byte outByte;
+                    values.TryRemove(member, out outByte);
+                }
             }
 
             return this;

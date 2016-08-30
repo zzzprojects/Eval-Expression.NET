@@ -17,6 +17,7 @@ namespace Z.Expressions
             AliasExtensionMethods.Clear();
             AliasGlobalConstants.Clear();
             AliasGlobalVariables.Clear();
+            AliasMembers.Clear();
             AliasNames.Clear();
             AliasStaticMembers.Clear();
             AliasTypes.Clear();

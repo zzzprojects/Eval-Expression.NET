@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="EvalContext\EvalContext.RegisterDefaultAliasSafe.cs" />
     <Compile Include="EvalContext\Register\EvalContext.RegisterMember.cs" />
+    <Compile Include="EvalContext\Unregister\EvalContext.UnregisterMember.cs" />
     <Compile Include="EvalLinq.cs" />
     <Compile Include="EvalCompilerParameterKind.cs" />
     <Compile Include="EvalCompiler\EvalCompiler.cs" />

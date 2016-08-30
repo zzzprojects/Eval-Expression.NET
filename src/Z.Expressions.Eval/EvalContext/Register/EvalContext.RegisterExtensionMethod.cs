@@ -39,6 +39,8 @@ namespace Z.Expressions
         {
             foreach (var method in extensionMethods)
             {
+                RegisterMember(method);
+
                 AliasExtensionMethods.AddOrUpdate(method.Name, s =>
                 {
                     var dict = new ConcurrentDictionary<MethodInfo, byte>();
