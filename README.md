@@ -21,7 +21,6 @@ int result = Eval.Execute<int>(@"
 ```
 PM> Install-Package Z.Expressions.Eval
 ```
-*FREE Version limited to 50 characters
 
 Stay updated with latest changes
 
