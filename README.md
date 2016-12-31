@@ -22,6 +22,8 @@ int result = Eval.Execute<int>(@"
 PM> Install-Package Z.Expressions.Eval
 ```
 
+_* PRO Version unlocked for the current month_
+
 Stay updated with latest changes
 
 <a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
