@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Benchmark Pitfall
-permalink: benchmark-pitfall
+title: Compile & Execute
+permalink: tutorial-compile-execute
 ---
 
 {% include template-h1.html %}

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Insert IF NOT Exists
-permalink: insert-if-not-exists
+title: Compile & Execute
+permalink: compile-execute
 ---
 
 {% include template-h1.html %}

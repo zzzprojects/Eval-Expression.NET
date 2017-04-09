@@ -1,7 +1,7 @@
 ---
 layout: default
-title: BulkOperation Manager
-permalink: bulkoperation-manager
+title: Options
+permalink: options
 ---
 
 {% include template-h1.html %}

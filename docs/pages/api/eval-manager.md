@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Input Expression
-permalink: input-expression
+title: Eval Manager
+permalink: eval-manager
 ---
 
 {% include template-h1.html %}

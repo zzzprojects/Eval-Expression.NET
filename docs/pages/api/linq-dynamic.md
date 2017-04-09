@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Update Key Value
-permalink: update-key-value
+title: LINQ Dynamic
+permalink: linq-dynamic
 ---
 
 {% include template-h1.html %}

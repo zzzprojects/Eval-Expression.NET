@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Insert Keep Identity
-permalink: insert-keep-identity
+title: LINQ Dynamic Method
+permalink: linq-linq-dynamic-method
 ---
 
 {% include template-h1.html %}

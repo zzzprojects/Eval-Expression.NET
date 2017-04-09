@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Key Expression
-permalink: key-expression
+title: LINQ Dynamic
+permalink: tutorial-linq-dynamic
 ---
 
 {% include template-h1.html %}

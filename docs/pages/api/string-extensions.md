@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Update Duplicate Key
-permalink: update-duplicate-key
+title: String Extensions
+permalink: string-extensions
 ---
 
 {% include template-h1.html %}

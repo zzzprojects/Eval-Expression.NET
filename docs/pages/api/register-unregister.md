@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Output Expression
-permalink: output-expression
+title: Register & Unregister
+permalink: register-unregister
 ---
 
 {% include template-h1.html %}
