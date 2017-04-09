@@ -189,7 +189,7 @@ layout: post
 						<div class="card">
 							<div class="card-block">
 								<hr class="m-y-md" />
-								<h2>tEvaluate, Compile and Execute C# Dynamic Code and Expression at Runtime</h2>
+								<h2>Evaluate, Compile and Execute C# Dynamic Code and Expression at Runtime</h2>
 								<hr class="m-y-md" />
 								<div class="lead">
 									<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank" class="btn btn-success btn-lg btn-left" role="button" onclick="ga('send', 'event', { eventAction: 'download'});"><span><i class="fa fa-cloud-download fa-2x"></i>&nbsp;<span>Download</span></span></a>
