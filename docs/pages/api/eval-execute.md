@@ -31,3 +31,23 @@ Use the generic Eval.Execute method:
 - Eval.Execute&lt;TResult&gt;(string code)
 - Eval.Execute&lt;TResult&gt;(string code, object parameters)
 - Eval.Execute&lt;TResult&gt;(string code, params object[] parameters)
+
+### Example
+
+{% highlight csharp %}
+// Parameter: Anonymous Type
+int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2} );
+
+// Parameter: Class Member
+dynamic expandoObject = new ExpandoObject();
+expandoObject.X = 1;
+expandoObject.Y = 2;
+int result = Eval.Execute<int>("X + Y", expandoObject);
+
+// Parameter: Dictionary Key
+var values = new Dictionary<string, object>() {{"X", 1}, {"Y", 2}};
+int result = Eval.Execute<int>("X + Y", values);
+
+// Parameter: Argument Position
+int result = Eval.Execute<int>("{0} + {1}", 1, 2);
+{% endhighlight %}
