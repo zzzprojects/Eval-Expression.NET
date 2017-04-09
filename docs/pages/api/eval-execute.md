@@ -9,11 +9,12 @@ permalink: eval-execute
 The Eval.Execute method allows executing a C# expression dynamically at runtime.
 
 ### Example
-```csharp
+
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
 var result = Eval.Execute<int>("X*Y", new { X = 2, Y = 3 }); // return 6
-```
+{% endhighlight %}
 
 > Use Execute over Compile when you need to run the expression only once.
 
@@ -29,7 +30,7 @@ Use the generic Eval.Execute method:
 - Eval.Execute&lt;TResult&gt;(string code, params object[] parameters)
 
 ### Example
-```csharp
+{% highlight csharp %}
 // Parameter: Anonymous Type
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2} );
 
@@ -45,7 +46,7 @@ int result = Eval.Execute<int>("X + Y", values);
 
 // Parameter: Argument Position
 int result = Eval.Execute<int>("{0} + {1}", 1, 2);
-```
+{% endhighlight %}
 
 ## Eval.Execute
 
@@ -59,7 +60,7 @@ Use the Eval.Execute method:
 - Eval.Execute(string code, params object[] parameters)
 
 ### Example
-```csharp
+{% highlight csharp %}
 // Parameter: Anonymous Type
 object result = Eval.Execute("X + Y", new { X = 1, Y = 2} );
 
@@ -75,7 +76,7 @@ object result = Eval.Execute("X + Y", values);
 
 // Parameter: Argument Position
 object result = Eval.Execute("{0} + {1}", 1, 2);
-```
+{% endhighlight %}
 
 ## Eval.Execute Parameter
 
