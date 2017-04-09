@@ -4,39 +4,20 @@ Requirements,requirements,tutorials
 Installing,installing,tutorials
 Upgrading,upgrading,tutorials
 Licensing,licensing,tutorials
-Bulk Methods,tutorial-bulk-methods,tutorials
-Bulk Generic Methods,tutorial-bulk-generic-methods,tutorials
-From Query Operations,tutorial-from-query-operations,tutorials
+Compile & Execute,tutorial-compile-execute,tutorials
+LINQ Dynamic,tutorial-linq-dynamic,tutorials
 API,api,api
-Bulk Insert,bulk-insert,api
-Bulk Update,bulk-update,api
-Bulk Delete,bulk-delete,api
-Bulk Merge,bulk-merge,api
-Bulk SaveChanges,bulk-savechanges,api
-Bulk Synchronize,bulk-synchronize,api
-Update from Query,update-from-query,api
-Delete from Query,delete-from-query,api
-Audit,audit,api
-Batch,batch,api
-Column Expression,column-expression,api
-Execute Event,execute-event,api
-Log,log,api
-Temporary Table,temporary-table,api
-Transient Error,transient-error,api
-SQL Server,sql-server,api
-BulkOperation Manager,bulkoperation-manager,api
+Eval.Execute,eval-execute,api
+Eval.Compile,eval-compile,api
+LINQ Dynamic,linq-dynamic,api
+String Extensions,string-extensions,api
+Compile & Execute,compile-execute,api
+Register & Unregister,register-unregister,api
+Options,options,api
+Eval Manager,eval-manager,api
+LINQ Dynamic,linq-dynamic-method,linq-dynamic
+LINQ Execute,linq-execute-method,linq-dynamic
 Articles,articles,articles
-Benchmark,benchmark-pitfall,articles
-Insert IF NOT Exists,insert-if-not-exists,articles
-Insert Keep Identity,insert-keep-identity,articles
-Update Duplicate Key,update-duplicate-key,articles
-Update Key Value,update-key-value,articles
-Input Expression,input-expression,articles
-Key Expression,key-expression,articles
-Output Expression,output-expression,articles
-Ignore on Merge Insert Expression,ignore-on-merge-insert-expression,articles
-Ignore on Merge Update Expression,ignore-on-merge-update-expression,articles
-Synchronize Expression,synchronize-expression,articles
 FAQ,faq,faq
 Contact Us,contact-us,faq
 Issue Tracker,issue-tracker,faq
@@ -46,4 +27,4 @@ License,faq-license,faq
 Troubleshooting,troubleshooting,troubleshooting
 Trial Period Expired,trial-period-expired-exception,troubleshooting
 MD5,md5-exception,troubleshooting
-Bulk Operations,/,home
+Eval-Expression.NET,/,home
