@@ -21,3 +21,13 @@ var result = Eval.Execute<int>("X*Y", new { X = 2, Y = 3 }); // return 6
 > Use Execute over Compile when you need to run the expression only once.
 
 ## Eval.Execute&lt;TResult&gt;
+
+### Problem
+You need to evaluate a dynamic C# code and return a strongly-typed value.
+
+### Solution
+Use the generic Eval.Execute method:
+
+- Eval.Execute&lt;TResult&gt;(string code)
+- Eval.Execute&lt;TResult&gt;(string code, object parameters)
+- Eval.Execute&lt;TResult&gt;(string code, params object[] parameters)
