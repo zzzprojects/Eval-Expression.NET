@@ -111,16 +111,18 @@ You can even access to C# 6.0 features even if you are using C# 4.0.
 
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Syntax-Supported)**
 
-## FREE vs PRO
+## PRO
 Every month, a new monthly trial of the PRO Version is available to let you evaluate all its features without limitations.
 
-Features | FREE Version | [PRO Version](http://eval-expression.net/#pro)
------------- | :-------------: | :-------------:
-Maximum Characters | 50 | Unlimited
-Commercial License | No | Yes
-Royalty-Free | No | Yes
-Support & Upgrades (1 year) | No | Yes
+Features | [PRO Version](http://eval-expression.net/#pro)
+------------ | :-------------:
+Maximum Characters | Unlimited
+Commercial License | Yes
+Royalty-Free | Yes
+Support & Upgrades (1 year) | Yes
 Learn more about the **[PRO Version](http://eval-expression.net/#pro)**
+
+Starting from version 2.x, there is no longer a free limited version.
 
 ## Contribute
 The best way to contribute is by **spreading the word** about the library:
