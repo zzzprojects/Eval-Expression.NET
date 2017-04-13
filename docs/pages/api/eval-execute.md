@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Eval.Execute
-permalink: eval-execute
 description: Execute a C# expression and return the result.
+permalink: eval-execute
 ---
 
 {% include template-h1.html %}
