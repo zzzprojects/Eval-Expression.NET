@@ -18,10 +18,6 @@ Even with this optimization, if you have to evaluate multiple times the same exp
 - [Eval.Execute<object>](#execute-and-return-an-object)
 - [Execute with parameter](#execute-with-parameter)
 
-## Execute and return a specific type
-## Execute and return an object
-## Execute with parameter
-
 ### Example
 {% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
@@ -29,17 +25,16 @@ Even with this optimization, if you have to evaluate multiple times the same exp
 var result = Eval.Execute<int>("X*Y", new { X = 2, Y = 3 }); // return 6
 {% endhighlight %}
 
-## Eval.Execute&lt;TResult&gt;
+## Execute with parameter
+You can specify parameter from various way:
 
-### Problem
-You need to evaluate a dynamic C# code and return a strongly-typed value.
+- By Anonymous Type
+- By Class Member
+- By Dictionary
+- By Argument Position
 
-### Solution
-Use the generic Eval.Execute method:
-
-- Eval.Execute&lt;TResult&gt;(string code)
-- Eval.Execute&lt;TResult&gt;(string code, object parameters)
-- Eval.Execute&lt;TResult&gt;(string code, params object[] parameters)
+## Execute and return a specific type
+You can return the result as a specific type if you know it
 
 ### Example
 
@@ -61,18 +56,9 @@ int result = Eval.Execute<int>("X + Y", values);
 int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 {% endhighlight %}
 
-## Eval.Execute
+## Execute and return an object
+You can return the result as an object if you doesn’t know the type.
 
-### Problem
-You need to evaluate a dynamic C# code and return a value or nothing.
-
-### Solution
-Use the Eval.Execute method:
-- Eval.Execute(string code)
-- Eval.Execute(string code, object parameters)
-- Eval.Execute(string code, params object[] parameters)
-
-### Example
 {% highlight csharp %}
 // Parameter: Anonymous Type
 object result = Eval.Execute("X + Y", new { X = 1, Y = 2} );
@@ -90,16 +76,3 @@ object result = Eval.Execute("X + Y", values);
 // Parameter: Argument Position
 object result = Eval.Execute("{0} + {1}", 1, 2);
 {% endhighlight %}
-
-## Eval.Execute Parameter
-
-### Problem
-You need to evaluate a C# expression dynamically using one or many parameters.
-
-### Solution
-The Eval.Execute method supports all common parameter resolution
-
-- By Anonymous Type
-- By Class Member
-- By Dictionary
-- By Argument Position
