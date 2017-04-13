@@ -62,7 +62,7 @@ var list3 = list.SelectDynamic(x => "new { y = x + 1 }", new { y = 1 });
 // OrderByDynamic
 var list4 = list.OrderByDynamic(x => "x + 1");
 var list5 = list.OrderByDynamic(x => "x + Y", new { Y = 1 });
-```
+{% endhighlight %}
 
 ## LINQ Dynamic - Execute
 You can push the LINQ Dynamic experience further by using the Execute method and chaining anything else:
