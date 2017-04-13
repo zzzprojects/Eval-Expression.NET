@@ -7,10 +7,14 @@ description: Execute a C# expression and return the result.
 
 {% include template-h1.html %}
 
+## Description
 {{ page.description }}
 
-### Example
+Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
 
+Even with this optimization, if you have to evaluate consecutively the same expression, by example in a for loop, we highly recommend using directly the delegate returning from the Compile method. 
+
+### Example
 {% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
