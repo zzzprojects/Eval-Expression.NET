@@ -10,6 +10,14 @@ permalink: string-extensions
 ## Description
 {{ page.description }}
 
+Under the hood, string extensions use the default context to execute and compile expressions.
+{% highlight csharp 
+public static object Execute(this string code, params object[] parameters)
+{
+    return EvalManager.DefaultContext.Execute(code, parameters);
+}
+{% endhighlight %}
+
 ## "string".Execute
 Execute a C# expression. Extend the String class.
 
