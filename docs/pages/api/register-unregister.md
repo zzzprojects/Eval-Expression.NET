@@ -1,22 +1,20 @@
 ---
 layout: default
 title: Register & Unregister
+description: Register and unregister assembly, constant, method, type, and more.
 permalink: register-unregister
 ---
 
 {% include template-h1.html %}
 
-### Introduction
-Register and unregister methods allow to add or remove referenced assembly, extension methods, type, constant value and more.
+## Description
+{{ page.description }}
 
 By default, all .NET common class/type/extension methods are already registered.
 
 ## Register
-### Problem
-You want to register an information supported by the EvalContext under which the code or expression is compiled.
+You can register:
 
-### Solution
-Supported Register:
 - RegisterAlias(string alias, string name)
 - RegisterAssembly(param Assembly[])
 - RegisterDomainAssemblies()
@@ -45,7 +43,7 @@ context.RegisterType(typeof (bool), typeof(char);
 ```
 
 ### Static Member
-Allows to use static member name without qualifying them with their namespace or type name. A static member is a new feature in C# 6.0.
+You can use static member name without qualifying them with their namespace or type name. Static member is a new feature in C# 6.0.
 
 ```csharp
 // using Z.Expressions; // Don't forget to include this.
@@ -58,10 +56,8 @@ int result = context.Execute<int>("MinValue"); // Int.MinValue
 
 ## Unregister
 ### Problem
-You want to unregister an information from the EvalContext under which the code or expression is compiled.
+You can unregister: 
 
-### Solution
-Supported Unregister:
 - UnregisterAlias(param string[] aliases)
 - UnregisterAll
 - UnregisterAssembly(param Assembly[])
