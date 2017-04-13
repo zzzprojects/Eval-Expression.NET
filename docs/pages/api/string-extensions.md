@@ -11,7 +11,7 @@ permalink: string-extensions
 {{ page.description }}
 
 Under the hood, string extensions use the default context to execute and compile expressions.
-{% highlight csharp 
+{% highlight csharp %}
 public static object Execute(this string code, params object[] parameters)
 {
     return EvalManager.DefaultContext.Execute(code, parameters);
