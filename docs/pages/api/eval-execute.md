@@ -13,9 +13,9 @@ description: Execute a C# expression and return the result.
 You can specify parameter value to use in the expression from various way:
 
 - Anonymous Type
+- Argument Position
 - Class Member
 - Dictionary
-- Argument Position
 
 Under the hood, the fist time an expression is executed, it's getting compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
 
@@ -34,6 +34,9 @@ You can return the result as a specific type if you know it
 // Parameter: Anonymous Type
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2} );
 
+// Parameter: Argument Position
+int result = Eval.Execute<int>("{0} + {1}", 1, 2);
+
 // Parameter: Class Member
 dynamic expandoObject = new ExpandoObject();
 expandoObject.X = 1;
@@ -43,9 +46,6 @@ int result = Eval.Execute<int>("X + Y", expandoObject);
 // Parameter: Dictionary Key
 var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 int result = Eval.Execute<int>("X + Y", values);
-
-// Parameter: Argument Position
-int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 {% endhighlight %}
 
 ## Execute and return an object
@@ -59,6 +59,9 @@ You can return the result as an object if you doesn’t know the type.
 // Parameter: Anonymous Type
 object result = Eval.Execute("X + Y", new { X = 1, Y = 2} );
 
+// Parameter: Argument Position
+object result = Eval.Execute("{0} + {1}", 1, 2);
+
 // Parameter: Class Member
 dynamic expandoObject = new ExpandoObject();
 expandoObject.X = 1;
@@ -68,7 +71,4 @@ object result = Eval.Execute("X + Y", expandoObject);
 // Parameter: Dictionary Key
 var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 object result = Eval.Execute("X + Y", values);
-
-// Parameter: Argument Position
-object result = Eval.Execute("{0} + {1}", 1, 2);
 {% endhighlight %}
