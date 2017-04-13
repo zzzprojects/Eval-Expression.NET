@@ -1,21 +1,18 @@
 ---
 layout: default
 title: Compile & Execute
+description: Compile and execute a C# expression at runtime.
 permalink: compile-execute
 ---
 
 {% include template-h1.html %}
 
-## Introduction
-
-The EvalContext allow specifying customer configuration for evaluating, compiling and executing C# code and expression at runtime.
+## Description
+{{ page.description }}
 
 ## Execute
-### Problem
-You need to evaluate a dynamic C# code in an instance context.
+Execute a C# expression and return the result: 
 
-### Solution
-Create a new instance of EvalContext and use Execute method:
 - Execute&lt;TResult&gt;(string code)
 - Execute&lt;TResult&gt;(string code, object parameters)
 - Execute&lt;TResult&gt;(string code, params object[] parameters)
@@ -24,7 +21,7 @@ Create a new instance of EvalContext and use Execute method:
 - Execute(string code, params object[] parameters)
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
 var context = new EvalContext();
@@ -32,14 +29,11 @@ var context = new EvalContext();
 
 string code = "Price * Quantity";
 var price = context.Execute<decimal>(code, orderItem);
-```
+{% endhighlight %}
 
 ## Compile
-### Problem
-You need to compile a dynamic C# code in an instance context.
+Compile a C# expression and return a delegate: 
 
-### Solution
-Create a new instance of EvalContext and use Compile method:
 - Compile&lt;TDelegate&gt;(string code)
 - Compile&lt;TDelegate&gt;(string code, IEnumerable&lt;string&gt; parameterNames)
 - Compile&lt;TDelegate&gt;(string code, params string[] parameterNames)
@@ -51,7 +45,7 @@ Create a new instance of EvalContext and use Compile method:
 - Compile(string, IDictionary&lt;string, Type&gt;): **Func&lt;IDictionary, object&gt;**
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
 var context = new EvalContext();
@@ -65,4 +59,4 @@ foreach(var item in list)
 {
     totals += compiled(item);
 }
-```
+{% endhighlight %}
