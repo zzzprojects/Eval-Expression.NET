@@ -51,7 +51,7 @@ You can use any ordering and selecting method with a dynamic C# expression:
  - ThenByDescendingDynamic
  - ThenByDynamic
 
-> The **"Dynamic"** suffix is required for not overriding the default behavior (Ordering or selecting by a string is valid).
+> The **"Dynamic"** suffix is required for not overriding the default behavior (ordering or selecting by a string is valid).
 
 ### Example
 {% highlight csharp %}
