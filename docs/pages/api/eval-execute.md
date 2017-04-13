@@ -2,13 +2,12 @@
 layout: default
 title: Eval.Execute
 permalink: eval-execute
+description: Execute a C# expression and return the result.
 ---
 
 {% include template-h1.html %}
 
-## Introduction
-
-The Eval.Execute method allows executing a C# expression dynamically at runtime.
+{{ page.description }}
 
 ### Example
 
