@@ -12,7 +12,15 @@ description: Execute a C# expression and return the result.
 
 Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
 
-Even with this optimization, if you have to evaluate consecutively the same expression, by example in a for loop, we highly recommend using directly the delegate returning from the Compile method. 
+Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend using directly the delegate returning from the Compile method.
+
+- [Eval.Execute<TResult>](#execute-and-return-a-specific-type)
+- [Eval.Execute<object>](#execute-and-return-an-object)
+- [Execute with parameter](#execute-with-parameter)
+
+## Execute and return a specific type
+## Execute and return an object
+## Execute with parameter
 
 ### Example
 {% highlight csharp %}
