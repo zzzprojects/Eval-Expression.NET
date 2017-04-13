@@ -47,7 +47,7 @@ permalink: tutorials
 			<h2 class="display-4">FAQ</h2>
 			<p class="lead">Freqently Answered Question</p>
 			<hr class="my-4">
-			<p>Start learning C# Eval Expressionbest practices and solution to the common problem you may encounter.</p>
+			<p>Start learning C# Eval Expression best practices and solution to the common problem you may encounter.</p>
 			<p class="lead">
 				<a class="btn btn-primary btn-lg" href="faq" role="button">Learn more</a>
 			</p>
