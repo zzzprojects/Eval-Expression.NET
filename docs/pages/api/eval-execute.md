@@ -17,7 +17,7 @@ You can specify parameter value to use in the expression from various way:
 - Dictionary
 - Argument Position
 
-Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
+Under the hood, the fist time an expression is executed, it's getting compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
 
 Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend you to use directly the delegate returning from the Compile method instead.
 
