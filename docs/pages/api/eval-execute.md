@@ -12,10 +12,10 @@ description: Execute a C# expression and return the result.
 
 You can specify parameter value to use in the expression from various way:
 
-- By Anonymous Type
-- By Class Member
-- By Dictionary
-- By Argument Position
+- Anonymous Type
+- Class Member
+- Dictionary
+- Argument Position
 
 Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
 
@@ -26,6 +26,10 @@ Even with this optimization, if you have to evaluate multiple times the same exp
 
 ## Execute and return a specific type
 You can return the result as a specific type if you know it
+
+- Eval.Execute&lt;TResult&gt;(string code)
+- Eval.Execute&lt;TResult&gt;(string code, object parameters)
+- Eval.Execute&lt;TResult&gt;(string code, params object[] parameters)
 
 ### Example
 
@@ -49,6 +53,10 @@ int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 
 ## Execute and return an object
 You can return the result as an object if you doesn’t know the type.
+
+- Eval.Execute(string code)
+- Eval.Execute(string code, object parameters)
+- Eval.Execute(string code, params object[] parameters)
 
 {% highlight csharp %}
 // Parameter: Anonymous Type
