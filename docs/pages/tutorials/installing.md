@@ -16,9 +16,9 @@ Don't worry. People love our library because it's so easy to use.
 
 .NET Bulk Operations library is only available through NuGet
 
-<a href="https://www.nuget.org/packages/Z.BulkOperations/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/bulk-operations-v.svg" alt="download" /></a>
-<a href="https://www.nuget.org/packages/Z.BulkOperations/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/bulk-operations-d.svg" alt="" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-v.svg" alt="download" /></a>
+<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-d.svg" alt="" /></a>
 
-> PM> Install-Package Z.BulkOperations
+> PM> Install-Package Z.Expressions.Eval
 
 ## Step 2 - Have Fun!
