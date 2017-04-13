@@ -1,20 +1,17 @@
 ---
 layout: default
 title: String Extensions
+description: Extend the String class with methods to Execute & Compile C# expression.
 permalink: string-extensions
 ---
 
 {% include template-h1.html %}
 
-## Introduction
-String extension methods extend the String class and let you execute or compile a C# expression containing in the string value.
+## Description
+{{ page.description }}
 
 ## "string".Execute
-### Problem
 You need to execute a C# expression from a string.
-
-### Solution
-Use the string Execute extension methods:
 
 - "string".Execute&lt;TResult&gt;()
 - "string".Execute&lt;TResult&gt;(object parameters)
@@ -24,19 +21,15 @@ Use the string Execute extension methods:
 - "string".Execute(params object[] parameters)
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
 var result1 = "1+2".Execute<int>(); // return 3
 var result2 = "X+Y".Execute(new { X = 1, Y = 2 }); // return 3
-```
+{% endhighlight %}
 
 ## "string".Compile
-### Problem
-You need to compile a C# expression from a string.
-
-### Solution
-Use the string Compile extension methods:
+Compile a C# expression. Extend the String class.
 
 - "string".Compile&lt;TDelegate&gt;()
 - "string".Compile&lt;TDelegate&gt;(IEnumerable&lt;string&gt; parameterNames)
@@ -49,7 +42,7 @@ Use the string Compile extension methods:
 - "string".Compile(IDictionary&lt;string, Type&gt;): Func&lt;IDictionary, object&gt;
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 
 string s = "Price * Quantity";
@@ -60,4 +53,4 @@ foreach(var item in list)
 {
     totals += compiled(item);
 }
-```
+{% endhighlight %}
