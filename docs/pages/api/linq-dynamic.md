@@ -12,6 +12,8 @@ permalink: linq-dynamic
 
 LINQ (Language Integrated Query) has been introduced in .NET 3.5 and since has been one of the most used features. ORM like Entity Framework takes advantage from this feature and allow you to write type-safe queries.
 
+The theory want you to only use type-safe queries, however the reality require often you to write LINQ with dynamic query expressions.
+
 ## LINQ Dynamic - Predicate
 You can use any LINQ method that support predicate with a dynamic C# expression :
 
