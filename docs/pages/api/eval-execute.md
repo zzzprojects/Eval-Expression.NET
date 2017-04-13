@@ -14,9 +14,9 @@ Under the hood, the fist time an expression is executed, it's before compiled an
 
 Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend using directly the delegate returning from the Compile method.
 
-- [Eval.Execute<TResult>](#execute-and-return-a-specific-type)
-- [Eval.Execute<object>](#execute-and-return-an-object)
 - [Execute with parameter](#execute-with-parameter)
+- [Execute and return a specific type](#execute-and-return-a-specific-type)
+- [Execute and return an object](#execute-and-return-an-object)
 
 ### Example
 {% highlight csharp %}
