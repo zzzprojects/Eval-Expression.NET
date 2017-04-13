@@ -10,28 +10,19 @@ description: Execute a C# expression and return the result.
 ## Description
 {{ page.description }}
 
-Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
-
-Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend using directly the delegate returning from the Compile method.
-
-- [Execute with parameter](#execute-with-parameter)
-- [Execute and return a specific type](#execute-and-return-a-specific-type)
-- [Execute and return an object](#execute-and-return-an-object)
-
-### Example
-{% highlight csharp %}
-// using Z.Expressions; // Don't forget to include this.
-
-var result = Eval.Execute<int>("X*Y", new { X = 2, Y = 3 }); // return 6
-{% endhighlight %}
-
-## Execute with parameter
 You can specify parameter from various way:
 
 - By Anonymous Type
 - By Class Member
 - By Dictionary
 - By Argument Position
+
+Under the hood, the fist time an expression is executed, it's before compiled and the delegate is stored in the memory before being returned and executed. All future call from the same expression will retrieve the delegate from the memory to optimize the performance.
+
+Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend you to use directly the delegate returning from the Compile method instead.
+
+- [Execute and return a specific type](#execute-and-return-a-specific-type)
+- [Execute and return an object](#execute-and-return-an-object)
 
 ## Execute and return a specific type
 You can return the result as a specific type if you know it
