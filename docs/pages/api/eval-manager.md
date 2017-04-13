@@ -1,52 +1,47 @@
 ---
 layout: default
 title: Eval Manager
+description: Static manager class for options shared between all instances.
 permalink: eval-manager
 ---
 
 {% include template-h1.html %}
 
-## Introduction
-The EvalManager static class keep global configuration shared between evaluation instance.
+## Description
+{{ page.description }}
 
 ## Cache
-### Problem
-You want to use your own cache to cache compiled lambda expression.
-
-### Solution
-You can change the shared cache by any cache inheriting from System.Runtime.Caching.ObjectCache class.
+Gets or sets the cache to use to cache compiled delegate.
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 EvalManager.Cache = MemoryCache.Default;
-```
+{% endhighlight %}
 
 > You can use your own cache provider inheriting from System.Runtime.Caching.ObjectCache
 
 ## DefaultContext
-### Problem
-You want to change default configuration for all evaluations context.
+Gets or sets the default context to use for all operations using the default context.
 
-### Solution
-Change default EvalContext configuration to
- - [Register & Unregister](https://github.com/zzzprojects/Eval-Expression.NET/wiki/EvalContext-Register-&-Unregister)
- - [Change Options](https://github.com/zzzprojects/Eval-Expression.NET/wiki/EvalContext-Options)
+You can also directly change options
+ - [Register & Unregister](register-unregister)
+ - [Options](options)
 
 The default context is used in static methods:
-- [Eval.Execute](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)
-- [Eval.Compile](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)
-- ["string".Execute](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Extension-Methods)
-- ["string".Compile](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Extension-Methods)
-- [Dynamic LINQ](https://github.com/zzzprojects/Eval-Expression.NET/wiki/LINQ-Dynamic)
+- [Eval.Execute](eval-execute)
+- [Eval.Compile](eval-compile)
+- [LINQ Dynamic](linq-dynamic)
+- [string".Execute](string-extensions#stringexecute)
+- [string".Compile](string-extensions#stringcompile)
 
 ### Example
-```csharp
+{% highlight csharp %}
 // using Z.Expressions; // Don't forget to include this.
 EvalManager.DefaultContext.RegisterExtensionMethod(typeof(Z.ExtensionMethods))
 
 // Make member case insensitive (Math.pOW = Math.Pow)
 EvalManager.DefaultContext.BindingFlags = BindingFlags.IgnoreCase | context.BindingFlags
-```
+{% endhighlight %}
 
 
