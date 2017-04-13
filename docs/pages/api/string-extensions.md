@@ -11,7 +11,7 @@ permalink: string-extensions
 {{ page.description }}
 
 ## "string".Execute
-You need to execute a C# expression from a string.
+Execute a C# expression. Extend the String class.
 
 - "string".Execute&lt;TResult&gt;()
 - "string".Execute&lt;TResult&gt;(object parameters)
