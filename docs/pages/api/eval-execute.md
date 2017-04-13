@@ -29,8 +29,6 @@ Even with this optimization, if you have to evaluate multiple times the same exp
 var result = Eval.Execute<int>("X*Y", new { X = 2, Y = 3 }); // return 6
 {% endhighlight %}
 
-> Use Execute over Compile when you need to run the expression only once.
-
 ## Eval.Execute&lt;TResult&gt;
 
 ### Problem
