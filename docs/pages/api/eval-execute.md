@@ -10,7 +10,7 @@ description: Execute a C# expression and return the result.
 ## Description
 {{ page.description }}
 
-You can specify parameter from various way:
+You can specify parameter value to use in the expression from various way:
 
 - By Anonymous Type
 - By Class Member
