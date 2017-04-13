@@ -21,8 +21,8 @@ Under the hood, the fist time an expression is executed, it's getting compiled a
 
 Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend you to use directly the delegate returning from the Compile method instead.
 
-## Execute and return a specific type
-You can return the result as a specific type if you know it:
+## Execute and return a strongly typed result
+You can return the result as a strongly typed type if you know it:
 
 - Eval.Execute&lt;TResult&gt;(string code)
 - Eval.Execute&lt;TResult&gt;(string code, object parameters)
@@ -48,7 +48,7 @@ var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 int result = Eval.Execute<int>("X + Y", values);
 {% endhighlight %}
 
-## Execute and return an object
+## Execute and return an object result
 You can return the result as an object if you doesn’t know the type:
 
 - Eval.Execute(string code)
