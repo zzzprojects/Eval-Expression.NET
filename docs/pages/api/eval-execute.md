@@ -22,7 +22,7 @@ Under the hood, the fist time an expression is executed, it's getting compiled a
 Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend you to use directly the delegate returning from the Compile method instead.
 
 ## Execute and return a strongly typed result
-You can return the result as a strongly typed type if you know it:
+You can return the result as a strongly typed type:
 
 - Eval.Execute&lt;TResult&gt;(string code)
 - Eval.Execute&lt;TResult&gt;(string code, object parameters)
@@ -49,7 +49,7 @@ int result = Eval.Execute<int>("X + Y", values);
 {% endhighlight %}
 
 ## Execute and return an object result
-You can return the result as an object if you doesn’t know the type:
+You can return the result as an object:
 
 - Eval.Execute(string code)
 - Eval.Execute(string code, object parameters)
