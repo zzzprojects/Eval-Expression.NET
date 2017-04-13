@@ -21,9 +21,6 @@ Under the hood, the fist time an expression is executed, it's before compiled an
 
 Even with this optimization, if you have to evaluate multiple times the same expression, by example in a for loop, we highly recommend you to use directly the delegate returning from the Compile method instead.
 
-- [Execute and return a specific type](#execute-and-return-a-specific-type)
-- [Execute and return an object](#execute-and-return-an-object)
-
 ## Execute and return a specific type
 You can return the result as a specific type if you know it
 
