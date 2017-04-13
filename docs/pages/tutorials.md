@@ -12,7 +12,7 @@ permalink: tutorials
 	<div class="col-md-6 col-lg-4">
 		<div class="jumbotron">
 			<h2 class="display-4">Tutorial</h2>
-			<p class="lead">Bulk Tutotrial</p>
+			<p class="lead">C# Eval Expression Tutotrial</p>
 			<hr class="my-4">
 			<p>Start learning about how to use C# Eval Expression with our tutorial.</p>
 			<p class="lead">
