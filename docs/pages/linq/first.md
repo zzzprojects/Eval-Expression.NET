@@ -19,33 +19,33 @@ This C# example uses the LINQ First method with a dynamic expression to find the
 ### LINQ
 {% highlight csharp %}
 private void uiFirst_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var product12 = products.Where(p => p.ProductID == 12).First();
+	var product12 = products.Where(p => p.ProductID == 12).First();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, product12);
+	My.ObjectDumper.Write(sb, product12);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiFirst_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var product12 = products.Where(p => p.ProductID == 12).Execute("First()");
+	var product12 = products.Where(p => p.ProductID == 12).Execute("First()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, product12);
+	My.ObjectDumper.Write(sb, product12);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -62,49 +62,49 @@ This C# example uses the LINQ First method with a dynamic expression to find the
 ### LINQ
 {% highlight csharp %}
 private void uiFirst_Condition_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var startsWithO = strings.First(s => s[0] == 'o');
+	var startsWithO = strings.First(s => s[0] == 'o');
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("A string starting with 'o': {0}", startsWithO);
+	sb.AppendLine("A string starting with 'o': {0}", startsWithO);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiFirst_Condition_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var startsWithO = strings.First(s => "s[0] == 'o'");
+	var startsWithO = strings.First(s => "s[0] == 'o'");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("A string starting with 'o': {0}", startsWithO);
+	sb.AppendLine("A string starting with 'o': {0}", startsWithO);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiFirst_Condition_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] strings = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var startsWithO = strings.Execute<string>("First(s => s[0] == 'o')");
+	var startsWithO = strings.Execute<string>("First(s => s[0] == 'o')");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("A string starting with 'o': {0}", startsWithO);
+	sb.AppendLine("A string starting with 'o': {0}", startsWithO);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

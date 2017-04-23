@@ -19,44 +19,43 @@ This C# example uses the LINQ Except method with a dynamic expression to create 
 ### LINQ
 {% highlight csharp %}
 private void uiExcept_1_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-        int[] numbersB = {1, 3, 5, 7, 8};
+{
+	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+	int[] numbersB = {1, 3, 5, 7, 8};
 
-        var aOnlyNumbers = numbersA.Except(numbersB);
+	var aOnlyNumbers = numbersA.Except(numbersB);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Numbers in first array but not second array:");
-			foreach (var n in aOnlyNumbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+	sb.AppendLine("Numbers in first array but not second array:");
+		foreach (var n in aOnlyNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiExcept_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-        int[] numbersB = {1, 3, 5, 7, 8};
+{
+	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+	int[] numbersB = {1, 3, 5, 7, 8};
 
-        var aOnlyNumbers = numbersA.Execute<IEnumerable<int>>("Except(numbersB)", new {numbersB});
+	var aOnlyNumbers = numbersA.Execute<IEnumerable<int>>("Except(numbersB)", new {numbersB});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Numbers in first array but not second array:");
-            foreach (var n in aOnlyNumbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+	sb.AppendLine("Numbers in first array but not second array:");
+		foreach (var n in aOnlyNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
-
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -78,50 +77,50 @@ This C# example uses the LINQ Except method with a dynamic expression to create 
 ### LINQ
 {% highlight csharp %}
 private void uiExcept_2_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
-        var customers = My.GetCustomerList();
+{
+	var products = My.GetProductList();
+	var customers = My.GetCustomerList();
 
-		var productFirstChars = from p in products select p.ProductName[0];
-        var customerFirstChars = from c in customers select c.CompanyName[0];
+	var productFirstChars = from p in products select p.ProductName[0];
+	var customerFirstChars = from c in customers select c.CompanyName[0];
 
-        var productOnlyFirstChars = productFirstChars.Except(customerFirstChars);
+	var productOnlyFirstChars = productFirstChars.Except(customerFirstChars);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("First letters from Product names, but not from Customer names:");
-            foreach (var ch in productOnlyFirstChars)
-            {
-                sb.AppendLine(ch.ToString());
-            }
+	sb.AppendLine("First letters from Product names, but not from Customer names:");
+		foreach (var ch in productOnlyFirstChars)
+		{
+			sb.AppendLine(ch.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiExcept_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
-        var customers = My.GetCustomerList();
+{
+	var products = My.GetProductList();
+	var customers = My.GetCustomerList();
 
-        var productFirstChars = from p in products select p.ProductName[0];
-        var customerFirstChars = from c in customers select c.CompanyName[0];
+	var productFirstChars = from p in products select p.ProductName[0];
+	var customerFirstChars = from c in customers select c.CompanyName[0];
 
-        var productOnlyFirstChars = productFirstChars.Execute<IEnumerable<char>>("Except(customerFirstChars)", new {customerFirstChars});
+	var productOnlyFirstChars = productFirstChars.Execute<IEnumerable<char>>("Except(customerFirstChars)", new {customerFirstChars});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("First letters from Product names, but not from Customer names:");
-            foreach (var ch in productOnlyFirstChars)
-            {
-                sb.AppendLine(ch.ToString());
-            }
+	sb.AppendLine("First letters from Product names, but not from Customer names:");
+		foreach (var ch in productOnlyFirstChars)
+		{
+			sb.AppendLine(ch.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

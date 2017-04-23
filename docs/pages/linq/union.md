@@ -19,43 +19,43 @@ This C# example uses the LINQ Union method with a dynamic expression to create o
 ### LINQ
 {% highlight csharp %}
 private void uiUnion_1_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-        int[] numbersB = {1, 3, 5, 7, 8};
+{
+	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+	int[] numbersB = {1, 3, 5, 7, 8};
 
-        var uniqueNumbers = numbersA.Union(numbersB);
+	var uniqueNumbers = numbersA.Union(numbersB);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Unique numbers from both arrays:");
-            foreach (var n in uniqueNumbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+	sb.AppendLine("Unique numbers from both arrays:");
+		foreach (var n in uniqueNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiUnion_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-        int[] numbersB = {1, 3, 5, 7, 8};
+{
+	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+	int[] numbersB = {1, 3, 5, 7, 8};
 
-        var uniqueNumbers = numbersA.Execute<IEnumerable<int>>("Union(numbersB)", new {numbersB});
+	var uniqueNumbers = numbersA.Execute<IEnumerable<int>>("Union(numbersB)", new {numbersB});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Unique numbers from both arrays:");
-            foreach (var n in uniqueNumbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+	sb.AppendLine("Unique numbers from both arrays:");
+		foreach (var n in uniqueNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -82,49 +82,49 @@ This C# example uses the LINQ Union method with a dynamic expression to create o
 ### LINQ
 {% highlight csharp %}
 private void uiUnion_2_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
-        var customers = My.GetCustomerList();
+{
+	var products = My.GetProductList();
+	var customers = My.GetCustomerList();
 
-        var productFirstChars = from p in products select p.ProductName[0];
-        var customerFirstChars = from c in customers select c.CompanyName[0];
+	var productFirstChars = from p in products select p.ProductName[0];
+	var customerFirstChars = from c in customers select c.CompanyName[0];
 
-        var uniqueFirstChars = productFirstChars.Union(customerFirstChars);
+	var uniqueFirstChars = productFirstChars.Union(customerFirstChars);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Unique first letters from Product names and Customer names:");
-            foreach (var ch in uniqueFirstChars)
-            {
-                sb.AppendLine(ch.ToString());
-            }
+	sb.AppendLine("Unique first letters from Product names and Customer names:");
+		foreach (var ch in uniqueFirstChars)
+		{
+			sb.AppendLine(ch.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiUnion_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
-        var customers = My.GetCustomerList();
+{
+	var products = My.GetProductList();
+	var customers = My.GetCustomerList();
 
-        var productFirstChars = from p in products select p.ProductName[0];
-        var customerFirstChars = from c in customers select c.CompanyName[0];
+	var productFirstChars = from p in products select p.ProductName[0];
+	var customerFirstChars = from c in customers select c.CompanyName[0];
 
-        var uniqueFirstChars = productFirstChars.Execute<IEnumerable<char>>("Union(customerFirstChars)", new {customerFirstChars});
+	var uniqueFirstChars = productFirstChars.Execute<IEnumerable<char>>("Union(customerFirstChars)", new {customerFirstChars});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Unique first letters from Product names and Customer names:");
-            foreach (var ch in uniqueFirstChars)
-            {
-                sb.AppendLine(ch.ToString());
-            }
+	sb.AppendLine("Unique first letters from Product names and Customer names:");
+		foreach (var ch in uniqueFirstChars)
+		{
+			sb.AppendLine(ch.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

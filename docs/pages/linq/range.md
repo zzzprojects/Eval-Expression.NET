@@ -18,36 +18,36 @@ This C# example uses the LINQ Range method with a dynamic expression to generate
 ### LINQ
 {% highlight csharp %}
 private void uiRange_LINQ_Click(object sender, EventArgs e)
-    {
-        var numbers = Enumerable.Range(100, 50).Select(n => new {Number = n, OddEven = n % 2 == 1 ? "odd" : "even"});
+{
+	var numbers = Enumerable.Range(100, 50).Select(n => new {Number = n, OddEven = n % 2 == 1 ? "odd" : "even"});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var n in numbers)
-            {
-                sb.AppendLine("The number {0} is {1}.", n.Number, n.OddEven);
-            }
+		foreach (var n in numbers)
+		{
+			sb.AppendLine("The number {0} is {1}.", n.Number, n.OddEven);
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiRange_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        EvalManager.DefaultContext.RegisterType(typeof(Enumerable));
-        dynamic numbers = Z.Expressions.Eval.Execute("Enumerable.Range(100, 50).Select(n => new { Number = n, OddEven = n % 2 == 1 ? 'odd' : 'even' })");
+{
+	EvalManager.DefaultContext.RegisterType(typeof(Enumerable));
+	dynamic numbers = Z.Expressions.Eval.Execute("Enumerable.Range(100, 50).Select(n => new { Number = n, OddEven = n % 2 == 1 ? 'odd' : 'even' })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var n in numbers)
-            {
-                sb.AppendLine("The number {0} is {1}.", (object) n.Number, (object) n.OddEven);
-            }
+		foreach (var n in numbers)
+		{
+			sb.AppendLine("The number {0} is {1}.", (object) n.Number, (object) n.OddEven);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

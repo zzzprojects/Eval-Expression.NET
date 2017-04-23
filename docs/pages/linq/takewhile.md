@@ -19,61 +19,61 @@ This C# example uses the LINQ TakeWhile method with a dynamic expression to retu
 ### LINQ
 {% highlight csharp %}
 private void uiTakeWhile_Simple_LINQ_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
+	var firstNumbersLessThan6 = numbers.TakeWhile(n => n < 6);
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers less than 6:");
-			foreach (var n in firstNumbersLessThan6)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers less than 6:");
+		foreach (var n in firstNumbersLessThan6)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiTakeWhile_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstNumbersLessThan6 = numbers.TakeWhile(n => "n < 6");
+	var firstNumbersLessThan6 = numbers.TakeWhile(n => "n < 6");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers less than 6:");
-			foreach (var n in firstNumbersLessThan6)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers less than 6:");
+		foreach (var n in firstNumbersLessThan6)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiTakeWhile_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstNumbersLessThan6 = numbers.Execute<IEnumerable<int>>("TakeWhile(n => n < 6)");
+	var firstNumbersLessThan6 = numbers.Execute<IEnumerable<int>>("TakeWhile(n => n < 6)");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers less than 6:");
-			foreach (var n in firstNumbersLessThan6)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers less than 6:");
+		foreach (var n in firstNumbersLessThan6)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -94,61 +94,61 @@ This C# example uses the LINQ Indexed TakeWhile method with a dynamic expression
 ### LINQ
 {% highlight csharp %}
 private void uiTakeWhile_Indexed_LINQ_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);
+	var firstSmallNumbers = numbers.TakeWhile((n, index) => n >= index);
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers not less than their position:");
-			foreach (var n in firstSmallNumbers)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers not less than their position:");
+		foreach (var n in firstSmallNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiTakeWhile_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstSmallNumbers = numbers.TakeWhile((n, index) => "n >= index");
+	var firstSmallNumbers = numbers.TakeWhile((n, index) => "n >= index");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers not less than their position:");
-			foreach (var n in firstSmallNumbers)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers not less than their position:");
+		foreach (var n in firstSmallNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiTakeWhile_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-		var firstSmallNumbers = numbers.Execute<IEnumerable<int>>("TakeWhile((n, index) => n >= index)");
+	var firstSmallNumbers = numbers.Execute<IEnumerable<int>>("TakeWhile((n, index) => n >= index)");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("First numbers not less than their position:");
-			foreach (var n in firstSmallNumbers)
-			{
-				sb.AppendLine(n.ToString());
-			}
+	sb.AppendLine("First numbers not less than their position:");
+		foreach (var n in firstSmallNumbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

@@ -21,33 +21,33 @@ This C# example uses the LINQ Max method with a dynamic expression to get the hi
 ### LINQ
 {% highlight csharp %}
 private void uiMax_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var maxNum = numbers.Max();
+	var maxNum = numbers.Max();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The maximum number is {0}.", maxNum);
+	sb.AppendLine("The maximum number is {0}.", maxNum);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiMax_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var maxNum = numbers.Execute<int>("Max()");
+	var maxNum = numbers.Execute<int>("Max()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The maximum number is {0}.", maxNum);
+	sb.AppendLine("The maximum number is {0}.", maxNum);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -64,33 +64,33 @@ This C# example uses the LINQ Max method with a dynamic expression to get the le
 ### LINQ
 {% highlight csharp %}
 private void uiMax_Projection_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] words = {"cherry", "apple", "blueberry"};
+{
+	string[] words = {"cherry", "apple", "blueberry"};
 
-        var longestLength = words.Max(w => w.Length);
+	var longestLength = words.Max(w => w.Length);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The longest word is {0} characters long.", longestLength);
+	sb.AppendLine("The longest word is {0} characters long.", longestLength);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiMax_Projection_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] words = {"cherry", "apple", "blueberry"};
+{
+	string[] words = {"cherry", "apple", "blueberry"};
 
-        var longestLength = words.Execute<int>("Max(w => w.Length)");
+	var longestLength = words.Execute<int>("Max(w => w.Length)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The longest word is {0} characters long.", longestLength);
+	sb.AppendLine("The longest word is {0} characters long.", longestLength);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -107,33 +107,33 @@ This C# example uses the LINQ Max method with a dynamic expression to get the mo
 ### LINQ
 {% highlight csharp %}
 private void uiMax_Grouped_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, MostExpensivePrice = g.Max(p => p.UnitPrice)});
+	var categories = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, MostExpensivePrice = g.Max(p => p.UnitPrice)});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories);
+	My.ObjectDumper.Write(sb, categories);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiMax_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensivePrice = g.Max(p => p.UnitPrice) })");
+	var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensivePrice = g.Max(p => p.UnitPrice) })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories);
+	My.ObjectDumper.Write(sb, categories);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -164,33 +164,33 @@ This C# example uses the LINQ Max method with a dynamic expression to get the pr
 ### LINQ
 {% highlight csharp %}
 private void uiMax_Elements_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensiveProducts = g.Where(p => p.UnitPrice == g.Max(p2 => p2.UnitPrice)) });
+	var categories = products.GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensiveProducts = g.Where(p => p.UnitPrice == g.Max(p2 => p2.UnitPrice)) });
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories, 1);
+	My.ObjectDumper.Write(sb, categories, 1);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiMax_Elements_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensiveProducts = g.Where(p => p.UnitPrice == g.Max(p2 => p2.UnitPrice)) })");
+	var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, MostExpensiveProducts = g.Where(p => p.UnitPrice == g.Max(p2 => p2.UnitPrice)) })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories, 1);
+	My.ObjectDumper.Write(sb, categories, 1);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

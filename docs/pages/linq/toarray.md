@@ -18,45 +18,45 @@ This C# example uses the LINQ ToArray method with a dynamic expression to immedi
 ### LINQ
 {% highlight csharp %}
 private void uiToArray_LINQ_Click(object sender, EventArgs e)
-    {
-        double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
+{
+	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
 
-        var sortedDoubles = from d in doubles orderby d descending select d;
+	var sortedDoubles = from d in doubles orderby d descending select d;
 
-        var doublesArray = sortedDoubles.ToArray();
+	var doublesArray = sortedDoubles.ToArray();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Every other double from highest to lowest:");
-            for (var d = 0; d < doublesArray.Length; d += 2)
-            {
-                sb.AppendLine(doublesArray[d].ToString());
-            }
+	sb.AppendLine("Every other double from highest to lowest:");
+		for (var d = 0; d < doublesArray.Length; d += 2)
+		{
+			sb.AppendLine(doublesArray[d].ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiToArray_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
+{
+	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
 
-        var sortedDoubles = from d in doubles orderby d descending select d;
+	var sortedDoubles = from d in doubles orderby d descending select d;
 
-        var doublesArray = sortedDoubles.Execute<double[]>("ToArray()");
+	var doublesArray = sortedDoubles.Execute<double[]>("ToArray()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Every other double from highest to lowest:");
-            for (var d = 0; d < doublesArray.Length; d += 2)
-            {
-                sb.AppendLine(doublesArray[d].ToString());
-            }
+	sb.AppendLine("Every other double from highest to lowest:");
+		for (var d = 0; d < doublesArray.Length; d += 2)
+		{
+			sb.AppendLine(doublesArray[d].ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

@@ -19,49 +19,49 @@ This C# example uses the LINQ Any method with a dynamic expression to determine 
 ### LINQ
 {% highlight csharp %}
 private void uiAny_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] words = {"believe", "relief", "receipt", "field"};
+{
+	string[] words = {"believe", "relief", "receipt", "field"};
 
-        var iAfterE = words.Any(w => w.Contains("ei"));
+	var iAfterE = words.Any(w => w.Contains("ei"));
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
+	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiAny_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        string[] words = {"believe", "relief", "receipt", "field"};
+{
+	string[] words = {"believe", "relief", "receipt", "field"};
 
-        var iAfterE = words.Any(w => "w.Contains('ei')");
+	var iAfterE = words.Any(w => "w.Contains('ei')");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
+	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiAny_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] words = {"believe", "relief", "receipt", "field"};
+{
+	string[] words = {"believe", "relief", "receipt", "field"};
 
-        var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");
+	var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
+	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -79,55 +79,55 @@ This C# example uses the LINQ Any method with a dynamic expression to return a g
 {% highlight csharp %}
 
 private void uiAny_Grouped_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var productGroups = products.GroupBy(p => p.Category)
-                .Where(g => g.Any(p => p.UnitsInStock == 0))
-                .Select(g => new {Category = g.Key, Products = g});
+	var productGroups = products.GroupBy(p => p.Category)
+			.Where(g => g.Any(p => p.UnitsInStock == 0))
+			.Select(g => new {Category = g.Key, Products = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, productGroups, 1);
+	My.ObjectDumper.Write(sb, productGroups, 1);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiAny_Grouped_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var productGroups = products.GroupBy(p => p.Category)
-            .Where(g => g.Any(p => "p.UnitsInStock == 0"))
-            .Select(g => new {Category = g.Key, Products = g});
+	var productGroups = products.GroupBy(p => p.Category)
+		.Where(g => g.Any(p => "p.UnitsInStock == 0"))
+		.Select(g => new {Category = g.Key, Products = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, productGroups, 1);
+	My.ObjectDumper.Write(sb, productGroups, 1);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiAny_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var productGroups = products.GroupBy(p => p.Category)
-            .Where(g => g.Execute<bool>("Any(p => p.UnitsInStock == 0)"))
-            .Select(g => new { Category = g.Key, Products = g });
+	var productGroups = products.GroupBy(p => p.Category)
+		.Where(g => g.Execute<bool>("Any(p => p.UnitsInStock == 0)"))
+		.Select(g => new { Category = g.Key, Products = g });
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, productGroups, 1);
+	My.ObjectDumper.Write(sb, productGroups, 1);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

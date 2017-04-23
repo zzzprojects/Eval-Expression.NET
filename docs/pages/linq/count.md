@@ -21,33 +21,33 @@ This C# example uses the LINQ Count method with a dynamic expression to get the 
 ### LINQ
 {% highlight csharp %}
 private void uiCount_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] factorsOf300 = {2, 2, 3, 5, 5};
+{
+	int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-        var uniqueFactors = factorsOf300.Distinct().Count();
+	var uniqueFactors = factorsOf300.Distinct().Count();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
+	sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiCount_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] factorsOf300 = {2, 2, 3, 5, 5};
+{
+	int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-        var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
+	var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
+	sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -64,49 +64,49 @@ This C# example uses the LINQ Count method with a dynamic expression to get the 
 ### LINQ
 {% highlight csharp %}
 private void uiCount_Conditional_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var oddNumbers = numbers.Count(n => n % 2 == 1);
+	var oddNumbers = numbers.Count(n => n % 2 == 1);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
+	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiCount_Conditional_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var oddNumbers = numbers.Count(n => "n % 2 == 1");
+	var oddNumbers = numbers.Count(n => "n % 2 == 1");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
+	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiCount_Conditional_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
+	var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
+	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -123,34 +123,33 @@ This C# example uses the LINQ Count method with a dynamic expression to return a
 ### LINQ
 {% highlight csharp %}
 private void uiCount_Nested_LINQ_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var orderCounts = customers.Select(c => new {c.CustomerID, OrderCount = c.Orders.Count()});
+	var orderCounts = customers.Select(c => new {c.CustomerID, OrderCount = c.Orders.Count()});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderCounts);
+	My.ObjectDumper.Write(sb, orderCounts);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiCount_Nested_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var orderCounts = customers.Execute("Select(c => new { c.CustomerID, OrderCount = c.Orders.Count() })");
+	var orderCounts = customers.Execute("Select(c => new { c.CustomerID, OrderCount = c.Orders.Count() })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderCounts);
+	My.ObjectDumper.Write(sb, orderCounts);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
-
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -347,33 +346,33 @@ This C# example uses the LINQ Count method with a dynamic expression to return a
 ### LINQ
 {% highlight csharp %}
 private void uiCount_Grouped_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categoryCounts = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, ProductCount = g.Count()});
+	var categoryCounts = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, ProductCount = g.Count()});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categoryCounts);
+	My.ObjectDumper.Write(sb, categoryCounts);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiCount_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categoryCounts = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, ProductCount = g.Count() })");
+	var categoryCounts = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, ProductCount = g.Count() })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categoryCounts);
+	My.ObjectDumper.Write(sb, categoryCounts);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

@@ -19,33 +19,33 @@ This C# example uses the LINQ FirstOrDefault method with a dynamic expression to
 ### LINQ
 {% highlight csharp %}
 private void uiFirstOrDefault_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {};
+{
+	int[] numbers = {};
 
-        var firstNumOrDefault = numbers.FirstOrDefault();
+	var firstNumOrDefault = numbers.FirstOrDefault();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine(firstNumOrDefault.ToString());
+	sb.AppendLine(firstNumOrDefault.ToString());
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiFirstOrDefault_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {};
+{
+	int[] numbers = {};
 
-        var firstNumOrDefault = numbers.Execute<int>("FirstOrDefault()");
+	var firstNumOrDefault = numbers.Execute<int>("FirstOrDefault()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine(firstNumOrDefault.ToString());
+	sb.AppendLine(firstNumOrDefault.ToString());
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -62,49 +62,49 @@ This C# example uses the LINQ FirstOrDefault method with a dynamic expression to
 ### LINQ
 {% highlight csharp %}
 private void uiFirstOrDefault_Condition_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var product789 = products.FirstOrDefault(p => p.ProductID == 789);
+	var product789 = products.FirstOrDefault(p => p.ProductID == 789);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Product 789 exists: {0}", product789 != null);
+	sb.AppendLine("Product 789 exists: {0}", product789 != null);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiFirstOrDefault_Condition_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var product789 = products.FirstOrDefault(p => "p.ProductID == 789");
+	var product789 = products.FirstOrDefault(p => "p.ProductID == 789");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Product 789 exists: {0}", product789 != null);
+	sb.AppendLine("Product 789 exists: {0}", product789 != null);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiFirstOrDefault_Condition_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var product789 = products.Execute<My.Product>("FirstOrDefault(p => p.ProductID == 789)");
+	var product789 = products.Execute<My.Product>("FirstOrDefault(p => p.ProductID == 789)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Product 789 exists: {0}", product789 != null);
+	sb.AppendLine("Product 789 exists: {0}", product789 != null);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

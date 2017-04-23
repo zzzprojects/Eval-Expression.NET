@@ -20,33 +20,33 @@ This C# example uses the LINQ Sum method with a dynamic expression to get the to
 ### LINQ
 {% highlight csharp %}
 private void uiSum_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        double numSum = numbers.Sum();
+	double numSum = numbers.Sum();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sum of the numbers is {0}.", numSum);
+	sb.AppendLine("The sum of the numbers is {0}.", numSum);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSum_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var numSum = numbers.Execute<int>("Sum()");
+	var numSum = numbers.Execute<int>("Sum()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sum of the numbers is {0}.", numSum);
+	sb.AppendLine("The sum of the numbers is {0}.", numSum);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -63,17 +63,17 @@ This C# example uses the LINQ Sum method with a dynamic expression to get the to
 ### LINQ
 {% highlight csharp %}
 private void uiSum_Projection_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] words = {"cherry", "apple", "blueberry"};
+{
+	string[] words = {"cherry", "apple", "blueberry"};
 
-        double totalChars = words.Sum(w => w.Length);
+	double totalChars = words.Sum(w => w.Length);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("There are a total of {0} characters in these words.", totalChars);
+	sb.AppendLine("There are a total of {0} characters in these words.", totalChars);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
@@ -106,33 +106,33 @@ This C# example uses the LINQ Sum method with a dynamic expression to get the to
 ### LINQ
 {% highlight csharp %}
 private void uiSum_Grouped_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, TotalUnitsInStock = g.Sum(p => p.UnitsInStock)});
+	var categories = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, TotalUnitsInStock = g.Sum(p => p.UnitsInStock)});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories); 
+	My.ObjectDumper.Write(sb, categories); 
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSum_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, TotalUnitsInStock = g.Sum(p => p.UnitsInStock) })");
+	var categories = products.Execute("GroupBy(p => p.Category).Select(g => new { Category = g.Key, TotalUnitsInStock = g.Sum(p => p.UnitsInStock) })");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, categories);
+	My.ObjectDumper.Write(sb, categories);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

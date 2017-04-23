@@ -99,61 +99,61 @@ This C# example uses the LINQ Where method with a dynamic expression to find all
 ### LINQ
 {% highlight csharp %}
 private void uiWhere_Simple_2_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var soldOutProducts = products.Where(prod => prod.UnitsInStock == 0);
+	var soldOutProducts = products.Where(prod => prod.UnitsInStock == 0);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Sold out products:");
-            foreach (var product in soldOutProducts)
-            {
-                sb.AppendLine("{0} is sold out!", product.ProductName);
-            }
+	sb.AppendLine("Sold out products:");
+		foreach (var product in soldOutProducts)
+		{
+			sb.AppendLine("{0} is sold out!", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiWhere_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var soldOutProducts = products.Where(prod => "prod.UnitsInStock == 0");
+	var soldOutProducts = products.Where(prod => "prod.UnitsInStock == 0");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Sold out products:");
-            foreach (var product in soldOutProducts)
-            {
-                sb.AppendLine("{0} is sold out!", product.ProductName);
-            }
+	sb.AppendLine("Sold out products:");
+		foreach (var product in soldOutProducts)
+		{
+			sb.AppendLine("{0} is sold out!", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiWhere_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var soldOutProducts = products.Execute<IEnumerable<My.Product>>("Where(prod => prod.UnitsInStock == 0)");
+	var soldOutProducts = products.Execute<IEnumerable<My.Product>>("Where(prod => prod.UnitsInStock == 0)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Sold out products:");
-            foreach (var product in soldOutProducts)
-            {
-                sb.AppendLine("{0} is sold out!", product.ProductName);
-            }
+	sb.AppendLine("Sold out products:");
+		foreach (var product in soldOutProducts)
+		{
+			sb.AppendLine("{0} is sold out!", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -175,61 +175,61 @@ This C# example uses the LINQ Where method with a dynamic expression to find all
 ### LINQ
 {% highlight csharp %}
 private void uiWhere_Simple_3_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var expensiveInStockProducts = from prod in products where (prod.UnitsInStock > 0) && (prod.UnitPrice > 3.00M) select prod;
+	var expensiveInStockProducts = from prod in products where (prod.UnitsInStock > 0) && (prod.UnitPrice > 3.00M) select prod;
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("In-stock products that cost more than 3.00:");
-            foreach (var product in expensiveInStockProducts)
-            {
-                sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
-            }
+	sb.AppendLine("In-stock products that cost more than 3.00:");
+		foreach (var product in expensiveInStockProducts)
+		{
+			sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiWhere_Simple_3_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var expensiveInStockProducts = products.Where(prod => "prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M");
+	var expensiveInStockProducts = products.Where(prod => "prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("In-stock products that cost more than 3.00:");
-            foreach (var product in expensiveInStockProducts)
-            {
-                sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
-            }
+	sb.AppendLine("In-stock products that cost more than 3.00:");
+		foreach (var product in expensiveInStockProducts)
+		{
+			sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiWhere_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var expensiveInStockProducts = products.Execute<IEnumerable<My.Product>>("Where(prod => prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M)");
+	var expensiveInStockProducts = products.Execute<IEnumerable<My.Product>>("Where(prod => prod.UnitsInStock > 0 && prod.UnitPrice > 3.00M)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("In-stock products that cost more than 3.00:");
-            foreach (var product in expensiveInStockProducts)
-            {
-                sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
-            }
+	sb.AppendLine("In-stock products that cost more than 3.00:");
+		foreach (var product in expensiveInStockProducts)
+		{
+			sb.AppendLine("{0} is in stock and costs more than 3.00.", product.ProductName);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -317,75 +317,75 @@ This C# example uses the LINQ Where method with a dynamic expression to find all
 ### LINQ
 {% highlight csharp %}
 private void uiWhere_DrillDown_LINQ_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var waCustomers = from cust in customers where cust.Region == "WA" select cust;
+	var waCustomers = from cust in customers where cust.Region == "WA" select cust;
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Customers from Washington and their orders:");
-            foreach (var customer in waCustomers)
-            {
-                sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
+	sb.AppendLine("Customers from Washington and their orders:");
+		foreach (var customer in waCustomers)
+		{
+			sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
 
-                foreach (var order in customer.Orders)
-                {
-                    sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
-                }
-            }
+			foreach (var order in customer.Orders)
+			{
+				sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiWhere_DrillDown_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
-        var customers = My.GetCustomerList();
+	var customers = My.GetCustomerList();
 
-        var waCustomers = customers.Where(cust => "cust.Region == 'WA'");
+	var waCustomers = customers.Where(cust => "cust.Region == 'WA'");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Customers from Washington and their orders:");
-            foreach (var customer in waCustomers)
-            {
-                sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
+	sb.AppendLine("Customers from Washington and their orders:");
+		foreach (var customer in waCustomers)
+		{
+			sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
 
-                foreach (var order in customer.Orders)
-                {
-                    sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
-                }
-            }
+			foreach (var order in customer.Orders)
+			{
+				sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiWhere_DrillDown_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var waCustomers = customers.Execute<IEnumerable<My.Customer>>("Where(cust => cust.Region == 'WA')");
+	var waCustomers = customers.Execute<IEnumerable<My.Customer>>("Where(cust => cust.Region == 'WA')");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Customers from Washington and their orders:");
-            foreach (var customer in waCustomers)
-            {
-                sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
-                foreach (var order in customer.Orders)
-                {
-                    sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
-                }
-            }
+	sb.AppendLine("Customers from Washington and their orders:");
+		foreach (var customer in waCustomers)
+		{
+			sb.AppendLine("Customer {0}: {1}", customer.CustomerID, customer.CompanyName);
+			foreach (var order in customer.Orders)
+			{
+				sb.AppendLine("  Order {0}: {1}", order.OrderID, order.OrderDate);
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -424,61 +424,61 @@ This C# example uses the LINQ Indexed Where method to find all digits whose name
 ### LINQ
 {% highlight csharp %}
 private void uiWhere_Indexed_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var shortDigits = digits.Where((digit, index) => digit.Length < index);
+	var shortDigits = digits.Where((digit, index) => digit.Length < index);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Short digits:");
-            foreach (var d in shortDigits)
-            {
-                sb.AppendLine("The word {0} is shorter than its value.", d);
-            }
+	sb.AppendLine("Short digits:");
+		foreach (var d in shortDigits)
+		{
+			sb.AppendLine("The word {0} is shorter than its value.", d);
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiWhere_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var shortDigits = digits.Where((digit, index) => digit.Length < index);
+	var shortDigits = digits.Where((digit, index) => digit.Length < index);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Short digits:");
-            foreach (var d in shortDigits)
-            {
-                sb.AppendLine("The word {0} is shorter than its value.", d);
-            }
+	sb.AppendLine("Short digits:");
+		foreach (var d in shortDigits)
+		{
+			sb.AppendLine("The word {0} is shorter than its value.", d);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiWhere_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+{
+	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 
-        var shortDigits = digits.Where((digit, index) => digit.Length < index);
+	var shortDigits = digits.Where((digit, index) => digit.Length < index);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Short digits:");
-            foreach (var d in shortDigits)
-            {
-                sb.AppendLine("The word {0} is shorter than its value.", d);
-            }
+	sb.AppendLine("Short digits:");
+		foreach (var d in shortDigits)
+		{
+			sb.AppendLine("The word {0} is shorter than its value.", d);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

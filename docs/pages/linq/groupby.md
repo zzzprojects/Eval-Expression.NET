@@ -23,49 +23,49 @@ This C# example uses the LINQ GroupBy method with a dynamic expression to partit
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_Simple_1_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var numberGroups = numbers.GroupBy(n => n % 5).Select(g => new {Remainder = g.Key, Numbers = g});
+	var numberGroups = numbers.GroupBy(n => n % 5).Select(g => new {Remainder = g.Key, Numbers = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var g in numberGroups)
-            {
-                sb.AppendLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
+		foreach (var g in numberGroups)
+		{
+			sb.AppendLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
 
-                foreach (var n in g.Numbers)
-                {
-                    sb.AppendLine(n.ToString());
-                }
-            }
+			foreach (var n in g.Numbers)
+			{
+				sb.AppendLine(n.ToString());
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiGroupBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+{
+	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-        var numberGroups = numbers.Execute<IEnumerable<IGrouping<int, int>>>("GroupBy(n => n % 5)").Select(g => new {Remainder = g.Key, Numbers = g});
+	var numberGroups = numbers.Execute<IEnumerable<IGrouping<int, int>>>("GroupBy(n => n % 5)").Select(g => new {Remainder = g.Key, Numbers = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var g in numberGroups)
-            {
-                sb.AppendLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
+		foreach (var g in numberGroups)
+		{
+			sb.AppendLine("Numbers with a remainder of {0} when divided by 5:", g.Remainder);
 
-                foreach (var n in g.Numbers)
-                {
-                    sb.AppendLine(n.ToString());
-                }
-            }
+			foreach (var n in g.Numbers)
+			{
+				sb.AppendLine(n.ToString());
+			}
+		}
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -96,49 +96,49 @@ This C# example uses the LINQ GroupBy method with a dynamic expression to partit
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_Simple_2_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
+{
+	string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
 
-        var wordGroups = words.GroupBy(w => w[0]).Select(g => new {FirstLetter = g.Key, Words = g});
+	var wordGroups = words.GroupBy(w => w[0]).Select(g => new {FirstLetter = g.Key, Words = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var g in wordGroups)
-            {
-                sb.AppendLine("Words that start with the letter '{0}':", g.FirstLetter);
+		foreach (var g in wordGroups)
+		{
+			sb.AppendLine("Words that start with the letter '{0}':", g.FirstLetter);
 
-                foreach (var w in g.Words)
-                {
-                    sb.AppendLine(w);
-                }
-            }
+			foreach (var w in g.Words)
+			{
+				sb.AppendLine(w);
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiGroupBy_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
+{
+	string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
 
-        dynamic wordGroups = words.Execute<IEnumerable<IGrouping<char, string>>>("GroupBy(w => w[0])").Select(g => new { FirstLetter = g.Key, Words = g });
+	dynamic wordGroups = words.Execute<IEnumerable<IGrouping<char, string>>>("GroupBy(w => w[0])").Select(g => new { FirstLetter = g.Key, Words = g });
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var g in wordGroups)
-            {
-                sb.AppendLine("Words that start with the letter '{0}':", (object)g.FirstLetter);
+		foreach (var g in wordGroups)
+		{
+			sb.AppendLine("Words that start with the letter '{0}':", (object)g.FirstLetter);
 
-                foreach (var w in g.Words)
-                {
-                    sb.AppendLine(w);
-                }
-            }
+			foreach (var w in g.Words)
+			{
+				sb.AppendLine(w);
+			}
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -163,34 +163,33 @@ This C# example uses the LINQ GroupBy method with a dynamic expression to partit
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_Simple_3_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var orderGroups = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, Products = g});
+	var orderGroups = products.GroupBy(p => p.Category).Select(g => new {Category = g.Key, Products = g});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups);
+	My.ObjectDumper.Write(sb, orderGroups);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiGroupBy_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var orderGroups = products.Execute<IEnumerable<IGrouping<string, My.Product>>>("GroupBy(p => p.Category)").Select(g => new { Category = g.Key, Products = g });
+	var orderGroups = products.Execute<IEnumerable<IGrouping<string, My.Product>>>("GroupBy(p => p.Category)").Select(g => new { Category = g.Key, Products = g });
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups);
+	My.ObjectDumper.Write(sb, orderGroups);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
-
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -291,63 +290,63 @@ This C# example uses the LINQ GroupBy method with a dynamic expression to partit
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_Nested_LINQ_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var customerOrderGroups = customers.Select(c =>
-            new
-                {
-                    c.CompanyName,
-                    YearGroups = c.Orders.GroupBy(o => o.OrderDate.Year).Select(yg =>
-                        new
-                        {
-                            Year = yg,
-                            MonthGroups = yg.GroupBy(o => o.OrderDate.Month).Select(mg =>
-                                new
-                                {
-                                    Month = mg.Key,
-                                    Orders = mg
-                                })
-                        })
-                });
+	var customerOrderGroups = customers.Select(c =>
+		new
+			{
+				c.CompanyName,
+				YearGroups = c.Orders.GroupBy(o => o.OrderDate.Year).Select(yg =>
+					new
+					{
+						Year = yg,
+						MonthGroups = yg.GroupBy(o => o.OrderDate.Month).Select(mg =>
+							new
+							{
+								Month = mg.Key,
+								Orders = mg
+							})
+					})
+			});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, customerOrderGroups, 3);
+	My.ObjectDumper.Write(sb, customerOrderGroups, 3);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiGroupBy_Nested_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-        var customerOrderGroups = customers.Select(c =>
-            new
-                {
-                    c.CompanyName,
-                    YearGroups = c.Orders.Execute<IEnumerable<IGrouping<int, My.Order>>>("GroupBy(o => o.OrderDate.Year)").Select(yg =>
-                        new
-                        {
-                            Year = yg,
-                            MonthGroups = yg.Execute<IEnumerable<IGrouping<int, My.Order>>>("GroupBy(o => o.OrderDate.Month)").Select(mg =>
-                                new
-                                {
-                                    Month = mg.Key,
-                                    Orders = mg
-                                })
-                        })
-                });
+	var customerOrderGroups = customers.Select(c =>
+		new
+			{
+				c.CompanyName,
+				YearGroups = c.Orders.Execute<IEnumerable<IGrouping<int, My.Order>>>("GroupBy(o => o.OrderDate.Year)").Select(yg =>
+					new
+					{
+						Year = yg,
+						MonthGroups = yg.Execute<IEnumerable<IGrouping<int, My.Order>>>("GroupBy(o => o.OrderDate.Month)").Select(mg =>
+							new
+							{
+								Month = mg.Key,
+								Orders = mg
+							})
+					})
+			});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, customerOrderGroups, 3);
+	My.ObjectDumper.Write(sb, customerOrderGroups, 3);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -2154,35 +2153,35 @@ This C# example uses the LINQ GroupBy method to partition trimmed elements of an
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_Comparer_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
+{
+	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
 
-        var orderGroups = anagrams.GroupBy(w => w.Trim(), new AnagramEqualityComparer());
+	var orderGroups = anagrams.GroupBy(w => w.Trim(), new AnagramEqualityComparer());
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups, 1);
+	My.ObjectDumper.Write(sb, orderGroups, 1);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiGroupBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
+{
+	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
 
-        EvalManager.DefaultContext.RegisterType(typeof(AnagramEqualityComparer));
+	EvalManager.DefaultContext.RegisterType(typeof(AnagramEqualityComparer));
 
-        var orderGroups = anagrams.Execute("GroupBy(w => w.Trim(), new AnagramEqualityComparer())");
+	var orderGroups = anagrams.Execute("GroupBy(w => w.Trim(), new AnagramEqualityComparer())");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups, 1);
+	My.ObjectDumper.Write(sb, orderGroups, 1);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -2206,37 +2205,36 @@ This C# example uses the LINQ GroupBy method to partition trimmed elements of an
 ### LINQ
 {% highlight csharp %}
 private void uiGroupBy_ComparerMapped_LINQ_Click(object sender, EventArgs e)
-    {
-        string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
+{
+	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
 
-        var orderGroups = anagrams.GroupBy(w => w.Trim(), a => a.ToUpper(), new AnagramEqualityComparer());
+	var orderGroups = anagrams.GroupBy(w => w.Trim(), a => a.ToUpper(), new AnagramEqualityComparer());
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups, 1);
+	My.ObjectDumper.Write(sb, orderGroups, 1);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 
 private void uiGroupBy_ComparerMapped_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
+{
+	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
 
-        EvalManager.DefaultContext.RegisterType(typeof(AnagramEqualityComparer));
+	EvalManager.DefaultContext.RegisterType(typeof(AnagramEqualityComparer));
 
-        var orderGroups = anagrams.Execute("GroupBy(w => w.Trim(), a => a.ToUpper(), new AnagramEqualityComparer())");
+	var orderGroups = anagrams.Execute("GroupBy(w => w.Trim(), a => a.ToUpper(), new AnagramEqualityComparer())");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, orderGroups, 1);
+	My.ObjectDumper.Write(sb, orderGroups, 1);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
-        
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}    
 {% endhighlight %}
 
 ### Result

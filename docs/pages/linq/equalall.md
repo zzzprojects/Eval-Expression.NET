@@ -19,35 +19,35 @@ This C# example uses the LINQ EqualAll method with a dynamic expression to see i
 ### LINQ
 {% highlight csharp %}
 private void uiEqualAll_1_LINQ_Click(object sender, EventArgs e)
-    {
-        var wordsA = new[] {"cherry", "apple", "blueberry"};
-        var wordsB = new[] {"cherry", "apple", "blueberry"};
+{
+	var wordsA = new[] {"cherry", "apple", "blueberry"};
+	var wordsB = new[] {"cherry", "apple", "blueberry"};
 
-        var match = wordsA.SequenceEqual(wordsB);
+	var match = wordsA.SequenceEqual(wordsB);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sequences match: {0}", match);
+	sb.AppendLine("The sequences match: {0}", match);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiEqualAll_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var wordsA = new[] {"cherry", "apple", "blueberry"};
-        var wordsB = new[] {"cherry", "apple", "blueberry"};
+{
+	var wordsA = new[] {"cherry", "apple", "blueberry"};
+	var wordsB = new[] {"cherry", "apple", "blueberry"};
 
-        var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
+	var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sequences match: {0}", match);
+	sb.AppendLine("The sequences match: {0}", match);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -64,35 +64,35 @@ This C# example uses the LINQ EqualAll method with a dynamic expression to see i
 ### LINQ
 {% highlight csharp %}
 private void uiEqualAll_2_LINQ_Click(object sender, EventArgs e)
-    {
-        var wordsA = new[] {"cherry", "apple", "blueberry"};
-        var wordsB = new[] {"apple", "blueberry", "cherry"};
+{
+	var wordsA = new[] {"cherry", "apple", "blueberry"};
+	var wordsB = new[] {"apple", "blueberry", "cherry"};
 
-        var match = wordsA.SequenceEqual(wordsB);
+	var match = wordsA.SequenceEqual(wordsB);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sequences match: {0}", match);
+	sb.AppendLine("The sequences match: {0}", match);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiEqualAll_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var wordsA = new[] {"cherry", "apple", "blueberry"};
-        var wordsB = new[] {"apple", "blueberry", "cherry"};
+{
+	var wordsA = new[] {"cherry", "apple", "blueberry"};
+	var wordsB = new[] {"apple", "blueberry", "cherry"};
 
-        var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
+	var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("The sequences match: {0}", match);
+	sb.AppendLine("The sequences match: {0}", match);
 
-         My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	 My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

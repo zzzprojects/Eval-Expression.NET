@@ -18,43 +18,42 @@ This C# example uses the LINQ Distinct method with a dynamic expression to remov
 
 ### LINQ
 {% highlight csharp %}
- private void uiDistinct_1_LINQ_Click(object sender, EventArgs e)
-    {
-        int[] factorsOf300 = {2, 2, 3, 5, 5};
+private void uiDistinct_1_LINQ_Click(object sender, EventArgs e)
+{
+	int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-        var uniqueFactors = factorsOf300.Distinct();
+	var uniqueFactors = factorsOf300.Distinct();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Prime factors of 300:");
-			foreach (var f in uniqueFactors)
-            {
-                sb.AppendLine(f.ToString());
-            }
+	sb.AppendLine("Prime factors of 300:");
+		foreach (var f in uniqueFactors)
+		{
+			sb.AppendLine(f.ToString());
+		}
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
-
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiDistinct_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        int[] factorsOf300 = {2, 2, 3, 5, 5};
+{
+	int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-        var uniqueFactors = factorsOf300.Execute<IEnumerable<int>>("Distinct()");
+	var uniqueFactors = factorsOf300.Execute<IEnumerable<int>>("Distinct()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Prime factors of 300:");
-            foreach (var f in uniqueFactors)
-            {
-                sb.AppendLine(f.ToString());
-            }
+	sb.AppendLine("Prime factors of 300:");
+		foreach (var f in uniqueFactors)
+		{
+			sb.AppendLine(f.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -74,42 +73,42 @@ This C# example uses the LINQ Distinct method with a dynamic expression to find 
 ### LINQ
 {% highlight csharp %}
 private void uiDistinct_2_LINQ_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categoryNames = products.Select(x => x.Category).Distinct();
+	var categoryNames = products.Select(x => x.Category).Distinct();
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Category names:");
-            foreach (var n in categoryNames)
-            {
-                sb.AppendLine(n);
-            }
+	sb.AppendLine("Category names:");
+		foreach (var n in categoryNames)
+		{
+			sb.AppendLine(n);
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiDistinct_2_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var products = My.GetProductList();
+{
+	var products = My.GetProductList();
 
-        var categoryNames = products.Execute<IEnumerable<string>>("Select(x => x.Category).Distinct()");
+	var categoryNames = products.Execute<IEnumerable<string>>("Select(x => x.Category).Distinct()");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Category names:");
-            foreach (var n in categoryNames)
-            {
-                sb.AppendLine(n);
-            }
+	sb.AppendLine("Category names:");
+		foreach (var n in categoryNames)
+		{
+			sb.AppendLine(n);
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

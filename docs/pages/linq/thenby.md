@@ -19,61 +19,61 @@ This C# example uses the LINQ ThenBy method with a dynamic expression to sort a 
 ### LINQ
 {% highlight csharp %}
 private void uiThenBy_Simple_1_LINQ_Click(object sender, EventArgs e)
-    {
-		string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+{
+	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-		var sortedDigits = digits.OrderBy(d => d.Length).ThenBy(d => d);
+	var sortedDigits = digits.OrderBy(d => d.Length).ThenBy(d => d);
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("Sorted digits:");
-			foreach (var d in sortedDigits)
-			{
-				sb.AppendLine(d);
-			}
+	sb.AppendLine("Sorted digits:");
+		foreach (var d in sortedDigits)
+		{
+			sb.AppendLine(d);
+		}
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiThenBy_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+{
+	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-		var sortedDigits = digits.OrderBy(d => d.Length).ThenByDynamic(d => "d");
+	var sortedDigits = digits.OrderBy(d => d.Length).ThenByDynamic(d => "d");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("Sorted digits:");
-			foreach (var d in sortedDigits)
-			{
-				sb.AppendLine(d);
-			}
+	sb.AppendLine("Sorted digits:");
+		foreach (var d in sortedDigits)
+		{
+			sb.AppendLine(d);
+		}
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiThenBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
+{
+	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 
-		var sortedDigits = digits.OrderBy(d => d.Length).Execute<IEnumerable<string>>("ThenBy(d => d)");
+	var sortedDigits = digits.OrderBy(d => d.Length).Execute<IEnumerable<string>>("ThenBy(d => d)");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("Sorted digits:");
-			foreach (var d in sortedDigits)
-			{
-				sb.AppendLine(d);
-			}
+	sb.AppendLine("Sorted digits:");
+		foreach (var d in sortedDigits)
+		{
+			sb.AppendLine(d);
+		}
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -100,51 +100,51 @@ This C# example uses the LINQ ThenBy method with a dynamic expression and a cust
 ### LINQ
 {% highlight csharp %}
 private void uiThenBy_Comparer_LINQ_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		var sortedWords = words.OrderBy(a => a.Length).ThenBy(a => a, new CaseInsensitiveComparer());
+	var sortedWords = words.OrderBy(a => a.Length).ThenBy(a => a, new CaseInsensitiveComparer());
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiThenBy_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		var sortedWords = words.OrderBy(a => a.Length).ThenByDynamic(a => "a", new CaseInsensitiveComparer());
+	var sortedWords = words.OrderBy(a => a.Length).ThenByDynamic(a => "a", new CaseInsensitiveComparer());
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiThenBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		EvalManager.DefaultContext.RegisterType(typeof(CaseInsensitiveComparer));
+	EvalManager.DefaultContext.RegisterType(typeof(CaseInsensitiveComparer));
 
-		var sortedWords = words.OrderBy(a => a.Length).Execute<IEnumerable<string>>("ThenBy(a => a, new CaseInsensitiveComparer())");
+	var sortedWords = words.OrderBy(a => a.Length).Execute<IEnumerable<string>>("ThenBy(a => a, new CaseInsensitiveComparer())");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

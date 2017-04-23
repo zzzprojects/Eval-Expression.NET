@@ -23,42 +23,42 @@ This C# example uses the LINQ SelectMany method to make a query that returns all
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_CF_1_LINQ_Click(object sender, EventArgs e)
-	{
-		int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-		int[] numbersB = {1, 3, 5, 7, 8};
+{
+	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+	int[] numbersB = {1, 3, 5, 7, 8};
 
-		var pairs = numbersA.SelectMany(a => numbersB, (a, b) => new {a, b}).Where(arg => arg.a < arg.b);
+	var pairs = numbersA.SelectMany(a => numbersB, (a, b) => new {a, b}).Where(arg => arg.a < arg.b);
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("Pairs where a < b:");
-			foreach (var pair in pairs)
-			{
-				sb.AppendLine("{0} is less than {1}", pair.a, pair.b);
-			}
+	sb.AppendLine("Pairs where a < b:");
+		foreach (var pair in pairs)
+		{
+			sb.AppendLine("{0} is less than {1}", pair.a, pair.b);
+		}
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_CF_1_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
-		int[] numbersB = { 1, 3, 5, 7, 8 };
+{
+	int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
+	int[] numbersB = { 1, 3, 5, 7, 8 };
 
-		var pairs = numbersA.SelectMany(a => numbersB, (a, b) => new { a, b }).Where(arg => arg.a < arg.b);
+	var pairs = numbersA.SelectMany(a => numbersB, (a, b) => new { a, b }).Where(arg => arg.a < arg.b);
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		sb.AppendLine("Pairs where a < b:");
-			foreach (var pair in pairs)
-			{
-				sb.AppendLine("{0} is less than {1}", pair.a, pair.b);
-			}
+	sb.AppendLine("Pairs where a < b:");
+		foreach (var pair in pairs)
+		{
+			sb.AppendLine("{0} is less than {1}", pair.a, pair.b);
+		}
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
 {% endhighlight %}
 
@@ -92,43 +92,43 @@ This C# example uses the LINQ SelectMany method to select all orders where the o
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_CF_2_LINQ_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
+	var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiSelectMany_CF_2_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
+	var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_CF_2_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
+	var orders = from c in customers from o in c.Orders where o.Total < 500.00M select new {c.CustomerID, o.OrderID, o.Total};
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -378,43 +378,43 @@ This C# example uses the LINQ SelectMany method with a dynamic expression to sel
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_CF_3_LINQ_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
 
-		var sb = new StringBuilder();
-	   
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+   
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiSelectMany_CF_3_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_CF_3_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new {c.CustomerID, o.OrderID, o.OrderDate};
 
-		var sb = new StringBuilder();
-	
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -700,43 +700,43 @@ This C# example uses the LINQ SelectMany method with a dynamic expression to sel
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_From_Assignment_LINQ_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiSelectMany_From_Assignment_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();		
+	var sb = new StringBuilder();		
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_From_Assignment_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -937,43 +937,43 @@ This C# example uses the LINQ SelectMany method with a dynamic expression to fil
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_Multiple_From_LINQ_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiSelectMany_Multiple_From_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_Multiple_From_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -1007,43 +1007,43 @@ This C# example uses the LINQ Indexed SelectMany method with a dynamic expressio
 ### LINQ
 {% highlight csharp %}
 private void uiSelectMany_Indexed_LINQ_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiSelectMany_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-		
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+	
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiSelectMany_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		var customers = My.GetCustomerList();
+{
+	var customers = My.GetCustomerList();
 
-		var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
+	var orders = from c in customers from o in c.Orders where o.OrderDate >= new DateTime(1998, 1, 1) select new { c.CustomerID, o.OrderID, o.OrderDate };
 
-		var sb = new StringBuilder();
-	
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	var sb = new StringBuilder();
+
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

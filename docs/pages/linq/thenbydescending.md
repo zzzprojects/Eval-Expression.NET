@@ -20,51 +20,49 @@ This C# example uses the LINQ ThenByDescending method with a dynamic expression 
 ### LINQ
 {% highlight csharp %}
 private void uiThenByDescending_Simple_1_LINQ_Click(object sender, EventArgs e)
-    {
-        List<My.Product> products = My.GetProductList();
+{
+	List<My.Product> products = My.GetProductList();
 
-        var sortedProducts = products.OrderBy(p => p.Category).ThenByDescending(p => p.UnitPrice);
+	var sortedProducts = products.OrderBy(p => p.Category).ThenByDescending(p => p.UnitPrice);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, sortedProducts);
+	My.ObjectDumper.Write(sb, sortedProducts);
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
-
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiThenByDescending_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
-    {
-        List<My.Product> products = My.GetProductList();
+{
+	List<My.Product> products = My.GetProductList();
 
-        var sortedProducts = products.OrderBy(p => p.Category).ThenByDescendingDynamic(p => "p.UnitPrice");
+	var sortedProducts = products.OrderBy(p => p.Category).ThenByDescendingDynamic(p => "p.UnitPrice");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        My.ObjectDumper.Write(sb, sortedProducts);
+	My.ObjectDumper.Write(sb, sortedProducts);
 
-        My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-    }
-
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiThenByDescending_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-		List<My.Product> products = My.GetProductList();
+{
+	List<My.Product> products = My.GetProductList();
 
-		var sortedProducts = products.OrderBy(p => p.Category).Execute<IEnumerable<My.Product>>("ThenByDescending(p => p.UnitPrice)");
+	var sortedProducts = products.OrderBy(p => p.Category).Execute<IEnumerable<My.Product>>("ThenByDescending(p => p.UnitPrice)");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedProducts);
+	My.ObjectDumper.Write(sb, sortedProducts);
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -157,51 +155,51 @@ This C# example uses the LINQ ThenByDescending method with a dynamic expression 
 ### LINQ
 {% highlight csharp %}
 private void uiThenByDescending_Comparer_LINQ_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		var sortedWords = words.OrderBy(a => a.Length).ThenByDescending(a => a, new CaseInsensitiveComparer());
+	var sortedWords = words.OrderBy(a => a.Length).ThenByDescending(a => a, new CaseInsensitiveComparer());
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
 private void uiThenByDescending_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		var sortedWords = words.OrderBy(a => a.Length).ThenByDescendingDynamic(a => "a", new CaseInsensitiveComparer());
+	var sortedWords = words.OrderBy(a => a.Length).ThenByDescendingDynamic(a => "a", new CaseInsensitiveComparer());
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiThenByDescending_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
-	{
-		string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
+{
+	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
 
-		EvalManager.DefaultContext.RegisterType(typeof(CaseInsensitiveComparer));
+	EvalManager.DefaultContext.RegisterType(typeof(CaseInsensitiveComparer));
 
-		var sortedWords = words.OrderBy(a => a.Length).Execute<IEnumerable<string>>("ThenByDescending(a => a, new CaseInsensitiveComparer())");
+	var sortedWords = words.OrderBy(a => a.Length).Execute<IEnumerable<string>>("ThenByDescending(a => a, new CaseInsensitiveComparer())");
 
-		var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-		My.ObjectDumper.Write(sb, sortedWords);
+	My.ObjectDumper.Write(sb, sortedWords);
 
-		My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-	}
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

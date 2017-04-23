@@ -18,36 +18,36 @@ This C# example uses the LINQ Repeat method with a dynamic expression to generat
 ### LINQ
 {% highlight csharp %}
 private void uiRepeat_LINQ_Click(object sender, EventArgs e)
-    {
-        var numbers = Enumerable.Repeat(7, 10);
+{
+	var numbers = Enumerable.Repeat(7, 10);
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var n in numbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+		foreach (var n in numbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiRepeat_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        EvalManager.DefaultContext.RegisterType(typeof(Enumerable));
-        var numbers = Z.Expressions.Eval.Execute<IEnumerable<int>>("Enumerable.Repeat(7, 10)");
+{
+	EvalManager.DefaultContext.RegisterType(typeof(Enumerable));
+	var numbers = Z.Expressions.Eval.Execute<IEnumerable<int>>("Enumerable.Repeat(7, 10)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-            foreach (var n in numbers)
-            {
-                sb.AppendLine(n.ToString());
-            }
+		foreach (var n in numbers)
+		{
+			sb.AppendLine(n.ToString());
+		}
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result

@@ -18,36 +18,34 @@ This C# example uses the LINQ Aggregate method with a dynamic expression to crea
 
 ### LINQ
 {% highlight csharp %}
+private void uiAggregate_Simple_LINQ_Click(object sender, EventArgs e)
+{
+	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
 
- private void uiAggregate_Simple_LINQ_Click(object sender, EventArgs e)
-    {
-        double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
+	var product = doubles.Aggregate((runningProduct, nextFactor) => runningProduct * nextFactor);
 
-        var product = doubles.Aggregate((runningProduct, nextFactor) => runningProduct * nextFactor);
+	var sb = new StringBuilder();
 
-        var sb = new StringBuilder();
+	sb.AppendLine("Total product of all numbers: {0}", product);
 
-        sb.AppendLine("Total product of all numbers: {0}", product);
-
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
-    
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
 private void uiAggregate_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
+{
+	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
 
-        var product = doubles.Execute<double>("Aggregate((runningProduct, nextFactor) => runningProduct * nextFactor)");
+	var product = doubles.Execute<double>("Aggregate((runningProduct, nextFactor) => runningProduct * nextFactor)");
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Total product of all numbers: {0}", product);
+	sb.AppendLine("Total product of all numbers: {0}", product);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
@@ -63,42 +61,38 @@ This C# example uses the LINQ Aggregate method with a dynamic expression to crea
 
 ### LINQ
 {% highlight csharp %}
+private void uiAggregate_Seed_LINQ_Click(object sender, EventArgs e)
+{
+	var startBalance = 100.0;
 
- private void uiAggregate_Seed_LINQ_Click(object sender, EventArgs e)
-    {
-        var startBalance = 100.0;
+	int[] attemptedWithdrawals = {20, 10, 40, 50, 10, 70, 30};
 
-        int[] attemptedWithdrawals = {20, 10, 40, 50, 10, 70, 30};
+	var endBalance = attemptedWithdrawals.Aggregate(startBalance, (balance, nextWithdrawal) => nextWithdrawal <= balance ? balance - nextWithdrawal : balance);
 
-        var endBalance = attemptedWithdrawals.Aggregate(startBalance, (balance, nextWithdrawal) => nextWithdrawal <= balance ? balance - nextWithdrawal : balance);
+	var sb = new StringBuilder();
 
-        var sb = new StringBuilder();
+	sb.AppendLine("Ending balance: {0}", endBalance);
 
-        sb.AppendLine("Ending balance: {0}", endBalance);
-
-        My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-    }
-    
+	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+}  
 {% endhighlight %}
 
 ### LINQ Execute
 {% highlight csharp %}
-
 private void uiAggregate_Seed_LINQ_Execute_Click(object sender, EventArgs e)
-    {
-        var startBalance = 100.0;
+{
+	var startBalance = 100.0;
 
-        int[] attemptedWithdrawals = {20, 10, 40, 50, 10, 70, 30};
+	int[] attemptedWithdrawals = {20, 10, 40, 50, 10, 70, 30};
 
-        var endBalance = attemptedWithdrawals.Execute<double>("Aggregate(startBalance, (balance, nextWithdrawal) => ((nextWithdrawal <= balance) ? (balance - nextWithdrawal) : balance)", new {startBalance});
+	var endBalance = attemptedWithdrawals.Execute<double>("Aggregate(startBalance, (balance, nextWithdrawal) => ((nextWithdrawal <= balance) ? (balance - nextWithdrawal) : balance)", new {startBalance});
 
-        var sb = new StringBuilder();
+	var sb = new StringBuilder();
 
-        sb.AppendLine("Ending balance: {0}", endBalance);
+	sb.AppendLine("Ending balance: {0}", endBalance);
 
-        My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-    }
-    
+	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+}
 {% endhighlight %}
 
 ### Result
