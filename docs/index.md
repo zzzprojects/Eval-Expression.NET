@@ -110,7 +110,7 @@ layout: post
 						<!-- navbar-bar-menu !-->
 						<ul class="nav navbar-nav pull-xs-right navbar-nav-menu hidden-md-down">
 							<li class="nav-item">
-								<a class="nav-link" href="https://github.com/zzzprojects/Eval-Expression.NET/wiki" target="_blank">Wiki</a>
+								<a class="nav-link" href="tutorials" target="_blank">Tutorials</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="https://github.com/zzzprojects/Eval-Expression.NET/issues" target="_blank">Forum</a>

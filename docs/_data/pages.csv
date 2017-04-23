@@ -15,6 +15,43 @@ Compile & Execute,compile-execute,api
 Register & Unregister,register-unregister,api
 Options,options,api
 Eval Manager,eval-manager,api
+Where,linq-dynamic-where-examples,linq
+Select,linq-dynamic-select-examples,linq
+SelectMany,linq-dynamic-selectmany-examples,linq
+Take,linq-dynamic-take-examples,linq
+Skip,linq-dynamic-skip-examples,linq
+TakeWhile,linq-dynamic-takewhile-examples,linq
+SkipWhile,linq-dynamic-skipwhile-examples,linq
+OrderBy,linq-dynamic-orderby-examples,linq
+OrderByDescending,linq-dynamic-orderbydescending-examples,linq
+ThenBy,linq-dynamic-thenby-examples,linq
+ThenByDescending,linq-dynamic-thenbydescending-examples,linq
+Reverse,linq-dynamic-reverse-examples,linq
+GroupBy,linq-dynamic-groupby-examples,linq
+Distinct,linq-dynamic-distinct-examples,linq
+Union,linq-dynamic-union-examples,linq
+Intersect,linq-dynamic-intersect-examples,linq
+Except,linq-dynamic-except-examples,linq
+ToArray,linq-dynamic-toarray-examples,linq
+ToList,linq-dynamic-tolist-examples,linq
+ToDictionary,linq-dynamic-todictionary-examples,linq
+OfType,linq-dynamic-oftype-examples,linq
+First,linq-dynamic-first-examples,linq
+First,linq-dynamic-firstordefault-examples,linq
+ElementAt,linq-dynamic-elementat-examples,linq
+Range,linq-dynamic-range-examples,linq
+Repeat,linq-dynamic-repeat-examples,linq
+Any,linq-dynamic-any-examples,linq
+All,linq-dynamic-all-examples,linq
+Count,linq-dynamic-count-examples,linq
+Sum,linq-dynamic-sum-examples,linq
+Min,linq-dynamic-min-examples,linq
+Max,linq-dynamic-max-examples,linq
+Average,linq-dynamic-average-examples,linq
+Aggregate,linq-dynamic-aggregate-examples,linq
+Concat,linq-dynamic-concat-examples,linq
+EqualAll,linq-dynamic-equalall-examples,linq
+Combine,linq-dynamic-combine-examples,linq
 LINQ Dynamic,linq-dynamic-method,linq-dynamic
 LINQ Execute,linq-execute-method,linq-dynamic
 Articles,articles,articles

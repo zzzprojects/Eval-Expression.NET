@@ -13,7 +13,7 @@
     	<title>C# Expression Evaluator - {{ page.title }}</title>
     
 	<!-- icon/css !-->
-	<link rel="icon" type="image/png" href="http://entityframework-extensions.net/images/logo.png" />
+	<link rel="icon" type="image/png" href="images/logo.png" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link rel="stylesheet" href="css/main_css_file.css">
@@ -33,7 +33,7 @@
 				
 					<!-- navbar-brand !-->
 					<div class="navbar-brand">
-						<a href="http://bulkoperations.net">
+						<a href="{{ site.github.url }}/">
 							<img src="http://entityframework-extensions.net/images/logo.png" />
 							C# Eval Expression
 							<span class="text-red">Tutorials</span>
@@ -44,13 +44,13 @@
 					<div class="navbar-menu navbar-collapse justify-content-end">			
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link" href="http://bulk-operations.net/#feature">Features</a>
+								<a class="nav-link" href="{{ site.github.url }}/#feature">Features</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://bulk-operations.net/tutorials">Tutorials</a>
+								<a class="nav-link" href="/tutorials">Tutorials</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="http://bulk-operations.net/#pricing">Buy</a>
+								<a class="nav-link" href="{{ site.github.url }}/#pricing">Buy</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="mailto:info@zzzprojects.com">Contact</a>
@@ -82,8 +82,8 @@
 							{% if page.path contains "/api/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}					
 								<a class="nav-link" href="api">API</a>
 							</li>
-							{% if page.path contains "/linq-dynamic/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
-								<a class="nav-link" href="linq-dynamic">LINQ Dynamic</a>
+							{% if page.path contains "/linq/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
+								<a class="nav-link" href="linq-dynamic-example">LINQ Dynamic</a>
 							</li>
 							{% if page.path contains "/faq/" %} <li class="nav-item active"> {% else %} <li class="nav-item"> {% endif %}
 								<a class="nav-link" href="faq">FAQ</a>
@@ -104,7 +104,7 @@
 		
 			<!-- header-brand !-->
 			<div class="header-brand">
-				<a href="http://bulkoperations.net">
+				<a href="{{ site.github.url }}/">
 					<img src="http://entityframework-plus.net/images/logo.png" />
 					Entity Framework
 					<span class="text-red">Extensions</span>

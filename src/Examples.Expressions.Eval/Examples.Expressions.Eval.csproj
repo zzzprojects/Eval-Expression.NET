@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{00AE0D7A-6F9E-4966-B42A-DD0571B212F7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Examples.Expressions.Eval</RootNamespace>
+    <AssemblyName>Examples.Expressions.Eval</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Z.Expressions.Eval, Version=2.0.5.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Z.Expressions.Eval.2.0.5\lib\net45\Z.Expressions.Eval.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Aggregate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Aggregate.Designer.cs">
+      <DependentUpon>Aggregate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Average.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Average.Designer.cs">
+      <DependentUpon>Average.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Count.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Count.Designer.cs">
+      <DependentUpon>Count.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Max.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Max.Designer.cs">
+      <DependentUpon>Max.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Min.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Min.Designer.cs">
+      <DependentUpon>Min.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Sum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Aggregate_Operators\Sum.Designer.cs">
+      <DependentUpon>Sum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\OfType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\OfType.Designer.cs">
+      <DependentUpon>OfType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToDictionary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToDictionary.Designer.cs">
+      <DependentUpon>ToDictionary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToList.Designer.cs">
+      <DependentUpon>ToList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToArray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Conversion_Operators\ToArray.Designer.cs">
+      <DependentUpon>ToArray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Custom_Sequence_Operators\Combine.cs" />
+    <Compile Include="LINQ_Dynamic\Custom_Sequence_Operators\Combine.Designer.cs">
+      <DependentUpon>Combine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\ElementAt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\ElementAt.Designer.cs">
+      <DependentUpon>ElementAt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\FirstOrDefault.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\FirstOrDefault.Designer.cs">
+      <DependentUpon>FirstOrDefault.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\First.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Element_Operators\First.Designer.cs">
+      <DependentUpon>First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Generation_Operators\Repeat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Generation_Operators\Repeat.Designer.cs">
+      <DependentUpon>Repeat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Generation_Operators\Range.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Generation_Operators\Range.Designer.cs">
+      <DependentUpon>Range.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Grouping_Operators\GroupBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Grouping_Operators\GroupBy.Designer.cs">
+      <DependentUpon>GroupBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\CrossJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\CrossJoin.Designer.cs">
+      <DependentUpon>CrossJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\CrossJoinwithGroupJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\CrossJoinwithGroupJoin.Designer.cs">
+      <DependentUpon>CrossJoinwithGroupJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\GroupJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\GroupJoin.Designer.cs">
+      <DependentUpon>GroupJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\LeftOuterJoin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Join_Operators\LeftOuterJoin.Designer.cs">
+      <DependentUpon>LeftOuterJoin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Miscellaneous_Operators\EqualAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Miscellaneous_Operators\EqualAll.Designer.cs">
+      <DependentUpon>EqualAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Miscellaneous_Operators\Concat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Miscellaneous_Operators\Concat.Designer.cs">
+      <DependentUpon>Concat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\OrderBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\OrderBy.Designer.cs">
+      <DependentUpon>OrderBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\Reverse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\Reverse.Designer.cs">
+      <DependentUpon>Reverse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\ThenByDescending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\ThenByDescending.Designer.cs">
+      <DependentUpon>ThenByDescending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\ThenBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\ThenBy.Designer.cs">
+      <DependentUpon>ThenBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\OrderByDescending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Ordering_Operators\OrderByDescending.Designer.cs">
+      <DependentUpon>OrderByDescending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\Skip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\Skip.Designer.cs">
+      <DependentUpon>Skip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\SkipWhile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\SkipWhile.Designer.cs">
+      <DependentUpon>SkipWhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\Take.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\Take.Designer.cs">
+      <DependentUpon>Take.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\TakeWhile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Partitioning_Operators\TakeWhile.Designer.cs">
+      <DependentUpon>TakeWhile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Projection_Operators\Select.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Projection_Operators\Select.Designer.cs">
+      <DependentUpon>Select.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Projection_Operators\SelectMany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Projection_Operators\SelectMany.Designer.cs">
+      <DependentUpon>SelectMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Quantifiers\All.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Quantifiers\All.Designer.cs">
+      <DependentUpon>All.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Quantifiers\Any.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Quantifiers\Any.Designer.cs">
+      <DependentUpon>Any.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\DeferredExecution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\DeferredExecution.Designer.cs">
+      <DependentUpon>DeferredExecution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\ImmediateExecution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\ImmediateExecution.Designer.cs">
+      <DependentUpon>ImmediateExecution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\QueryReuse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Query_Execution\QueryReuse.Designer.cs">
+      <DependentUpon>QueryReuse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Distinct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Distinct.Designer.cs">
+      <DependentUpon>Distinct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Except.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Except.Designer.cs">
+      <DependentUpon>Except.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Intersect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Intersect.Designer.cs">
+      <DependentUpon>Intersect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Union.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Set_Operators\Union.Designer.cs">
+      <DependentUpon>Union.cs</DependentUpon>
+    </Compile>
+    <Compile Include="My.cs" />
+    <Compile Include="StartupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartupForm.Designer.cs">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Restriction_Operators\Where.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LINQ_Dynamic\Restriction_Operators\Where.Designer.cs">
+      <DependentUpon>Where.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Aggregate.resx">
+      <DependentUpon>Aggregate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Average.resx">
+      <DependentUpon>Average.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Count.resx">
+      <DependentUpon>Count.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Max.resx">
+      <DependentUpon>Max.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Min.resx">
+      <DependentUpon>Min.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Aggregate_Operators\Sum.resx">
+      <DependentUpon>Sum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Conversion_Operators\OfType.resx">
+      <DependentUpon>OfType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Conversion_Operators\ToDictionary.resx">
+      <DependentUpon>ToDictionary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Conversion_Operators\ToList.resx">
+      <DependentUpon>ToList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Conversion_Operators\ToArray.resx">
+      <DependentUpon>ToArray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Custom_Sequence_Operators\Combine.resx">
+      <DependentUpon>Combine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Element_Operators\ElementAt.resx">
+      <DependentUpon>ElementAt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Element_Operators\FirstOrDefault.resx">
+      <DependentUpon>FirstOrDefault.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Element_Operators\First.resx">
+      <DependentUpon>First.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Generation_Operators\Repeat.resx">
+      <DependentUpon>Repeat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Generation_Operators\Range.resx">
+      <DependentUpon>Range.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Grouping_Operators\GroupBy.resx">
+      <DependentUpon>GroupBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Join_Operators\CrossJoin.resx">
+      <DependentUpon>CrossJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Join_Operators\CrossJoinwithGroupJoin.resx">
+      <DependentUpon>CrossJoinwithGroupJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Join_Operators\GroupJoin.resx">
+      <DependentUpon>GroupJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Join_Operators\LeftOuterJoin.resx">
+      <DependentUpon>LeftOuterJoin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Miscellaneous_Operators\EqualAll.resx">
+      <DependentUpon>EqualAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Miscellaneous_Operators\Concat.resx">
+      <DependentUpon>Concat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Ordering_Operators\OrderBy.resx">
+      <DependentUpon>OrderBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Ordering_Operators\Reverse.resx">
+      <DependentUpon>Reverse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Ordering_Operators\ThenByDescending.resx">
+      <DependentUpon>ThenByDescending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Ordering_Operators\ThenBy.resx">
+      <DependentUpon>ThenBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Ordering_Operators\OrderByDescending.resx">
+      <DependentUpon>OrderByDescending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Partitioning_Operators\Skip.resx">
+      <DependentUpon>Skip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Partitioning_Operators\SkipWhile.resx">
+      <DependentUpon>SkipWhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Partitioning_Operators\Take.resx">
+      <DependentUpon>Take.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Partitioning_Operators\TakeWhile.resx">
+      <DependentUpon>TakeWhile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Projection_Operators\Select.resx">
+      <DependentUpon>Select.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Projection_Operators\SelectMany.resx">
+      <DependentUpon>SelectMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Quantifiers\All.resx">
+      <DependentUpon>All.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Quantifiers\Any.resx">
+      <DependentUpon>Any.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Query_Execution\DeferredExecution.resx">
+      <DependentUpon>DeferredExecution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Query_Execution\ImmediateExecution.resx">
+      <DependentUpon>ImmediateExecution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Query_Execution\QueryReuse.resx">
+      <DependentUpon>QueryReuse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Set_Operators\Distinct.resx">
+      <DependentUpon>Distinct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Set_Operators\Except.resx">
+      <DependentUpon>Except.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Set_Operators\Intersect.resx">
+      <DependentUpon>Intersect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Set_Operators\Union.resx">
+      <DependentUpon>Union.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartupForm.resx">
+      <DependentUpon>StartupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LINQ_Dynamic\Restriction_Operators\Where.resx">
+      <DependentUpon>Where.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="_DataSource\Customers.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
