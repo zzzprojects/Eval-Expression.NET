@@ -383,12 +383,12 @@ var name = nameGetter(customer);
 					<div class="col-sm-6 col-lg-3">
 						<div class="card">
 							<div class="card-block">
-								<h4 class="card-title">Wiki</h4>
+								<h4 class="card-title">Tutorials</h4>
 							</div>
-							<a href="https://github.com/zzzprojects/Eval-Expression.NET/wiki" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});"><i class="fa fa-folder-open fa-5x"></i></a>
+							<a href="tutorials"><i class="fa fa-folder-open fa-5x"></i></a>
 							<div class="card-block">
 								<p class="card-text">Consult our complete documentation to help you getting started.</p>
-								<a href="https://github.com/zzzprojects/Eval-Expression.NET/wiki" target="_blank" onclick="ga('send', 'event', { eventAction: 'github'});">Wiki</a>
+								<a href="tutorials">Tutorials</a>
 							</div>
 						</div>
 					</div>
