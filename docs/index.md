@@ -113,7 +113,7 @@ layout: post
 								<a class="nav-link" href="tutorials">Tutorials</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="https://github.com/zzzprojects/Eval-Expression.NET/issues" target="_blank">Forum</a>
+								<a class="nav-link" href="https://github.com/zzzprojects/Eval-Expression.NET/issues" target="_blank">Issues</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#pro">Buy</a>
