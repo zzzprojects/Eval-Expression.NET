@@ -354,7 +354,7 @@ var name = nameGetter(customer);
 				</div>	
 				
 				<!-- more-feature !-->
-				<p class="more-feature"><a href="https://github.com/zzzprojects/Eval-Expression.NET/wiki" target="_blank" class="btn btn-primary btn-lg" role="button"><span><i class="fa fa-book"></i>&nbsp;<span>View More Features</span></span></a></p>
+				<p class="more-feature"><a href="http://eval-expression.net/tutorials" target="_blank" class="btn btn-primary btn-lg" role="button"><span><i class="fa fa-book"></i>&nbsp;<span>View More Features</span></span></a></p>
 				
 			</div>
 		</div>
