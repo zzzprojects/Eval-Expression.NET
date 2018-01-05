@@ -34,6 +34,22 @@ var context = new EvalContext();
 context.CacheKey = Guid.NewGuid().ToString();
 {% endhighlight %}
 
+## IncludeMemberFromAllParameters
+Gets or sets if all members should be included from all parameters.
+
+By default, member are only included when one parameter is specified.
+
+> This configuration can be very useful to disable if you execute multiple expression only once, and you believe they will never be re-used.
+
+### Example
+{% highlight csharp %}
+// using Z.Expressions; // Don't forget to include this.
+var context = new EvalContext();
+context.IncludeMemberFromAllParameters = true;
+
+Eval.Execute<bool>("catPropertyName == dogPropertyName", cat, dog);
+{% endhighlight %}
+
 ## UseCache
 Gets or sets if compiled delegate shoud be cached in the memory or not. 
 
