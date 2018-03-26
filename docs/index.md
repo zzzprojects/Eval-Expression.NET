@@ -219,7 +219,8 @@ int result = Eval.Execute<int>(@"
 // - Anonymous Type
 // - Extension Methods
 // - Generic Type
-{% endhighlight %}		
+{% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/MHoctF' %}
 							</div>
 						</div>
 					</div>
