@@ -19,44 +19,34 @@ This C# example uses the LINQ Concat method with a dynamic expression to create 
 ### LINQ
 {% highlight csharp %}
 private void uiConcat_1_LINQ_Click(object sender, EventArgs e)
+int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+int[] numbersB = {1, 3, 5, 7, 8};
+
+var allNumbers = numbersA.Concat(numbersB);
+
+Console.WriteLine("All numbers from both arrays:");
+foreach (var n in allNumbers)
 {
-	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-	int[] numbersB = {1, 3, 5, 7, 8};
-
-	var allNumbers = numbersA.Concat(numbersB);
-
-	var sb = new StringBuilder();
-
-	sb.AppendLine("All numbers from both arrays:");
-		foreach (var n in allNumbers)
-		{
-			sb.AppendLine(n.ToString());
-		}
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+	Console.WriteLine(n);
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/bwa68e' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiConcat_1_LINQ_Execute_Click(object sender, EventArgs e)
+int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+int[] numbersB = {1, 3, 5, 7, 8};
+
+var allNumbers = numbersA.Execute<IEnumerable<int>>("Concat(numbersB)", new {numbersB});
+
+
+Console.WriteLine("All numbers from both arrays:");
+foreach (var n in allNumbers)
 {
-	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-	int[] numbersB = {1, 3, 5, 7, 8};
-
-	var allNumbers = numbersA.Execute<IEnumerable<int>>("Concat(numbersB)", new {numbersB});
-
-	var sb = new StringBuilder();
-
-	sb.AppendLine("All numbers from both arrays:");
-		foreach (var n in allNumbers)
-		{
-			sb.AppendLine(n.ToString());
-		}
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+	Console.WriteLine(n.ToString());
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/kIv2qY' %}
 
 ### Result
 {% highlight text %}
