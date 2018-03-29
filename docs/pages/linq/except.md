@@ -18,45 +18,33 @@ This C# example uses the LINQ Except method with a dynamic expression to create 
 
 ### LINQ
 {% highlight csharp %}
-private void uiExcept_1_LINQ_Click(object sender, EventArgs e)
+int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+int[] numbersB = {1, 3, 5, 7, 8};
+
+var aOnlyNumbers = numbersA.Except(numbersB);
+
+Console.WriteLine("Numbers in first array but not second array:");
+foreach (var n in aOnlyNumbers)
 {
-	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-	int[] numbersB = {1, 3, 5, 7, 8};
-
-	var aOnlyNumbers = numbersA.Except(numbersB);
-
-	var sb = new StringBuilder();
-
-	sb.AppendLine("Numbers in first array but not second array:");
-		foreach (var n in aOnlyNumbers)
-		{
-			sb.AppendLine(n.ToString());
-		}
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+	Console.WriteLine(n.ToString());
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/oynmkt' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiExcept_1_LINQ_Execute_Click(object sender, EventArgs e)
+int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
+int[] numbersB = {1, 3, 5, 7, 8};
+
+var aOnlyNumbers = numbersA.Execute<IEnumerable<int>>("Except(numbersB)", new {numbersB});
+
+Console.WriteLine("Numbers in first array but not second array:");
+foreach (var n in aOnlyNumbers)
 {
-	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
-	int[] numbersB = {1, 3, 5, 7, 8};
-
-	var aOnlyNumbers = numbersA.Execute<IEnumerable<int>>("Except(numbersB)", new {numbersB});
-
-	var sb = new StringBuilder();
-
-	sb.AppendLine("Numbers in first array but not second array:");
-		foreach (var n in aOnlyNumbers)
-		{
-			sb.AppendLine(n.ToString());
-		}
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
+	Console.WriteLine(n.ToString());
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/uPQUlu' %}
 
 ### Result
 {% highlight text %}
