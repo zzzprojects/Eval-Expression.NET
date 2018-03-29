@@ -31,6 +31,7 @@ private void uiAggregate_Simple_LINQ_Click(object sender, EventArgs e)
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/BZLbt5' %}
 
 ### LINQ Execute
 {% highlight csharp %}
@@ -46,6 +47,7 @@ private void uiAggregate_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
+{% include  component-try-it.html href='https://dotnetfiddle.net/HbOEOt' %}
 {% endhighlight %}
 
 ### Result
@@ -76,6 +78,7 @@ private void uiAggregate_Seed_LINQ_Click(object sender, EventArgs e)
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }  
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/LqobT0' %}
 
 ### LINQ Execute
 {% highlight csharp %}
@@ -94,6 +97,7 @@ private void uiAggregate_Seed_LINQ_Execute_Click(object sender, EventArgs e)
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/p67L8v' %}
 
 ### Result
 {% highlight text %}
