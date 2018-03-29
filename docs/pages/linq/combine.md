@@ -17,39 +17,26 @@ This C# example uses the LINQ Combine method with a dynamic expression to calcul
 
 ### LINQ
 {% highlight csharp %}
-private void uiCombine_LINQ_Click(object sender, EventArgs e)
-{
-	int[] vectorA = {0, 2, 4, 5, 6};
-	int[] vectorB = {1, 3, 5, 7, 8};
+int[] vectorA = {0, 2, 4, 5, 6};
+int[] vectorB = {1, 3, 5, 7, 8};
 
-	var dotProduct = vectorA.Combine(vectorB, (a, b) => a * b).Sum();
+var dotProduct = vectorA.Combine(vectorB, (a, b) => a * b).Sum();
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("Dot product: {0}", dotProduct);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("Dot product: {0}", dotProduct);
 {% endhighlight %}
-
+{% include  component-try-it.html href='https://dotnetfiddle.net/sqa5uV' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiCombine_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	int[] vectorA = {0, 2, 4, 5, 6};
-	int[] vectorB = {1, 3, 5, 7, 8};
+int[] vectorA = {0, 2, 4, 5, 6};
+int[] vectorB = {1, 3, 5, 7, 8};
 
-	EvalManager.DefaultContext.RegisterExtensionMethod(typeof(CustomSequenceOperators));
-	var dotProduct = vectorA.Execute<int>("Combine(vectorB, (a, b) => a * b).Sum()", new {vectorB});
+EvalManager.DefaultContext.RegisterExtensionMethod(typeof(CustomSequenceOperators));
+var dotProduct = vectorA.Execute<int>("Combine(vectorB, (a, b) => a * b).Sum()", new {vectorB});
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("Dot product: {0}", dotProduct);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("Dot product: {0}", dotProduct);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/DR5a6p' %}
 
 ### Result
 {% highlight text %}
