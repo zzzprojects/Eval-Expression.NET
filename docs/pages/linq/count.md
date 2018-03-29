@@ -20,35 +20,23 @@ This C# example uses the LINQ Count method with a dynamic expression to get the 
 
 ### LINQ
 {% highlight csharp %}
-private void uiCount_Simple_LINQ_Click(object sender, EventArgs e)
-{
-	int[] factorsOf300 = {2, 2, 3, 5, 5};
+int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-	var uniqueFactors = factorsOf300.Distinct().Count();
+var uniqueFactors = factorsOf300.Distinct().Count();
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);	
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/2HAQox' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiCount_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	int[] factorsOf300 = {2, 2, 3, 5, 5};
+int[] factorsOf300 = {2, 2, 3, 5, 5};
 
-	var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
+var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There are {0} unique factors of 300.", uniqueFactors);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/1Xc6yM' %}
 
 ### Result
 {% highlight text %}
@@ -63,51 +51,33 @@ This C# example uses the LINQ Count method with a dynamic expression to get the 
 
 ### LINQ
 {% highlight csharp %}
-private void uiCount_Conditional_LINQ_Click(object sender, EventArgs e)
-{
-	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-	var oddNumbers = numbers.Count(n => n % 2 == 1);
+var oddNumbers = numbers.Count(n => n % 2 == 1);
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/3LGjG3' %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
-private void uiCount_Conditional_LINQ_Dynamic_Click(object sender, EventArgs e)
-{
-	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-	var oddNumbers = numbers.Count(n => "n % 2 == 1");
+var oddNumbers = numbers.Count(n => "n % 2 == 1");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
-
-	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-}
+Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/P2zgkd' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiCount_Conditional_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-	var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
+var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There are {0} odd numbers in the list.", oddNumbers);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/UY9frV' %}
 
 ### Result
 {% highlight text %}
