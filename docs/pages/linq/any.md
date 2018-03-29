@@ -18,51 +18,33 @@ This C# example uses the LINQ Any method with a dynamic expression to determine 
 
 ### LINQ
 {% highlight csharp %}
-private void uiAny_Simple_LINQ_Click(object sender, EventArgs e)
-{
-	string[] words = {"believe", "relief", "receipt", "field"};
+string[] words = {"believe", "relief", "receipt", "field"};
 
-	var iAfterE = words.Any(w => w.Contains("ei"));
+var iAfterE = words.Any(w => w.Contains("ei"));
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/36Tkzn' %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
-private void uiAny_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
-{
-	string[] words = {"believe", "relief", "receipt", "field"};
+string[] words = {"believe", "relief", "receipt", "field"};
 
-	var iAfterE = words.Any(w => "w.Contains('ei')");
+var iAfterE = words.Any(w => "w.Contains('ei')");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-
-	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-}
+Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/gXwUhP' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiAny_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	string[] words = {"believe", "relief", "receipt", "field"};
+string[] words = {"believe", "relief", "receipt", "field"};
 
-	var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");
+var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");		
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/PEGWxp' %}
 
 ### Result
 {% highlight text %}
@@ -77,22 +59,24 @@ This C# example uses the LINQ Any method with a dynamic expression to return a g
 
 ### LINQ
 {% highlight csharp %}
+var products = getList();
 
-private void uiAny_Grouped_LINQ_Click(object sender, EventArgs e)
+var productGroups = products.GroupBy(p => p.Category)
+	.Where(g => g.Any(p => p.UnitsInStock == 0))
+	.Select(g => new {Category = g.Key, Products = g});
+
+Console.WriteLine("Count before Any : " + products.Count());
+
+int newCount = 0;
+
+foreach (var group in productGroups) 
 {
-	var products = My.GetProductList();
-
-	var productGroups = products.GroupBy(p => p.Category)
-			.Where(g => g.Any(p => p.UnitsInStock == 0))
-			.Select(g => new {Category = g.Key, Products = g});
-
-	var sb = new StringBuilder();
-
-	My.ObjectDumper.Write(sb, productGroups, 1);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+	newCount+= group.Products.Count();
 }
+
+Console.WriteLine("Count After Any : " + newCount);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/GXuk1q' %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
