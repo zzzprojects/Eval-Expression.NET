@@ -219,7 +219,8 @@ int result = Eval.Execute<int>(@"
 // - Anonymous Type
 // - Extension Methods
 // - Generic Type
-{% endhighlight %}		
+{% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/MHoctF' %}
 							</div>
 						</div>
 					</div>
@@ -251,6 +252,7 @@ int result = Eval.Execute<int>(@"
 var list = new List<int>() { 1, 2, 3, 4, 5 };
 return list.Where(x => x > X).Take(Y).Count();", new { X = 1, Y = 2});
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/j3WHx1' %}
 					</div>
 				</div>
 			</div>
@@ -304,6 +306,8 @@ int result = Eval.Execute<int>("X + Y", values);
 // Argument Position
 int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/V6cZ0K' %}
+	
 					</div>
 				</div>
 
@@ -326,6 +330,7 @@ int result = Eval.Execute<int>(@"
 var list = new List<int>() { 1, 2, 3, 4, 5 };
 return list.Where(x => x > X).Take(Y).Count();", new { X = 1, Y = 2});
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/eZM4mh' %}
 					</div>
 				</div>
 
@@ -350,6 +355,7 @@ var customer = new Customer() { Name = "ZZZ" };
 var nameGetter = Eval.Compile<Func<Customer, string>>("x.Name", "x");
 var name = nameGetter(customer);
 {% endhighlight %}	
+{% include  component-try-it.html href='https://dotnetfiddle.net/yW8S35' %}
 					</div>
 				</div>	
 				

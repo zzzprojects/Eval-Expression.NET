@@ -33,6 +33,7 @@ compiled(1, 2);
 var compiled = Eval.Compile<Func<int, int, int>>("X + Y", "X", "Y");
 int result = compiled(1, 2);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/MBHlX8' %}
 
 ## Compile and return a delegate
 You can return the delegate as a generic delegate:
@@ -64,5 +65,6 @@ var types = values.ToDictionary(x => x.Key, x => x.Value.GetType());
 var compiled = Eval.Compile("X + Y", types);
 var result = compiled(values);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/PY1TRM' %}
 
 

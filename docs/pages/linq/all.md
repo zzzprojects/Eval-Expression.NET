@@ -18,51 +18,33 @@ This C# example uses the LINQ All method with a dynamic expression to determine 
 
 ### LINQ
 {% highlight csharp %}
-private void uiAll_Simple_LINQ_Click(object sender, EventArgs e)
-{
-	int[] numbers = {1, 11, 3, 19, 41, 65, 19};
+int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
-	var onlyOdd = numbers.All(n => n % 2 == 1);
+var onlyOdd = numbers.All(n => n % 2 == 1);
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The list contains only odd numbers: {0}", onlyOdd);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/E82Y4a' %}
 
 ### LINQ Dynamic
 {% highlight csharp %}
-private void uiAll_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
-{
-	int[] numbers = {1, 11, 3, 19, 41, 65, 19};
+int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
-	var onlyOdd = numbers.All(n => "n % 2 == 1");
+var onlyOdd = numbers.All(n => "n % 2 == 1");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The list contains only odd numbers: {0}", onlyOdd);
-
-	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
-}
+Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/1M0scW' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiAll_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	int[] numbers = {1, 11, 3, 19, 41, 65, 19};
+int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
-	var onlyOdd = numbers.Execute<bool>("All(n => n % 2 == 1)");
+var onlyOdd = numbers.Execute<bool>("All(n => n % 2 == 1)");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The list contains only odd numbers: {0}", onlyOdd);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/8kTOjI' %}
 
 ### Result
 {% highlight text %}
@@ -77,21 +59,24 @@ This C# example uses the LINQ All method with a dynamic expression to return a g
 
 ### LINQ
 {% highlight csharp %}
-private void uiAll_Grouped_LINQ_Click(object sender, EventArgs e)
+var products = getList();
+
+var productGroups = products.GroupBy(p => p.Category)
+	.Where(g => g.All(p => p.UnitsInStock > 0))
+	.Select(g => new {Category = g.Key, Products = g});
+
+Console.WriteLine("Count before All : " + products.Count());
+
+int newCount = 0;
+
+foreach (var group in productGroups) 
 {
-	var products = My.GetProductList();
-
-	var productGroups = products.GroupBy(p => p.Category)
-		.Where(g => g.All(p => p.UnitsInStock > 0))
-		.Select(g => new {Category = g.Key, Products = g});
-
-	var sb = new StringBuilder();
-
-	My.ObjectDumper.Write(sb, productGroups, 1);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+	newCount+= group.Products.Count();
 }
+
+Console.WriteLine("Count After All : " + newCount);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/COqjUY' %}
 
 ### LINQ Dynamic
 {% highlight csharp %}

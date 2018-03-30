@@ -35,6 +35,8 @@ Execute a C# expression. Extend the String class.
 var result1 = "1+2".Execute<int>(); // return 3
 var result2 = "X+Y".Execute(new { X = 1, Y = 2 }); // return 3
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/iXeE87' %}
+    
 
 ## "string".Compile
 Compile a C# expression. Extend the String class.

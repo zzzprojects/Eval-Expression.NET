@@ -19,35 +19,24 @@ This C# example uses the LINQ Average method with a dynamic expression to get th
 
 ### LINQ
 {% highlight csharp %}
-private void uiAverage_Simple_LINQ_Click(object sender, EventArgs e)
-{
-	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-	var averageNum = numbers.Average();
+var averageNum = numbers.Average();
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The average number is {0}.", averageNum);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("The average number is {0}.", averageNum);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/ytINV0' %}
+
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiAverage_Simple_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
+int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
-	var averageNum = numbers.Execute<double>("Average()");
+var averageNum = numbers.Execute<double>("Average()");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The average number is {0}.", averageNum);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("The average number is {0}.", averageNum);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/0eEHRS' %}
 
 ### Result
 {% highlight text %}
@@ -62,35 +51,23 @@ This C# example uses the LINQ Average method with a dynamic expression to get th
 
 ### LINQ
 {% highlight csharp %}
-private void uiAverage_Projection_LINQ_Click(object sender, EventArgs e)
-{
-	string[] words = {"cherry", "apple", "blueberry"};
+string[] words = {"cherry", "apple", "blueberry"};
 
-	var averageLength = words.Average(w => w.Length);
+var averageLength = words.Average(w => w.Length);
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The average word length is {0} characters.", averageLength);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
-}
+Console.WriteLine("The average word length is {0} characters.", averageLength);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/CjVP6t' %}
 
 ### LINQ Execute
 {% highlight csharp %}
-private void uiAverage_Projection_LINQ_Execute_Click(object sender, EventArgs e)
-{
-	string[] words = {"cherry", "apple", "blueberry"};
+string[] words = {"cherry", "apple", "blueberry"};
 
-	var averageLength = words.Execute<double>("Average(w => w.Length)");
+var averageLength = words.Execute<double>("Average(w => w.Length)");
 
-	var sb = new StringBuilder();
-
-	sb.AppendLine("The average word length is {0} characters.", averageLength);
-
-	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
-}
+Console.WriteLine("The average word length is {0} characters.", averageLength);
 {% endhighlight %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/xmIXWV' %}
 
 ### Result
 {% highlight text %}
@@ -105,20 +82,16 @@ This C# example uses the LINQ Average method with a dynamic expression to get th
 
 ### LINQ
 {% highlight csharp %}
-private void uiAverage_Grouped_LINQ_Click(object sender, EventArgs e)
+var products = getList();
+
+var categories = products.GroupBy(prod => prod.Category).Select(g => new {Category = g.Key, AveragePrice = g.Average(prod => prod.UnitPrice)});
+
+foreach (var categorie in categories) 
 {
-	var products = My.GetProductList();
-
-	var categories = products.GroupBy(prod => prod.Category).Select(g => new {Category = g.Key, AveragePrice = g.Average(prod => prod.UnitPrice)});
-
-	var sb = new StringBuilder();
-
-	My.ObjectDumper.Write(sb, categories);
-
-	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
+	Console.WriteLine("Category : " + categorie.Category + " AveragePrice : " +categorie.AveragePrice );
 }
 {% endhighlight %}
-
+{% include  component-try-it.html href='https://dotnetfiddle.net/XtBI9y' %}
 
 ### LINQ Execute
 {% highlight csharp %}
