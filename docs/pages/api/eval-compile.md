@@ -65,6 +65,6 @@ var types = values.ToDictionary(x => x.Key, x => x.Value.GetType());
 var compiled = Eval.Compile("X + Y", types);
 var result = compiled(values);
 {% endhighlight %}
-{% include  component-try-it.html href='https://dotnetfiddle.net/PY1TRM' %}
+{% include  component-try-it.html href='https://dotnetfiddle.net/870F71' %}
 
 
