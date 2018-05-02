@@ -52,7 +52,7 @@ The validate method allow you to know whether your license is valid or not.
 {% include template-example.html %} 
 {% highlight csharp %}
 string licenseErrorMessage;
-if (!Z.Expressions.EvalManager.ValidateLicense.ValidateLicense(out licenseErrorMessage))
+if (!Z.Expressions.EvalManager.ValidateLicense(out licenseErrorMessage))
 {
     throw new Exception(licenseErrorMessage);
 }
