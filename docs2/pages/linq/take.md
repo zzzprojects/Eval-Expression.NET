@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Take
-description: C# Dynamic LINQ Take examples using an Expression Evaluator.
-permalink: linq-dynamic-take-examples
----
-
-
+# LINQ Dynamic - Take
 
 ## LINQ Dynamic Take Examples
 {{ page.description }}

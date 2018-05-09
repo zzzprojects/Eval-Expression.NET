@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Concat
-description: C# Dynamic LINQ Concat examples using an Expression Evaluator.
-permalink: linq-dynamic-concat-examples
----
-
-
+# LINQ Dynamic - Concat
 
 ## LINQ Dynamic Concat Examples
 {{ page.description }}

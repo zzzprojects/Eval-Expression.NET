@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - FirstOrDefault
-description: C# Dynamic LINQ FirstOrDefault examples using an Expression Evaluator.
-permalink: linq-dynamic-firstordefault-examples
----
-
-
+# LINQ Dynamic - FirstOrDefault
 
 ## LINQ Dynamic FirstOrDefault Examples
 {{ page.description }}

@@ -1,9 +1,3 @@
----
-layout: default
-title: LINQ Dynamic Method
-permalink: linq-linq-dynamic-method
----
-
-
+# LINQ Dynamic Method
 
 _Coming Soon_

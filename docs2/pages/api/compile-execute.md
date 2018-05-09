@@ -1,11 +1,4 @@
----
-layout: default
-title: Compile & Execute
-description: Compile and execute a C# expression at runtime.
-permalink: compile-execute
----
-
-
+# Compile & Execute
 
 ## Description
 {{ page.description }}

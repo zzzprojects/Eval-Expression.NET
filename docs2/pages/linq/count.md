@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Count
-description: C# Dynamic LINQ Count examples using an Expression Evaluator.
-permalink: linq-dynamic-count-examples
----
-
-
+# LINQ Dynamic - Count
 
 ## LINQ Dynamic Count Examples
 {{ page.description }}

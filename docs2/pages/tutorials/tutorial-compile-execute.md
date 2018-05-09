@@ -1,9 +1,3 @@
----
-layout: default
-title: Compile & Execute
-permalink: tutorial-compile-execute
----
-
-
+# Compile & Execute
 
 _Coming Soon_

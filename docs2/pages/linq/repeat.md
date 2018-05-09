@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Repeat
-description: C# Dynamic LINQ Repeat examples using an Expression Evaluator.
-permalink: linq-dynamic-repeat-examples
----
-
-
+# LINQ Dynamic - Repeat
 
 ## LINQ Dynamic Repeat Examples
 {{ page.description }}

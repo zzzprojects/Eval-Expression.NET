@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Min
-description: C# Dynamic LINQ Min examples using an Expression Evaluator.
-permalink: linq-dynamic-min-examples
----
-
-
+# LINQ Dynamic - Min
 
 ## LINQ Dynamic Min Examples
 {{ page.description }}

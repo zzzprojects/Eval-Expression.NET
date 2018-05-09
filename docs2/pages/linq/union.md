@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Union
-description: C# Dynamic LINQ Union examples using an Expression Evaluator.
-permalink: linq-dynamic-union-examples
----
-
-
+# LINQ Dynamic - Union
 
 ## LINQ Dynamic Union Examples
 {{ page.description }}

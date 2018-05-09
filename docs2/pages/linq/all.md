@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - All
-description: C# Dynamic LINQ All examples using an Expression Evaluator.
-permalink: linq-dynamic-all-examples
----
-
-
+# LINQ Dynamic - All
 
 ## LINQ Dynamic All Examples
 {{ page.description }}

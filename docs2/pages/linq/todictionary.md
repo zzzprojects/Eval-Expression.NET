@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ToDictionary
-description: C# Dynamic LINQ ToDictionary examples using an Expression Evaluator.
-permalink: linq-dynamic-todictionary-examples
----
-
-
+# LINQ Dynamic - ToDictionary
 
 ## LINQ Dynamic ToDictionary Examples
 {{ page.description }}

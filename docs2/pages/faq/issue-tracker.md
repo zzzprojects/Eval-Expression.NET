@@ -1,10 +1,4 @@
----
-layout: default
-title: Issue Tracker
-permalink: issue-tracker
----
-
-
+# Issue Tracker
 
 ## Where is your Issue Tracker?
 

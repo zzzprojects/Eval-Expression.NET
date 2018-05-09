@@ -1,9 +1,3 @@
----
-layout: default
-title: LINQ Excute Method
-permalink: linq-linq-execute-method
----
-
-
+# LINQ Excute Method
 
 _Coming Soon_

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - OfType
-description: C# Dynamic LINQ OfType examples using an Expression Evaluator.
-permalink: linq-dynamic-oftype-examples
----
-
-
+# LINQ Dynamic - OfType
 
 ## LINQ Dynamic OfType Examples
 {{ page.description }}

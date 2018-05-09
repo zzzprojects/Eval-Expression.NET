@@ -1,11 +1,4 @@
----
-layout: default
-title: Eval.Execute
-description: Execute a C# expression and return the result.
-permalink: eval-execute
----
-
-
+# Eval.Execute
 
 ## Description
 {{ page.description }}

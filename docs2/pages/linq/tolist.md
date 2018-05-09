@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ToList
-description: C# Dynamic LINQ ToList examples using an Expression Evaluator.
-permalink: linq-dynamic-tolist-examples
----
-
-
+# LINQ Dynamic - ToList
 
 ## LINQ Dynamic ToList Examples
 {{ page.description }}

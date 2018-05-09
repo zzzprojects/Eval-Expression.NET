@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - GroupBy
-description: C# Dynamic LINQ GroupBy examples using an Expression Evaluator.
-permalink: linq-dynamic-groupby-examples
----
-
-
+# LINQ Dynamic - GroupBy
 
 ## LINQ Dynamic GroupBy Examples
 {{ page.description }}

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - SelectMany
-description: C# Dynamic LINQ Where examples using an Expression Evaluator.
-permalink: linq-dynamic-selectmany-examples
----
-
-
+# LINQ Dynamic - SelectMany
 
 ## LINQ Dynamic SelectMany Examples
 {{ page.description }}

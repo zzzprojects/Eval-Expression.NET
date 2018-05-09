@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - SkipWhile
-description: C# Dynamic LINQ SkipWhile examples using an Expression Evaluator.
-permalink: linq-dynamic-skipwhile-examples
----
-
-
+# LINQ Dynamic - SkipWhile
 
 ## LINQ Dynamic SkipWhile Examples
 {{ page.description }}

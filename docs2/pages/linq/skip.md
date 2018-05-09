@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Skip
-description: C# Dynamic LINQ Skip examples using an Expression Evaluator.
-permalink: linq-dynamic-skip-examples
----
-
-
+# LINQ Dynamic - Skip
 
 ## LINQ Dynamic Skip Examples
 {{ page.description }}

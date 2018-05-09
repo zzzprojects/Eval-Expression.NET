@@ -1,10 +1,4 @@
----
-layout: default
-title: API
-permalink: api
----
-
-
+# API
 
 ## API
 

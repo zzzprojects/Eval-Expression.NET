@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Average
-description: C# Dynamic LINQ Average examples using an Expression Evaluator.
-permalink: linq-dynamic-average-examples
----
-
-
+# LINQ Dynamic - Average
 
 ## LINQ Dynamic Average Examples
 {{ page.description }}

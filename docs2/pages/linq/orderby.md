@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - OrderBy
-description: C# Dynamic LINQ OrderBy examples using an Expression Evaluator.
-permalink: linq-dynamic-orderby-examples
----
-
-
+# LINQ Dynamic - OrderBy
 
 ## LINQ Dynamic OrderBy Examples
 {{ page.description }}

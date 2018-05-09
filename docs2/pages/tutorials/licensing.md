@@ -1,10 +1,4 @@
----
-layout: default
-title: Licensing
-permalink: licensing
----
-
-
+# Licensing
 
 ## Evaluation Period
 You can evaluate our library for several months before purchasing it.

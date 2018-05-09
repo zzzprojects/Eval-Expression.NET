@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Range
-description: C# Dynamic LINQ Range examples using an Expression Evaluator.
-permalink: linq-dynamic-range-examples
----
-
-
+# LINQ Dynamic - Range
 
 ## LINQ Dynamic Range Examples
 {{ page.description }}

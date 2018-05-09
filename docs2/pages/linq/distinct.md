@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Distinct
-description: C# Dynamic LINQ Distinct examples using an Expression Evaluator.
-permalink: linq-dynamic-distinct-examples
----
-
-
+# LINQ Dynamic - Distinct
 
 ## LINQ Dynamic Distinct Examples
 {{ page.description }}

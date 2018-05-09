@@ -1,10 +1,4 @@
----
-layout: default
-title: License
-permalink: faq-license
----
-
-
+# License
 
 ## Developer Seat
 

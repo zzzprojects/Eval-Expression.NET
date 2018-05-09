@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Select
-description: C# Dynamic LINQ Select examples using an Expression Evaluator.
-permalink: linq-dynamic-select-examples
----
-
-
+# LINQ Dynamic - Select
 
 ## LINQ Dynamic Select Examples
 {{ page.description }}

@@ -1,10 +1,4 @@
----
-layout: default
-title: MD5 Exception
-permalink: md5-exception
----
-
-
+# MD5 Exception
 
 ## Problem
 

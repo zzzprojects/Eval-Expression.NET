@@ -1,9 +1,3 @@
----
-layout: default
-title: LINQ Dynamic
-permalink: tutorial-linq-dynamic
----
-
-
+# LINQ Dynamic
 
 _Coming Soon_

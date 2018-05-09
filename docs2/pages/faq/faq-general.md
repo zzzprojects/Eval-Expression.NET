@@ -1,10 +1,4 @@
----
-layout: default
-title: FAQ General
-permalink: faq-general
----
-
-
+# FAQ General
 
 ## Which Payment method do you support?
 We support the following payment method:

@@ -1,11 +1,4 @@
----
-layout: default
-title: String Extensions
-description: Extend the String class with methods to Execute & Compile C# expression.
-permalink: string-extensions
----
-
-
+# String Extensions
 
 ## Description
 {{ page.description }}

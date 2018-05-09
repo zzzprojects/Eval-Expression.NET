@@ -1,10 +1,4 @@
----
-layout: default
-title: Installing
-permalink: installing
----
-
-
+# Installing
 
 ## Installing
 Is it the first time you use our Library?

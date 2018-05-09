@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic
-description: Extend the IEnumerable&lt;T&gt; and IQueryable&lt;T&gt; interface with methods to use LINQ with dynamic expressions.
-permalink: linq-dynamic
----
-
-
+# LINQ Dynamic
 
 ## Description
 {{ page.description }}

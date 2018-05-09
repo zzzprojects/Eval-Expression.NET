@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Intersect
-description: C# Dynamic LINQ Intersect examples using an Expression Evaluator.
-permalink: linq-dynamic-intersect-examples
----
-
-
+# LINQ Dynamic - Intersect
 
 ## LINQ Dynamic Intersect Examples
 {{ page.description }}

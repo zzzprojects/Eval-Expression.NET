@@ -1,8 +1,4 @@
----
-layout: default
-title: Safe Mode
-permalink: safe-mode
----
+# Safe Mode
 
 ### Problem
 You want to allow your users to create and evaluate some generic expression. However, you need to limit access on what user can do!

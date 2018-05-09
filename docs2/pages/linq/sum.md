@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Sum
-description: C# Dynamic LINQ Sum examples using an Expression Evaluator.
-permalink: linq-dynamic-sum-examples
----
-
-
+# LINQ Dynamic - Sum
 
 ## LINQ Dynamic Sum Examples
 {{ page.description }}

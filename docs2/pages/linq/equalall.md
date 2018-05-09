@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - EqualAll
-description: C# Dynamic LINQ EqualAll examples using an Expression Evaluator.
-permalink: linq-dynamic-equalall-examples
----
-
-
+# LINQ Dynamic - EqualAll
 
 ## LINQ Dynamic EqualAll Examples
 {{ page.description }}

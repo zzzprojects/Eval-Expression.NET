@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ToArray
-description: C# Dynamic LINQ ToArray examples using an Expression Evaluator.
-permalink: linq-dynamic-toarray-examples
----
-
-
+# LINQ Dynamic - ToArray
 
 ## LINQ Dynamic ToArray Examples
 {{ page.description }}

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Max
-description: C# Dynamic LINQ Max examples using an Expression Evaluator.
-permalink: linq-dynamic-max-examples
----
-
-
+# LINQ Dynamic - Max
 
 ## LINQ Dynamic Max Examples
 {{ page.description }}

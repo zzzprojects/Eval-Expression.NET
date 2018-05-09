@@ -1,10 +1,4 @@
----
-layout: default
-title: Trial Period Expired Exception
-permalink: trial-period-expired-exception
----
-
-
+# Trial Period Expired Exception
 
 ## Problem
 

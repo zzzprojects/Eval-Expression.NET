@@ -1,10 +1,4 @@
----
-layout: default
-title: LINQ Dynamic
-permalink: linq-dynamic-example
----
-
-
+# LINQ Dynamic
 
 ## LINQ Dynamic
 

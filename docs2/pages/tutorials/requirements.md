@@ -1,10 +1,4 @@
----
-layout: default
-title: Requirements
-permalink: requirements
----
-
-
+# Requirements
 
 ## Requirements
 

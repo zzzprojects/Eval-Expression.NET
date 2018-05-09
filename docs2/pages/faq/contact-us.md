@@ -1,10 +1,4 @@
----
-layout: default
-title: Contact us
-permalink: contact-us
----
-
-
+# Contact us
 
 ## I have a question! What should I do?
 Contact us directly with your questions: info@zzzprojects.com _(recommended)_ 

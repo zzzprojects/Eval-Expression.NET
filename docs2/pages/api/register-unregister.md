@@ -1,11 +1,4 @@
----
-layout: default
-title: Register & Unregister
-description: Register and unregister assembly, constant, method, type, and more.
-permalink: register-unregister
----
-
-
+# Register & Unregister
 
 ## Description
 {{ page.description }}

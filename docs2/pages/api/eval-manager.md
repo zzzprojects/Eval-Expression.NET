@@ -1,11 +1,4 @@
----
-layout: default
-title: Eval Manager
-description: Static manager class for options shared between all instances.
-permalink: eval-manager
----
-
-
+# Eval Manager
 
 ## Description
 {{ page.description }}

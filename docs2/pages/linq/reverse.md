@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Reverse
-description: C# Dynamic LINQ Reverse examples using an Expression Evaluator.
-permalink: linq-dynamic-reverse-examples
----
-
-
+# LINQ Dynamic - Reverse
 
 ## LINQ Dynamic Reverse Examples
 {{ page.description }}

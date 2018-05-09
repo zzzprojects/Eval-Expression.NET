@@ -1,12 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ThenByDescending
-description: C# Dynamic LINQ ThenByDescending examples using an Expression Evaluator.
-permalink: linq-dynamic-thenbydescending-examples
----
-
-
-
+# LINQ Dynamic - ThenByDescending
 
 ## LINQ Dynamic ThenByDescending Examples
 {{ page.description }}

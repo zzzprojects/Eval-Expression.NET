@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Combine
-description: C# Dynamic LINQ Combine examples using an Expression Evaluator.
-permalink: linq-dynamic-combine-examples
----
-
-
+# LINQ Dynamic - Combine
 
 ## LINQ Dynamic Combine Examples
 {{ page.description }}

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Aggregate
-description: C# Dynamic LINQ Aggregate examples using an Expression Evaluator.
-permalink: linq-dynamic-aggregate-examples
----
-
-
+# LINQ Dynamic - Aggregate
 
 ## LINQ Dynamic Aggregate Examples
 {{ page.description }}

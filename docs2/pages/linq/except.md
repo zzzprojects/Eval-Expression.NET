@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Except
-description: C# Dynamic LINQ Except examples using an Expression Evaluator.
-permalink: linq-dynamic-except-examples
----
-
-
+# LINQ Dynamic - Except
 
 ## LINQ Dynamic Except Examples
 {{ page.description }}

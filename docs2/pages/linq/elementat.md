@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ElementAt
-description: C# Dynamic LINQ ElementAt examples using an Expression Evaluator.
-permalink: linq-dynamic-elementat-examples
----
-
-
+# LINQ Dynamic - ElementAt
 
 ## LINQ Dynamic ElementAt Examples
 {{ page.description }}

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - First
-description: C# Dynamic LINQ First examples using an Expression Evaluator.
-permalink: linq-dynamic-first-examples
----
-
-
+# LINQ Dynamic - First
 
 ## LINQ Dynamic First Examples
 {{ page.description }}

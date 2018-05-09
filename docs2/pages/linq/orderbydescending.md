@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - OrderByDescending
-description: C# Dynamic LINQ OrderByDescending examples using an Expression Evaluator.
-permalink: linq-dynamic-orderbydescending-examples
----
-
-
+# LINQ Dynamic - OrderByDescending
 
 ## LINQ Dynamic OrderByDescending Examples
 {{ page.description }}

@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - TakeWhile
-description: C# Dynamic LINQ TakeWhile examples using an Expression Evaluator.
-permalink: linq-dynamic-takewhile-examples
----
-
-
+# LINQ Dynamic - TakeWhile
 
 ## LINQ Dynamic TakeWhile Examples
 {{ page.description }}

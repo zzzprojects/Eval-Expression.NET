@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - ThenBy
-description: C# Dynamic LINQ ThenBy examples using an Expression Evaluator.
-permalink: linq-dynamic-thenby-examples
----
-
-
+# LINQ Dynamic - ThenBy
 
 ## LINQ Dynamic ThenBy Examples
 {{ page.description }}

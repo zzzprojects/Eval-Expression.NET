@@ -1,11 +1,4 @@
----
-layout: default
-title: LINQ Dynamic - Where
-description: C# Dynamic LINQ Where examples using an Expression Evaluator.
-permalink: linq-dynamic-where-examples
----
-
-
+# LINQ Dynamic - Where
 
 ## LINQ Dynamic Where Examples
 {{ page.description }}

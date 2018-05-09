@@ -1,11 +1,4 @@
----
-layout: default
-title: Eval.Compile
-description: Compile a C# expression and return a delegate.
-permalink: eval-compile
----
-
-
+# Eval.Compile
 
 ## Description
 {{ page.description }}

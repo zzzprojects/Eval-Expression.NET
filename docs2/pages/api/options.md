@@ -1,11 +1,4 @@
----
-layout: default
-title: Options
-description: Options to customize the context under which the C# expression is compiled.
-permalink: options
----
-
-
+# Options
 
 ## Description
 {{ page.description }}

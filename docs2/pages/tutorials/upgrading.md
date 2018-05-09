@@ -1,10 +1,4 @@
----
-layout: default
-title: Upgrading
-permalink: upgrading
----
-
-
+# Upgrading
 
 ## Upgrading
 
