@@ -4,7 +4,7 @@ title: FAQ
 permalink: faq
 ---
 
-{% include template-h1.html %}
+
 
 ## FAQ
 

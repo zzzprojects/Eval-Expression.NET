@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Count examples using an Expression Evaluator.
 permalink: linq-dynamic-count-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Count Examples
 {{ page.description }}
@@ -19,23 +19,23 @@ permalink: linq-dynamic-count-examples
 This C# example uses the LINQ Count method with a dynamic expression to get the number of unique factors of 300.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] factorsOf300 = {2, 2, 3, 5, 5};
 
 var uniqueFactors = factorsOf300.Distinct().Count();
 
 Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);	
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/2HAQox' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] factorsOf300 = {2, 2, 3, 5, 5};
 
 var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
 
 Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/1Xc6yM' %}
 
 ### Result
@@ -44,39 +44,39 @@ LINQ Execute Test
 ------------------------------
 There are 3 unique factors of 300.
 
-{% endhighlight %}
+```
 
 ## Count - Conditional
 This C# example uses the LINQ Count method with a dynamic expression to get the number of odd ints in the array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
 var oddNumbers = numbers.Count(n => n % 2 == 1);
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/3LGjG3' %}
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
 var oddNumbers = numbers.Count(n => "n % 2 == 1");
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/P2zgkd' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
 var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/UY9frV' %}
 
 ### Result
@@ -85,13 +85,13 @@ LINQ Execute Test
 ------------------------------
 There are 5 odd numbers in the list.
 
-{% endhighlight %}
+```
 
 ## Count - Nested
 This C# example uses the LINQ Count method with a dynamic expression to return a list of customers and how many orders each has.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiCount_Nested_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -104,10 +104,10 @@ private void uiCount_Nested_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiCount_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -120,7 +120,7 @@ private void uiCount_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -308,13 +308,13 @@ OrderCount=14
 OrderCount=8 
 OrderCount=7
 
-{% endhighlight %}
+```
 
 ## Count - Grouped
 This C# example uses the LINQ Count method with a dynamic expression to return a list of categories and how many products each has.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiCount_Grouped_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -327,10 +327,10 @@ private void uiCount_Grouped_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiCount_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -343,7 +343,7 @@ private void uiCount_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -365,4 +365,4 @@ ProductCount=10
 ProductCount=13 
 ProductCount=7
 
-{% endhighlight %}
+```

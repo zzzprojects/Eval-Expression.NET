@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Any examples using an Expression Evaluator.
 permalink: linq-dynamic-any-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Any Examples
 {{ page.description }}
@@ -17,33 +17,33 @@ permalink: linq-dynamic-any-examples
 This C# example uses the LINQ Any method with a dynamic expression to determine if any of the words in the array contain the substring 'ei'.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 string[] words = {"believe", "relief", "receipt", "field"};
 
 var iAfterE = words.Any(w => w.Contains("ei"));
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/36Tkzn' %}
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 string[] words = {"believe", "relief", "receipt", "field"};
 
 var iAfterE = words.Any(w => "w.Contains('ei')");
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/gXwUhP' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 string[] words = {"believe", "relief", "receipt", "field"};
 
 var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");		
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/PEGWxp' %}
 
 ### Result
@@ -52,13 +52,13 @@ LINQ Execute Test
 ------------------------------
 There is a word that contains in the list that contains 'ei': True
 
-{% endhighlight %}
+```
 
 ## Any - Grouped
 This C# example uses the LINQ Any method with a dynamic expression to return a grouped a list of products only for categories that have at least one product that is out of stock.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 var products = getList();
 
 var productGroups = products.GroupBy(p => p.Category)
@@ -75,11 +75,11 @@ foreach (var group in productGroups)
 }
 
 Console.WriteLine("Count After Any : " + newCount);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/GXuk1q' %}
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiAny_Grouped_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -94,10 +94,10 @@ private void uiAny_Grouped_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiAny_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -112,7 +112,7 @@ private void uiAny_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -150,4 +150,4 @@ Category=Dairy Products        Products=...
   Products: ProductID=71  ProductName=Flotemysost        Category=Dairy Products        UnitPrice=21.5000      UnitsInStock=26 
   Products: ProductID=72  ProductName=Mozzarella di Giovanni      Category=Dairy Products        UnitPrice=34.8000      UnitsInStock=14
 
-{% endhighlight %}
+```

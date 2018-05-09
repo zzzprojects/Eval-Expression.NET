@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Intersect examples using an Expression Evaluator.
 permalink: linq-dynamic-intersect-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Intersect Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-intersect-examples
 ## Intersect - 1
 This C# example uses the LINQ Intersect method with a dynamic expression to create one sequence that contains the common first letter from both product and customer names.
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiIntersect_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
@@ -34,10 +34,10 @@ private void uiIntersect_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiIntersect_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
@@ -55,7 +55,7 @@ private void uiIntersect_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -65,13 +65,13 @@ Common numbers shared by both arrays:
 5
 8
 
-{% endhighlight %}
+```
 
 ## Intersect - 2
 This C# example uses the LINQ Intersect method with a dynamic expression to find all products that are out of stock.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiIntersect_2_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -92,10 +92,10 @@ private void uiIntersect_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiIntersect_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -116,7 +116,7 @@ private void uiIntersect_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -143,4 +143,4 @@ W
 L
 O
 
-{% endhighlight %}
+```

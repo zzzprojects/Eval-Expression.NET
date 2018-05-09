@@ -4,7 +4,7 @@ title: Licensing
 permalink: licensing
 ---
 
-{% include template-h1.html %}
+
 
 ## Evaluation Period
 You can evaluate our library for several months before purchasing it.
@@ -18,26 +18,26 @@ Upon purchase, you will receive a license name and a license key.
 ## Setup License from config file
 The license name and key can be directly be added in the app.config or web.config file in the appSettings section.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 <appSettings>
 	<add key="Z_Expressions_Eval_LicenseName" value="[licenseName]"/>
 	<add key="Z_Expressions_Eval_LicenseKey" value="[licenseKey]"/>
 </appSettings>
-{% endhighlight %}
+```
 
 ## Setup License from code
 You can also set the license name and key directly in the code.
 
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 
 string licenseName = //... PRO license name
 string licenseKey = //... PRO license key
 
 EvalManager.AddLicense(licenseName, licenseKey);
-{% endhighlight %}
+```
 
 ### Recommendation
 - Use the config file to store your license name and license key.
@@ -49,11 +49,11 @@ EvalManager.AddLicense(licenseName, licenseKey);
 
 ## How can I check if my license is valid?
 The validate method allow you to know whether your license is valid or not.
-{% include template-example.html %} 
-{% highlight csharp %}
+
+```csharp
 string licenseErrorMessage;
 if (!Z.Expressions.EvalManager.ValidateLicense(out licenseErrorMessage))
 {
     throw new Exception(licenseErrorMessage);
 }
-{% endhighlight %}
+```

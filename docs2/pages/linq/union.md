@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Union examples using an Expression Evaluator.
 permalink: linq-dynamic-union-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Union Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-union-examples
 This C# example uses the LINQ Union method with a dynamic expression to create one sequence that contains the unique values from both arrays.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiUnion_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
@@ -35,10 +35,10 @@ private void uiUnion_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiUnion_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
@@ -56,7 +56,7 @@ private void uiUnion_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -74,13 +74,13 @@ Unique numbers from both arrays:
 3
 7
 
-{% endhighlight %}
+```
 
 ## Union - 2
 This C# example uses the LINQ Union method with a dynamic expression to create one sequence that contains the unique first letter from both product and customer names.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiUnion_2_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -101,10 +101,10 @@ private void uiUnion_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiUnion_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -125,7 +125,7 @@ private void uiUnion_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -157,4 +157,4 @@ O
 D
 H
 
-{% endhighlight %}
+```

@@ -5,7 +5,7 @@ description: C# Dynamic LINQ ThenBy examples using an Expression Evaluator.
 permalink: linq-dynamic-thenby-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic ThenBy Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-thenby-examples
 This C# example uses the LINQ ThenBy method with a dynamic expression to sort a list of digits, first by length of their name, and then alphabetically by the name itself.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -34,10 +34,10 @@ private void uiThenBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -54,10 +54,10 @@ private void uiThenBy_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -74,7 +74,7 @@ private void uiThenBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -92,13 +92,13 @@ eight
 seven
 three
 
-{% endhighlight %}
+```
 
 ## ThenBy - Comparer
 This C# example uses the LINQ ThenBy method with a dynamic expression and a custom comparer to sort first by word length and then by a case-insensitive sort of the words in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Comparer_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -111,10 +111,10 @@ private void uiThenBy_Comparer_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -127,10 +127,10 @@ private void uiThenBy_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiThenBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -145,7 +145,7 @@ private void uiThenBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -158,4 +158,4 @@ cHeRry
 ClOvEr
 BlUeBeRrY
 
-{% endhighlight %}
+```

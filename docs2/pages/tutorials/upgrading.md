@@ -4,7 +4,7 @@ title: Upgrading
 permalink: upgrading
 ---
 
-{% include template-h1.html %}
+
 
 ## Upgrading
 

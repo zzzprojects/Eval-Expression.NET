@@ -4,7 +4,7 @@ title: Contact us
 permalink: contact-us
 ---
 
-{% include template-h1.html %}
+
 
 ## I have a question! What should I do?
 Contact us directly with your questions: info@zzzprojects.com _(recommended)_ 

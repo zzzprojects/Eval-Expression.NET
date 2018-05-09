@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Skip examples using an Expression Evaluator.
 permalink: linq-dynamic-skip-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Skip Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-skip-examples
 This C# example uses the LINQ Skip method with a dynamic expression to get all but the first 4 elements of the array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSkip_Simple_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -34,10 +34,10 @@ private void uiSkip_Simple_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSkip_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -54,7 +54,7 @@ private void uiSkip_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -68,13 +68,13 @@ All but first 4 numbers:
 2 
 0
 
-{% endhighlight %}
+```
 
 ## Skip - Nested
 This C# example uses the LINQ Skip method with a dynamic expression to get all but the first 2 orders from customers in Washington.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSkip_Nested_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -97,10 +97,10 @@ private void uiSkip_Nested_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSkip_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -123,7 +123,7 @@ private void uiSkip_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -148,4 +148,4 @@ CustomerID=WHITC OrderID=10904 OrderDate=2/24/1998
 CustomerID=WHITC OrderID=11032 OrderDate=4/17/1998
 CustomerID=WHITC OrderID=11066 OrderDate=5/1/1998
 
-{% endhighlight %}
+```

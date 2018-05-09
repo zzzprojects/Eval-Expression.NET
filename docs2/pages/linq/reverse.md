@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Reverse examples using an Expression Evaluator.
 permalink: linq-dynamic-reverse-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Reverse Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-reverse-examples
 This C# example uses the LINQ Where method with a dynamic expression to find all elements of an array less than 5.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiReverse_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -33,10 +33,10 @@ private void uiReverse_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiReverse_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] digits = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
@@ -53,7 +53,7 @@ private void uiReverse_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -65,4 +65,4 @@ eight
 six
 five
 
-{% endhighlight %}
+```

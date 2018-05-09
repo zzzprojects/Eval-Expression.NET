@@ -5,7 +5,7 @@ description: C# Dynamic LINQ SkipWhile examples using an Expression Evaluator.
 permalink: linq-dynamic-skipwhile-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic SkipWhile Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-skipwhile-examples
 This C# example uses the LINQ SkipWhile method with a dynamic expression to get the elements of the array starting from the first element divisible by 3.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Simple_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -34,10 +34,10 @@ private void uiSkipWhile_Simple_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -54,10 +54,10 @@ private void uiSkipWhile_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -74,7 +74,7 @@ private void uiSkipWhile_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -89,13 +89,13 @@ All elements starting from first element divisible by 3:
 2
 0
 
-{% endhighlight %}
+```
 
 ## SkipWhile - Indexed
 This C# example uses the LINQ Indexed SkipWhile method with a dynamic expression to get the elements of the array starting from the first element less than its position.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Indexed_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -112,10 +112,10 @@ private void uiSkipWhile_Indexed_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -132,10 +132,10 @@ private void uiSkipWhile_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSkipWhile_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -152,7 +152,7 @@ private void uiSkipWhile_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -168,4 +168,4 @@ All elements starting from first element less than its position:
 2
 0
 
-{% endhighlight %}
+```

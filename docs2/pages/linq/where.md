@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Where examples using an Expression Evaluator.
 permalink: linq-dynamic-where-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Where Examples
 {{ page.description }}
@@ -20,7 +20,7 @@ permalink: linq-dynamic-where-examples
 This C# example uses the LINQ Where method with a dynamic expression to find all elements of an array less than 5.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -38,10 +38,10 @@ private void uiWhere_Simple_1_LINQ_Click(object sender, EventArgs e)
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
 
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -58,10 +58,10 @@ private void uiWhere_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -78,7 +78,7 @@ private void uiWhere_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -90,14 +90,14 @@ Numbers < 5:
 3
 2
 0
-{% endhighlight %}
+```
 
 
 ## Where - Simple 2
 This C# example uses the LINQ Where method with a dynamic expression to find all products that are out of stock.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_2_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -114,10 +114,10 @@ private void uiWhere_Simple_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -134,10 +134,10 @@ private void uiWhere_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -154,7 +154,7 @@ private void uiWhere_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -167,13 +167,13 @@ ThÃ¼ringer Rostbratwurst is sold out!
 Gorgonzola Telino is sold out! 
 Perth Pasties is sold out!
 
-{% endhighlight %}
+```
 
 ## Where - Simple 3
 This C# example uses the LINQ Where method with a dynamic expression to find all products that are in stock and cost more than 3.00 per unit.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_3_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -190,10 +190,10 @@ private void uiWhere_Simple_3_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -210,10 +210,10 @@ private void uiWhere_Simple_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiWhere_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -230,7 +230,7 @@ private void uiWhere_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -309,13 +309,13 @@ RhÃ¶nbrÃ¤u Klosterbier is in stock and costs more than 3.00.
 LakkalikÃ¶Ã¶ri is in stock and costs more than 3.00. 
 Original Frankfurter grÃ¼ne SoÃŸe is in stock and costs more than 3.00.
 
-{% endhighlight %}
+```
 
 ## Where - Drilldown
 This C# example uses the LINQ Where method with a dynamic expression to find all customers in Washington and then uses the resulting sequence to drill down into their orders.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiWhere_DrillDown_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -337,10 +337,10 @@ private void uiWhere_DrillDown_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiWhere_DrillDown_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -362,10 +362,10 @@ private void uiWhere_DrillDown_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiWhere_DrillDown_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -386,7 +386,7 @@ private void uiWhere_DrillDown_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -416,13 +416,13 @@ Order 10904: 2/24/1998 12:00:00 AM
 Order 11032: 4/17/1998 12:00:00 AM
 Order 11066: 5/1/1998 12:00:00 AM
 
-{% endhighlight %}
+```
 
 ## Where - Indexed
 This C# example uses the LINQ Indexed Where method to find all digits whose name is shorter than their value.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiWhere_Indexed_LINQ_Click(object sender, EventArgs e)
 {
 	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -439,10 +439,10 @@ private void uiWhere_Indexed_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiWhere_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -459,10 +459,10 @@ private void uiWhere_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiWhere_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] digits = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
@@ -479,7 +479,7 @@ private void uiWhere_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -492,4 +492,4 @@ The word seven is shorter than its value.
 The word eight is shorter than its value. 
 The word nine is shorter than its value.
 
-{% endhighlight %}
+```

@@ -4,7 +4,7 @@ title: Overview
 permalink: overview
 ---
 
-{% include template-h1.html %}
+
 
 ## What's C# Eval Expression library?
 
@@ -23,16 +23,16 @@ It supports:
 
 It’s easy to use, and easy to customize.
 
-{% include template-example.html %} 
 
-{% highlight csharp %}
+
+```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 
 int result = Eval.Execute<int>(@"
     var list = new List<int>() { 1, 2, 3, 4, 5 };
     var filter = list.Where(x => x < 4);
     return filter.Sum(x => x);");
-{% endhighlight %}
+```
 
 ### Is it that simple?
 

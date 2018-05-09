@@ -4,7 +4,7 @@ title: License
 permalink: faq-license
 ---
 
-{% include template-h1.html %}
+
 
 ## Developer Seat
 

@@ -5,7 +5,7 @@ description: C# Dynamic LINQ OfType examples using an Expression Evaluator.
 permalink: linq-dynamic-oftype-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic OfType Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-oftype-examples
 This C# example uses the LINQ OfType method with a dynamic expression to return only the elements of the array that are of type double.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOfType_LINQ_Click(object sender, EventArgs e)
 {
 	object[] numbers = {null, 1.0, "two", 3, "four", 5, "six", 7.0};
@@ -33,10 +33,10 @@ private void uiOfType_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOfType_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	object[] numbers = {null, 1.0, "two", 3, "four", 5, "six", 7.0};
@@ -53,7 +53,7 @@ private void uiOfType_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -63,4 +63,4 @@ Numbers stored as doubles:
 1
 7
 
-{% endhighlight %}
+```

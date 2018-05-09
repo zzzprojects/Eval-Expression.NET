@@ -5,7 +5,7 @@ description: Execute a C# expression and return the result.
 permalink: eval-execute
 ---
 
-{% include template-h1.html %}
+
 
 ## Description
 {{ page.description }}
@@ -30,7 +30,7 @@ You can return the result as a strongly typed type:
 
 ### Example
 
-{% highlight csharp %}
+```csharp
 // Parameter: Anonymous Type
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2} );
 
@@ -46,7 +46,7 @@ int result = Eval.Execute<int>("X + Y", expandoObject);
 // Parameter: Dictionary Key
 var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 int result = Eval.Execute<int>("X + Y", values);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/W9TwcP' %}  
 
 ## Execute and return an object result
@@ -56,7 +56,7 @@ You can return the result as an object:
 - Eval.Execute(string code, object parameters)
 - Eval.Execute(string code, params object[] parameters)
 
-{% highlight csharp %}
+```csharp
 // Parameter: Anonymous Type
 object result = Eval.Execute("X + Y", new { X = 1, Y = 2} );
 
@@ -72,5 +72,5 @@ object result = Eval.Execute("X + Y", expandoObject);
 // Parameter: Dictionary Key
 var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 object result = Eval.Execute("X + Y", values);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/8mtLH8' %}  

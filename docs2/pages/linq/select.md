@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Select examples using an Expression Evaluator.
 permalink: linq-dynamic-select-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Select Examples
 {{ page.description }}
@@ -23,7 +23,7 @@ permalink: linq-dynamic-select-examples
 This C# example uses the LINQ Select method with a dynamic expression to produce a sequence of ints one higher than those in an existing array of ints.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -40,10 +40,10 @@ private void uiSelect_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -60,10 +60,10 @@ private void uiSelect_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -80,7 +80,7 @@ private void uiSelect_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -97,13 +97,13 @@ Numbers + 1:
 8
 3
 1
-{% endhighlight %}
+```
 
 ## Select - Simple 2
 This C# example uses the LINQ Select method with a dynamic expression to produce a sequence of just the names of a list of products.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_2_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -120,10 +120,10 @@ private void uiSelect_Simple_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -140,10 +140,10 @@ private void uiSelect_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -160,7 +160,7 @@ private void uiSelect_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -245,13 +245,13 @@ RhÃ¶nbrÃ¤u Klosterbier
 LakkalikÃ¶Ã¶ri
 Original Frankfurter grÃ¼ne SoÃŸe
 
-{% endhighlight %}
+```
 
 ## Select - Transformation
 This C# example uses the LINQ Select method with a dynamic expression to produce a sequence of strings representing the text version of a sequence of ints.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Transformation_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -269,10 +269,10 @@ private void uiSelect_Transformation_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Transformation_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -290,10 +290,10 @@ private void uiSelect_Transformation_LINQ_Dynamic_Click(object sender, EventArgs
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Transformation_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -311,7 +311,7 @@ private void uiSelect_Transformation_LINQ_Execute_Click(object sender, EventArgs
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -329,13 +329,13 @@ seven
 two
 zero
 
-{% endhighlight %}
+```
 
 ## Select - Anonymous Types 1
 This C# example uses the LINQ Select method with a dynamic expression to produce a sequence of the uppercase and lowercase versions of each word in the original array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_1_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = {"aPPLE", "BlUeBeRrY", "cHeRry"};
@@ -351,10 +351,10 @@ private void uiSelect_Anonymous_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = {"aPPLE", "BlUeBeRrY", "cHeRry"};
@@ -370,10 +370,10 @@ private void uiSelect_Anonymous_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = {"aPPLE", "BlUeBeRrY", "cHeRry"};
@@ -389,7 +389,7 @@ private void uiSelect_Anonymous_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -399,13 +399,13 @@ Uppercase: APPLE, Lowercase: apple
 Uppercase: BLUEBERRY, Lowercase: blueberry
 Uppercase: CHERRY, Lowercase: cherry
 
-{% endhighlight %}
+```
 
 ## Select - Anonymous Types 2
 This C# example uses the LINQ Select method to produce a sequence containing text representations of digits and whether their length is even or odd.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_2_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -422,10 +422,10 @@ private void uiSelect_Anonymous_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -442,10 +442,10 @@ private void uiSelect_Anonymous_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -462,7 +462,7 @@ private void uiSelect_Anonymous_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -479,13 +479,13 @@ The digit seven is odd.
 The digit two is even.
 The digit zero is even.
 
-{% endhighlight %}
+```
 
 ## Select - Anonymous Types 3
 This C# example uses the LINQ Select method to produce a sequence containing some properties of Products, including UnitPrice which is renamed to Price in the resulting type.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_3_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -502,10 +502,10 @@ private void uiSelect_Anonymous_3_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -522,10 +522,10 @@ private void uiSelect_Anonymous_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Anonymous_3_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -542,7 +542,7 @@ private void uiSelect_Anonymous_3_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -627,13 +627,13 @@ RhÃ¶nbrÃ¤u Klosterbier is in the category Beverages and costs 7.7500 per uni
 LakkalikÃ¶Ã¶ri is in the category Beverages and costs 18.0000 per unit.
 Original Frankfurter grÃ¼ne SoÃŸe is in the category Condiments and costs 13.0000 per unit.
 
-{% endhighlight %}
+```
 
 ## Select - Indexed
 This C# example uses the LINQ Indexed Select method to determine if the value of ints in an array match their position in the array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Indexed_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -650,10 +650,10 @@ private void uiSelect_Indexed_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -670,10 +670,10 @@ private void uiSelect_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -690,7 +690,7 @@ private void uiSelect_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -708,13 +708,13 @@ Number: In-place?
 2: False
 0: False
 
-{% endhighlight %}
+```
 
 ## Select - Filtered
 This C# example uses the LINQ Indexed Select method to make a simple query that returns the text form of each digit less than 5.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelect_Filtered_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -732,10 +732,10 @@ private void uiSelect_Filtered_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelect_Filtered_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -753,10 +753,10 @@ private void uiSelect_Filtered_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelect_Filtered_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -774,7 +774,7 @@ private void uiSelect_Filtered_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -786,4 +786,4 @@ one
 three
 two
 zero
-{% endhighlight %}
+```

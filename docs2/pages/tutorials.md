@@ -4,7 +4,7 @@ title: Tutorials
 permalink: tutorials
 ---
 
-{% include template-h1.html %}
+
 
 <br />
 

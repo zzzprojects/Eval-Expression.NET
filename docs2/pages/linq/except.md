@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Except examples using an Expression Evaluator.
 permalink: linq-dynamic-except-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Except Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-except-examples
 This C# example uses the LINQ Except method with a dynamic expression to create a sequence that contains the values from numbersAthat are not also in numbersB.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
 int[] numbersB = {1, 3, 5, 7, 8};
 
@@ -28,11 +28,11 @@ foreach (var n in aOnlyNumbers)
 {
 	Console.WriteLine(n.ToString());
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/oynmkt' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
 int[] numbersB = {1, 3, 5, 7, 8};
 
@@ -43,7 +43,7 @@ foreach (var n in aOnlyNumbers)
 {
 	Console.WriteLine(n.ToString());
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/uPQUlu' %}
 
 ### Result
@@ -57,13 +57,13 @@ Numbers in first array but not second array:
 6
 9
 
-{% endhighlight %}
+```
 
 ## Except - 2
 This C# example uses the LINQ Except method with a dynamic expression to create one sequence that contains the first letters of product names that are not also first letters of customer names.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiExcept_2_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -84,11 +84,11 @@ private void uiExcept_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiExcept_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -109,7 +109,7 @@ private void uiExcept_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -120,4 +120,4 @@ U
 J
 Z
 
-{% endhighlight %}
+```

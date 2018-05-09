@@ -4,7 +4,7 @@ title: Installation
 permalink: faq-installation
 ---
 
-{% include template-h1.html %}
+
 
 ## How to I Install your product?
 It simple, you download it from NuGet and add it to your project.

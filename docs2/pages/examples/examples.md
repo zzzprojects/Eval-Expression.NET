@@ -4,7 +4,7 @@ title: Examples
 permalink: examples
 ---
 
-{% include template-h1.html %}
+
 
 ### C# Eval Expression - Examples
 

@@ -4,7 +4,7 @@ title: Installing
 permalink: installing
 ---
 
-{% include template-h1.html %}
+
 
 ## Installing
 Is it the first time you use our Library?

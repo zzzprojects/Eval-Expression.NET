@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Concat examples using an Expression Evaluator.
 permalink: linq-dynamic-concat-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Concat Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-concat-examples
 This C# example uses the LINQ Concat method with a dynamic expression to create one sequence that contains each array's values, one after the other.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiConcat_1_LINQ_Click(object sender, EventArgs e)
 int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
 int[] numbersB = {1, 3, 5, 7, 8};
@@ -29,11 +29,11 @@ foreach (var n in allNumbers)
 {
 	Console.WriteLine(n);
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/bwa68e' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
 int[] numbersB = {1, 3, 5, 7, 8};
 
@@ -45,7 +45,7 @@ foreach (var n in allNumbers)
 {
 	Console.WriteLine(n.ToString());
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/kIv2qY' %}
 
 ### Result
@@ -66,13 +66,13 @@ All numbers from both arrays:
 7 
 8
 
-{% endhighlight %}
+```
 
 ## Concat - 2
 This C# example uses the LINQ Concat method with a dynamic expression to create one sequence that contains the names of all customers and products, including any duplicates.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiConcat_2_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -93,10 +93,10 @@ private void uiConcat_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiConcat_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -117,7 +117,7 @@ private void uiConcat_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -291,4 +291,4 @@ RhÃ¶nbrÃ¤u Klosterbier
 LakkalikÃ¶Ã¶ri 
 Original Frankfurter grÃ¼ne SoÃŸe
 
-{% endhighlight %}
+```

@@ -5,7 +5,7 @@ description: C# Dynamic LINQ ToDictionary examples using an Expression Evaluator
 permalink: linq-dynamic-todictionary-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic ToDictionary Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-todictionary-examples
 This C# example uses the LINQ ToDictionary method with a dynamic expression to immediately evaluate a sequence and a related key expression into a dictionary.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiToDictionary_LINQ_Click(object sender, EventArgs e)
 {
 	var scoreRecords = new[]
@@ -33,10 +33,10 @@ private void uiToDictionary_LINQ_Click(object sender, EventArgs e)
 	sb.AppendLine("Bob's score: {0}", scoreRecordsDict["Bob"]);
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiToDictionary_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var scoreRecords = new[]
@@ -54,7 +54,7 @@ private void uiToDictionary_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -62,4 +62,4 @@ LINQ Execute Test
 ------------------------------
 Bob's score: { Name = Bob, Score = 40 }
 
-{% endhighlight %}
+```

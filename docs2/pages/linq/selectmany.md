@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Where examples using an Expression Evaluator.
 permalink: linq-dynamic-selectmany-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic SelectMany Examples
 {{ page.description }}
@@ -21,7 +21,7 @@ permalink: linq-dynamic-selectmany-examples
 This C# example uses the LINQ SelectMany method to make a query that returns all pairs of numbers from both arrays such that the number from numbersA is less than the number from numbersB.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbersA = {0, 2, 4, 5, 6, 8, 9};
@@ -39,10 +39,10 @@ private void uiSelectMany_CF_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbersA = { 0, 2, 4, 5, 6, 8, 9 };
@@ -60,7 +60,7 @@ private void uiSelectMany_CF_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -84,13 +84,13 @@ Pairs where a < b:
 6 is less than 7
 6 is less than 8
 
-{% endhighlight %}
+```
 
 ## SelectMany - Compound from 2
 This C# example uses the LINQ SelectMany method to select all orders where the order total is less than 500.00.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_2_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -101,10 +101,10 @@ private void uiSelectMany_CF_2_LINQ_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -115,10 +115,10 @@ private void uiSelectMany_CF_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -129,7 +129,7 @@ private void uiSelectMany_CF_2_LINQ_Execute_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -370,13 +370,13 @@ CustomerID=WOLZA OrderID=10792 Total=399.85
 CustomerID=WOLZA OrderID=10870 Total=160.00
 CustomerID=WOLZA OrderID=10906 Total=427.50
 
-{% endhighlight %}
+```
 
 ## SelectMany - Compound from 3
 This C# example uses the LINQ SelectMany method with a dynamic expression to select all orders where the order was made in 1998 or later.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_3_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -387,10 +387,10 @@ private void uiSelectMany_CF_3_LINQ_Click(object sender, EventArgs e)
    
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -401,10 +401,10 @@ private void uiSelectMany_CF_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_CF_3_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -415,7 +415,7 @@ private void uiSelectMany_CF_3_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -692,13 +692,13 @@ CustomerID=WOLZA OrderID=10906 OrderDate=2/25/1998
 CustomerID=WOLZA OrderID=10998 OrderDate=4/3/1998
 CustomerID=WOLZA OrderID=11044 OrderDate=4/23/1998
 
-{% endhighlight %}
+```
 
 ## SelectMany - from Assignment
 This C# example uses the LINQ SelectMany method with a dynamic expression to select all orders where the order total is greater than 2000.00 and uses from assignment to avoid requesting the total twice.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_From_Assignment_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -709,10 +709,10 @@ private void uiSelectMany_From_Assignment_LINQ_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_From_Assignment_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -723,10 +723,10 @@ private void uiSelectMany_From_Assignment_LINQ_Dynamic_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_From_Assignment_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -737,7 +737,7 @@ private void uiSelectMany_From_Assignment_LINQ_Execute_Click(object sender, Even
 	
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -929,13 +929,13 @@ CustomerID=WHITC OrderID=10693 Total=2071.20
 CustomerID=WHITC OrderID=10861 Total=3523.40
 CustomerID=WHITC OrderID=11032 Total=8902.50
 
-{% endhighlight %}
+```
 
 ## SelectMany - Multiple from
 This C# example uses the LINQ SelectMany method with a dynamic expression to filter on customers before selecting their orders. This makes the query more efficient by not selecting and then discarding orders for customers outside of Washington.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Multiple_From_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -946,10 +946,10 @@ private void uiSelectMany_Multiple_From_LINQ_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Multiple_From_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -960,10 +960,10 @@ private void uiSelectMany_Multiple_From_LINQ_Dynamic_Click(object sender, EventA
 	
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Multiple_From_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -974,7 +974,7 @@ private void uiSelectMany_Multiple_From_LINQ_Execute_Click(object sender, EventA
 	
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -998,14 +998,14 @@ CustomerID=WHITC OrderID=10904
 CustomerID=WHITC OrderID=11032
 CustomerID=WHITC OrderID=11066
 
-{% endhighlight %}
+```
 
 
 ## SelectMany - Indexed
 This C# example uses the LINQ Indexed SelectMany method with a dynamic expression to select all orders, while referring to customers by the order in which they are returned from the query.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Indexed_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -1016,10 +1016,10 @@ private void uiSelectMany_Indexed_LINQ_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -1030,10 +1030,10 @@ private void uiSelectMany_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 	
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiSelectMany_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -1044,7 +1044,7 @@ private void uiSelectMany_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -1078,4 +1078,4 @@ Customer #91 has an order with OrderID 10906
 Customer #91 has an order with OrderID 10998
 Customer #91 has an order with OrderID 11044
 
-{% endhighlight %}
+```

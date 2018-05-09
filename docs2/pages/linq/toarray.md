@@ -5,7 +5,7 @@ description: C# Dynamic LINQ ToArray examples using an Expression Evaluator.
 permalink: linq-dynamic-toarray-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic ToArray Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-toarray-examples
 This C# example uses the LINQ ToArray method with a dynamic expression to immediately evaluate a sequence into an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiToArray_LINQ_Click(object sender, EventArgs e)
 {
 	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
@@ -35,10 +35,10 @@ private void uiToArray_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiToArray_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	double[] doubles = {1.7, 2.3, 1.9, 4.1, 2.9};
@@ -57,7 +57,7 @@ private void uiToArray_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -68,4 +68,4 @@ Every other double from highest to lowest:
 2.3
 1.7
 
-{% endhighlight %}
+```

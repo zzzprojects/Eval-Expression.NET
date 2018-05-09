@@ -5,7 +5,7 @@ description: Register and unregister assembly, constant, method, type, and more.
 permalink: register-unregister
 ---
 
-{% include template-h1.html %}
+
 
 ## Description
 {{ page.description }}
@@ -27,7 +27,7 @@ You can register:
 - RegisterType(param Type[])
 
 ### Example
-{% highlight csharp %}
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 var context = new EvalContext();
 context.RegisterAlias("Math2", "System.Math");
@@ -40,19 +40,19 @@ context.RegisterGlobalVariable("sessionCount", 0);
 context.RegisterStaticMember(typeof(Math), typeof(Int));
 context.RegisterStaticMember(powMemberInfo, RoundMemberInfo);
 context.RegisterType(typeof (bool), typeof(char);
-{% endhighlight %}
+```
 
 ### Static Member
 You can use static member name without qualifying them with their namespace or type name. Static member is a new feature in C# 6.0.
 
-{% highlight csharp %}
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 var context = new EvalContext();
 context.RegisterStaticMember(typeof(Math), typeof(Int));
 
 bool result = context.Execute<double>("Pow(2, 3)"); // Math.Pow(2, 3) = 8"
 int result = context.Execute<int>("MinValue"); // Int.MinValue
-{% endhighlight %}
+```
 
 ## Unregister
 ### Problem
@@ -70,7 +70,7 @@ You can unregister:
 - UnregisterType(param Type[])
 
 ### Example
-{% highlight csharp %}
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 var context = new EvalContext();
 context.UnregisterAlias("Math2");
@@ -83,4 +83,4 @@ context.UnregisterGlobalVariables("sessionCount");
 context.UnregisterStaticMember(typeof(Math), typeof(Int));
 context.UnregisterStaticMember(powMemberInfo, RoundMemberInfo);
 context.UnregisterType(typeof (bool), typeof(char);
-{% endhighlight %}
+```

@@ -4,7 +4,7 @@ title: Requirements
 permalink: requirements
 ---
 
-{% include template-h1.html %}
+
 
 ## Requirements
 

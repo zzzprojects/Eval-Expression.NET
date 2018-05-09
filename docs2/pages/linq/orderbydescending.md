@@ -5,7 +5,7 @@ description: C# Dynamic LINQ OrderByDescending examples using an Expression Eval
 permalink: linq-dynamic-orderbydescending-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic OrderByDescending Examples
 {{ page.description }}
@@ -18,7 +18,7 @@ permalink: linq-dynamic-orderbydescending-examples
 This C# example uses the LINQ OrderByDescending method with a dynamic expression to sort a list of doubles from highest to lowest.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
@@ -35,10 +35,10 @@ private void uiOrderByDescending_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
@@ -55,10 +55,10 @@ private void uiOrderByDescending_Simple_1_LINQ_Dynamic_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	double[] doubles = { 1.7, 2.3, 1.9, 4.1, 2.9 };
@@ -75,7 +75,7 @@ private void uiOrderByDescending_Simple_1_LINQ_Execute_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -88,13 +88,13 @@ The doubles from highest to lowest:
 1.9
 1.7
 
-{% endhighlight %}
+```
 
 ## OrderByDescending - Simple 2
 This C# example uses the LINQ OrderByDescending method with a dynamic expression to sort a list of products by units in stock from highest to lowest.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_2_LINQ_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -107,10 +107,10 @@ private void uiOrderByDescending_Simple_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -123,10 +123,10 @@ private void uiOrderByDescending_Simple_2_LINQ_Dynamic_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -139,7 +139,7 @@ private void uiOrderByDescending_Simple_2_LINQ_Execute_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -223,12 +223,12 @@ ProductID=29 ProductName=ThÃ¼ringer Rostbratwurst Category=Meat/Poultry UnitPr
 ProductID=31 ProductName=Gorgonzola Telino Category=Dairy Products UnitPrice=12.5000 UnitsInStock=0
 ProductID=53 ProductName=Perth Pasties Category=Meat/Poultry UnitPrice=32.8000 UnitsInStock=0
 
-{% endhighlight %}
+```
 
 ## OrderByDescending - Comparer
 This C# example uses the LINQ OrderByDescending method with a dynamic expression and a custom comparer to do a case-insensitive descending sort of the words in an array.
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Comparer_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -241,10 +241,10 @@ private void uiOrderByDescending_Comparer_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -257,10 +257,10 @@ private void uiOrderByDescending_Comparer_LINQ_Dynamic_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderByDescending_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -275,7 +275,7 @@ private void uiOrderByDescending_Comparer_LINQ_Execute_Click(object sender, Even
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -288,4 +288,4 @@ BlUeBeRrY
 aPPLE
 AbAcUs
 
-{% endhighlight %}
+```

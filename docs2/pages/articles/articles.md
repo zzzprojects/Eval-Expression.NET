@@ -4,7 +4,7 @@ title: Articles
 permalink: articles
 ---
 
-{% include template-h1.html %}
+
 
 ## Articles
 

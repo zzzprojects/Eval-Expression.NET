@@ -4,7 +4,7 @@ title: LINQ Dynamic
 permalink: linq-dynamic-example
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic
 

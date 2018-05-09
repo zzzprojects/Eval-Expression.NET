@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Range examples using an Expression Evaluator.
 permalink: linq-dynamic-range-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Range Examples
 {{ page.description }}
@@ -16,7 +16,7 @@ permalink: linq-dynamic-range-examples
 This C# example uses the LINQ Range method with a dynamic expression to generate a sequence of numbers from 100 to 149 that is used to find which numbers in that range are odd and even.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiRange_LINQ_Click(object sender, EventArgs e)
 {
 	var numbers = Enumerable.Range(100, 50).Select(n => new {Number = n, OddEven = n % 2 == 1 ? "odd" : "even"});
@@ -30,10 +30,10 @@ private void uiRange_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiRange_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	EvalManager.DefaultContext.RegisterType(typeof(Enumerable));
@@ -48,7 +48,7 @@ private void uiRange_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -105,4 +105,4 @@ The number 147 is odd.
 The number 148 is even.
 The number 149 is odd.
 
-{% endhighlight %}
+```

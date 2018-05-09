@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Min examples using an Expression Evaluator.
 permalink: linq-dynamic-min-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Min Examples
 {{ page.description }}
@@ -19,7 +19,7 @@ permalink: linq-dynamic-min-examples
 This C# example uses the LINQ Min method with a dynamic expression to get the lowest number in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMin_Simple_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -32,10 +32,10 @@ private void uiMin_Simple_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMin_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -48,7 +48,7 @@ private void uiMin_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -56,13 +56,13 @@ LINQ Execute Test
 ------------------------------
 The minimum number is 0.
 
-{% endhighlight %}
+```
 
 ## Min - Projection
 This C# example uses the LINQ Min method with a dynamic expression to get the length of the shortest word in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMin_Projection_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = {"cherry", "apple", "blueberry"};
@@ -75,10 +75,10 @@ private void uiMin_Projection_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMin_Projection_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = {"cherry", "apple", "blueberry"};
@@ -91,7 +91,7 @@ private void uiMin_Projection_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -99,13 +99,13 @@ LINQ Execute Test
 ------------------------------
 The shortest word is 5 characters long.
 
-{% endhighlight %}
+```
 
 ## Min - Grouped
 This C# example uses the LINQ Min method with a dynamic expression to get the cheapest price among each category's products.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMin_Grouped_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -118,10 +118,10 @@ private void uiMin_Grouped_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMin_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -134,7 +134,7 @@ private void uiMin_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -156,13 +156,13 @@ CheapestPrice=2.5000
 CheapestPrice=9.2000
 CheapestPrice=7.0000
 
-{% endhighlight %}
+```
 
 ## Min - Elements
 This C# example uses the LINQ Min method with a dynamic expression to get the products with the cheapest price in each category.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMin_Elements_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -175,10 +175,10 @@ private void uiMin_Elements_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMin_Elements_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -191,7 +191,7 @@ private void uiMin_Elements_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -214,4 +214,4 @@ Category=Confections    CheapestProducts=...
 Category=Grains/Cereals        CheapestProducts=... 
   CheapestProducts: ProductID=52  ProductName=Filo Mix    Category=Grains/Cereals        UnitPrice=7.0000        UnitsInStock=38
 
-{% endhighlight %}
+```

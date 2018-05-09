@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Average examples using an Expression Evaluator.
 permalink: linq-dynamic-average-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Average Examples
 {{ page.description }}
@@ -18,24 +18,24 @@ permalink: linq-dynamic-average-examples
 This C# example uses the LINQ Average method with a dynamic expression to get the average of all numbers in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
 var averageNum = numbers.Average();
 
 Console.WriteLine("The average number is {0}.", averageNum);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/ytINV0' %}
 
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
 
 var averageNum = numbers.Execute<double>("Average()");
 
 Console.WriteLine("The average number is {0}.", averageNum);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/0eEHRS' %}
 
 ### Result
@@ -44,29 +44,29 @@ LINQ Execute Test
 ------------------------------
 The average number is 4.5.
 
-{% endhighlight %}
+```
 
 ## Average - Projection
 This C# example uses the LINQ Average method with a dynamic expression to get the average length of the words in the array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 string[] words = {"cherry", "apple", "blueberry"};
 
 var averageLength = words.Average(w => w.Length);
 
 Console.WriteLine("The average word length is {0} characters.", averageLength);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/CjVP6t' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 string[] words = {"cherry", "apple", "blueberry"};
 
 var averageLength = words.Execute<double>("Average(w => w.Length)");
 
 Console.WriteLine("The average word length is {0} characters.", averageLength);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/xmIXWV' %}
 
 ### Result
@@ -75,13 +75,13 @@ LINQ Execute Test
 ------------------------------
 The average word length is 6.66666666666667 characters.
 
-{% endhighlight %}
+```
 
 ## Average - Grouped
 This C# example uses the LINQ Average method with a dynamic expression to get the average price of each category's products.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 var products = getList();
 
 var categories = products.GroupBy(prod => prod.Category).Select(g => new {Category = g.Key, AveragePrice = g.Average(prod => prod.UnitPrice)});
@@ -90,11 +90,11 @@ foreach (var categorie in categories)
 {
 	Console.WriteLine("Category : " + categorie.Category + " AveragePrice : " +categorie.AveragePrice );
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/XtBI9y' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiAverage_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -107,7 +107,7 @@ private void uiAverage_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -129,4 +129,4 @@ AveragePrice=28.7300
 AveragePrice=25.1600 
 AveragePrice=20.2500
 
-{% endhighlight %}
+```

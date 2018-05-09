@@ -5,18 +5,18 @@ description: Extend the String class with methods to Execute & Compile C# expres
 permalink: string-extensions
 ---
 
-{% include template-h1.html %}
+
 
 ## Description
 {{ page.description }}
 
 Under the hood, string extensions use the default context to execute and compile expressions.
-{% highlight csharp %}
+```csharp
 public static object Execute(this string code, params object[] parameters)
 {
     return EvalManager.DefaultContext.Execute(code, parameters);
 }
-{% endhighlight %}
+```
 
 ## "string".Execute
 Execute a C# expression. Extend the String class.
@@ -29,12 +29,12 @@ Execute a C# expression. Extend the String class.
 - "string".Execute(params object[] parameters)
 
 ### Example
-{% highlight csharp %}
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 
 var result1 = "1+2".Execute<int>(); // return 3
 var result2 = "X+Y".Execute(new { X = 1, Y = 2 }); // return 3
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/iXeE87' %}
     
 
@@ -52,7 +52,7 @@ Compile a C# expression. Extend the String class.
 - "string".Compile(IDictionary&lt;string, Type&gt;): Func&lt;IDictionary, object&gt;
 
 ### Example
-{% highlight csharp %}
+```csharp
 // using Z.Expressions; // Don't forget to include this.
 
 string s = "Price * Quantity";
@@ -63,4 +63,4 @@ foreach(var item in list)
 {
     totals += compiled(item);
 }
-{% endhighlight %}
+```

@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Max examples using an Expression Evaluator.
 permalink: linq-dynamic-max-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Max Examples
 {{ page.description }}
@@ -19,7 +19,7 @@ permalink: linq-dynamic-max-examples
 This C# example uses the LINQ Max method with a dynamic expression to get the highest number in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMax_Simple_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -32,10 +32,10 @@ private void uiMax_Simple_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMax_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -48,7 +48,7 @@ private void uiMax_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -56,13 +56,13 @@ LINQ Execute Test
 ------------------------------
 The maximum number is 9.
 
-{% endhighlight %}
+```
 
 ## Max - Projection
 This C# example uses the LINQ Max method with a dynamic expression to get the length of the longest word in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMax_Projection_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = {"cherry", "apple", "blueberry"};
@@ -75,10 +75,10 @@ private void uiMax_Projection_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMax_Projection_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = {"cherry", "apple", "blueberry"};
@@ -91,7 +91,7 @@ private void uiMax_Projection_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -99,13 +99,13 @@ LINQ Execute Test
 ------------------------------
 The longest word is 9 characters long.
 
-{% endhighlight %}
+```
 
 ## Max - Grouped
 This C# example uses the LINQ Max method with a dynamic expression to get the most expensive price among each category's products.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMax_Grouped_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -118,10 +118,10 @@ private void uiMax_Grouped_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMax_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -134,7 +134,7 @@ private void uiMax_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -156,13 +156,13 @@ MostExpensivePrice=55.0000
 MostExpensivePrice=81.0000 
 MostExpensivePrice=38.0000
 
-{% endhighlight %}
+```
 
 ## Max - Elements
 This C# example uses the LINQ Max method with a dynamic expression to get the products with the most expensive price in each category.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiMax_Elements_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -175,10 +175,10 @@ private void uiMax_Elements_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiMax_Elements_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -191,7 +191,7 @@ private void uiMax_Elements_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -214,4 +214,4 @@ Category=Confections    MostExpensiveProducts=...
 Category=Grains/Cereals        MostExpensiveProducts=... 
   MostExpensiveProducts: ProductID=56    ProductName=Gnocchi di nonna Alice      Category=Grains/Cereals        UnitPrice=38.0000      UnitsInStock=21
 
-{% endhighlight %}
+```

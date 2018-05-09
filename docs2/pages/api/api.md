@@ -4,7 +4,7 @@ title: API
 permalink: api
 ---
 
-{% include template-h1.html %}
+
 
 ## API
 

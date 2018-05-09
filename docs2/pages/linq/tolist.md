@@ -5,7 +5,7 @@ description: C# Dynamic LINQ ToList examples using an Expression Evaluator.
 permalink: linq-dynamic-tolist-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic ToList Examples
 {{ page.description }}
@@ -16,19 +16,19 @@ permalink: linq-dynamic-tolist-examples
 This C# example uses the LINQ ToList method with a dynamic expression to immediately evaluate a sequence into a List<T>.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 // todo
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 // todo
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 // todo
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -39,4 +39,4 @@ apple
 blueberry
 cherry
 
-{% endhighlight %}
+```

@@ -5,7 +5,7 @@ description: C# Dynamic LINQ OrderBy examples using an Expression Evaluator.
 permalink: linq-dynamic-orderby-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic OrderBy Examples
 {{ page.description }}
@@ -19,7 +19,7 @@ permalink: linq-dynamic-orderby-examples
 This C# example uses the LINQ OrderBy method with a dynamic expression to sort a list of words alphabetically.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -36,10 +36,10 @@ private void uiOrderBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -56,10 +56,10 @@ private void uiOrderBy_Simple_1_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -76,7 +76,7 @@ private void uiOrderBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -87,13 +87,13 @@ apple
 blueberry
 cherry
 
-{% endhighlight %}
+```
 
 ## OrderBy - Simple 2
 This C# example uses the LINQ OrderBy method with a dynamic expression to sort a list of words by length.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_2_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -110,10 +110,10 @@ private void uiOrderBy_Simple_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -130,10 +130,10 @@ private void uiOrderBy_Simple_2_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = { "cherry", "apple", "blueberry" };
@@ -150,7 +150,7 @@ private void uiOrderBy_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -161,13 +161,13 @@ apple
 cherry
 blueberry
 
-{% endhighlight %}
+```
 
 ## OrderBy - Simple 3
 This C# example uses the LINQ OrderBy method with a dynamic expression to sort a list of products by name.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_3_LINQ_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -180,10 +180,10 @@ private void uiOrderBy_Simple_3_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -196,10 +196,10 @@ private void uiOrderBy_Simple_3_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	List<My.Product> products = My.GetProductList();
@@ -212,7 +212,7 @@ private void uiOrderBy_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -296,13 +296,13 @@ ProductID=63 ProductName=Vegie-spread Category=Condiments UnitPrice=43.9000 Unit
 ProductID=64 ProductName=Wimmers gute SemmelknÃ¶del Category=Grains/Cereals UnitPrice=33.2500 UnitsInStock=22
 ProductID=47 ProductName=Zaanse koeken Category=Confections UnitPrice=9.5000 UnitsInStock=36
 
-{% endhighlight %}
+```
 
 ## OrderBy - Comparer
 This C# example uses the LINQ OrderBy method with a dynamic expression and a custom comparer to do a case-insensitive sort of the words in an array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Comparer_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -315,10 +315,10 @@ private void uiOrderBy_Comparer_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -331,10 +331,10 @@ private void uiOrderBy_Comparer_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiOrderBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = { "aPPLE", "AbAcUs", "bRaNcH", "BlUeBeRrY", "ClOvEr", "cHeRry" };
@@ -349,7 +349,7 @@ private void uiOrderBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -362,4 +362,4 @@ bRaNcH
 cHeRry
 ClOvEr
 
-{% endhighlight %}
+```

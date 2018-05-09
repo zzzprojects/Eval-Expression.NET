@@ -5,7 +5,7 @@ description: C# Dynamic LINQ Distinct examples using an Expression Evaluator.
 permalink: linq-dynamic-distinct-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic Distinct Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-distinct-examples
 This C# example uses the LINQ Distinct method with a dynamic expression to remove duplicate elements in a sequence of factors of 300.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] factorsOf300 = {2, 2, 3, 5, 5};
 
 var uniqueFactors = factorsOf300.Distinct();
@@ -27,11 +27,11 @@ foreach (var f in uniqueFactors)
 {
 	Console.WriteLine(f.ToString());
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/p6rdJI' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] factorsOf300 = {2, 2, 3, 5, 5};
 
 var uniqueFactors = factorsOf300.Execute<IEnumerable<int>>("Distinct()");
@@ -42,7 +42,7 @@ foreach (var f in uniqueFactors)
 {
 	Console.WriteLine(f.ToString());
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/uMxKIt' %}
 
 ### Result
@@ -54,13 +54,13 @@ Prime factors of 300:
 3
 5
 
-{% endhighlight %}
+```
 
 ## Distinct - 2
 This C# example uses the LINQ Distinct method with a dynamic expression to find the unique Category names.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 var products = getList();
 
 var categoryNames = products.Select(x => x.Category).Distinct();
@@ -70,11 +70,11 @@ foreach (var n in categoryNames)
 {
 	Console.WriteLine(n);
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/TZUcdy' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 var products = getList();
 
 var categoryNames = products.Execute<IEnumerable<string>>("Select(x => x.Category).Distinct()");
@@ -84,7 +84,7 @@ foreach (var n in categoryNames)
 {
 	Console.WriteLine(n);
 }
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/gC6H2M' %}
 
 ### Result
@@ -101,4 +101,4 @@ Dairy Products
 Confections
 Grains/Cereals
 
-{% endhighlight %}
+```

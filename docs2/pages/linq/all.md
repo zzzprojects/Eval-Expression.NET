@@ -5,7 +5,7 @@ description: C# Dynamic LINQ All examples using an Expression Evaluator.
 permalink: linq-dynamic-all-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic All Examples
 {{ page.description }}
@@ -17,33 +17,33 @@ permalink: linq-dynamic-all-examples
 This C# example uses the LINQ All method with a dynamic expression to determine whether an array contains only odd numbers.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
 var onlyOdd = numbers.All(n => n % 2 == 1);
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/E82Y4a' %}
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
 var onlyOdd = numbers.All(n => "n % 2 == 1");
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/1M0scW' %}
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 int[] numbers = {1, 11, 3, 19, 41, 65, 19};
 
 var onlyOdd = numbers.Execute<bool>("All(n => n % 2 == 1)");
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/8kTOjI' %}
 
 ### Result
@@ -52,13 +52,13 @@ LINQ Execute Test
 ------------------------------
 The list contains only odd numbers: True
 
-{% endhighlight %}
+```
 
 ## All - Grouped
 This C# example uses the LINQ All method with a dynamic expression to return a grouped a list of products only for categories that have all of their products in stock.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 var products = getList();
 
 var productGroups = products.GroupBy(p => p.Category)
@@ -75,11 +75,11 @@ foreach (var group in productGroups)
 }
 
 Console.WriteLine("Count After All : " + newCount);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/COqjUY' %}
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiAll_Grouped_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -94,10 +94,10 @@ private void uiAll_Grouped_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiAll_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -112,7 +112,7 @@ private void uiAll_Grouped_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -173,4 +173,4 @@ Category=Grains/Cereals        Products=...
   Products: ProductID=57  ProductName=Ravioli Angelo      Category=Grains/Cereals        UnitPrice=19.5000      UnitsInStock=36 
   Products: ProductID=64  ProductName=Wimmers gute SemmelknÃ¶del  Category=Grains/Cereals        UnitPrice=33.2500      UnitsInStock=22
 
-{% endhighlight %}
+```

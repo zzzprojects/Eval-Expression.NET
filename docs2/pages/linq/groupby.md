@@ -5,7 +5,7 @@ description: C# Dynamic LINQ GroupBy examples using an Expression Evaluator.
 permalink: linq-dynamic-groupby-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic GroupBy Examples
 {{ page.description }}
@@ -21,7 +21,7 @@ permalink: linq-dynamic-groupby-examples
 This C# example uses the LINQ GroupBy method with a dynamic expression to partition a list of numbers by their remainder when divided by 5.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -42,10 +42,10 @@ private void uiGroupBy_Simple_1_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -66,7 +66,7 @@ private void uiGroupBy_Simple_1_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -88,13 +88,13 @@ Numbers with a remainder of 2 when divided by 5:
 7
 2
 
-{% endhighlight %}
+```
 
 ## GroupBy - Simple 2
 This C# example uses the LINQ GroupBy method with a dynamic expression to partition a list of words by their first letter.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_2_LINQ_Click(object sender, EventArgs e)
 {
 	string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
@@ -115,10 +115,10 @@ private void uiGroupBy_Simple_2_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] words = {"blueberry", "chimpanzee", "abacus", "banana", "apple", "cheese"};
@@ -139,7 +139,7 @@ private void uiGroupBy_Simple_2_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -155,13 +155,13 @@ Words that start with the letter 'a':
 abacus
 apple
 
-{% endhighlight %}
+```
 
 ## GroupBy - Simple 3
 This C# example uses the LINQ GroupBy method with a dynamic expression to partition a list of products by category.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_3_LINQ_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -174,10 +174,10 @@ private void uiGroupBy_Simple_3_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var products = My.GetProductList();
@@ -190,7 +190,7 @@ private void uiGroupBy_Simple_3_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -282,13 +282,13 @@ Products: ProductID=56 ProductName=Gnocchi di nonna Alice Category=Grains/Cereal
 Products: ProductID=57 ProductName=Ravioli Angelo Category=Grains/Cereals UnitPrice=19.5000 UnitsInStock=36
 Products: ProductID=64 ProductName=Wimmers gute SemmelknÃ¶del Category=Grains/Cereals UnitPrice=33.2500 UnitsInStock=22
 
-{% endhighlight %}
+```
 
 ## GroupBy - Nested
 This C# example uses the LINQ GroupBy method with a dynamic expression to partition a list of each customer's orders, first by year, and then by month.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Nested_LINQ_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -316,10 +316,10 @@ private void uiGroupBy_Nested_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	var customers = My.GetCustomerList();
@@ -347,7 +347,7 @@ private void uiGroupBy_Nested_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -2145,13 +2145,13 @@ MonthGroups: Month=4 Orders=...
 Orders: OrderID=10998 OrderDate=4/3/1998 Total=686.00
 Orders: OrderID=11044 OrderDate=4/23/1998 Total=591.60
 
-{% endhighlight %}
+```
 
 ## GroupBy - Comparer
 This C# example uses the LINQ GroupBy method to partition trimmed elements of an array using a custom comparer that matches words that are anagrams of each other.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Comparer_LINQ_Click(object sender, EventArgs e)
 {
 	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
@@ -2164,10 +2164,10 @@ private void uiGroupBy_Comparer_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
@@ -2182,7 +2182,7 @@ private void uiGroupBy_Comparer_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -2198,12 +2198,12 @@ last
 earn 
 near
 
-{% endhighlight %}
+```
 
 ## GroupBy - Comparer, Mapped
 This C# example uses the LINQ GroupBy method to partition trimmed elements of an array using a custom comparer that matches words that are anagrams of each other, and then converts the results to uppercase.
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiGroupBy_ComparerMapped_LINQ_Click(object sender, EventArgs e)
 {
 	string[] anagrams = {"from   ", " salt", " earn ", "  last   ", " near ", " form  "};
@@ -2216,10 +2216,10 @@ private void uiGroupBy_ComparerMapped_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 
 private void uiGroupBy_ComparerMapped_LINQ_Execute_Click(object sender, EventArgs e)
 {
@@ -2235,7 +2235,7 @@ private void uiGroupBy_ComparerMapped_LINQ_Execute_Click(object sender, EventArg
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }    
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -2251,4 +2251,4 @@ LAST
 EARN 
 NEAR
 
-{% endhighlight %}
+```

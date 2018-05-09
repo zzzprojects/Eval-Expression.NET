@@ -5,7 +5,7 @@ description: C# Dynamic LINQ TakeWhile examples using an Expression Evaluator.
 permalink: linq-dynamic-takewhile-examples
 ---
 
-{% include template-h1.html %}
+
 
 ## LINQ Dynamic TakeWhile Examples
 {{ page.description }}
@@ -17,7 +17,7 @@ permalink: linq-dynamic-takewhile-examples
 This C# example uses the LINQ TakeWhile method with a dynamic expression to return elements starting from the beginning of the array until a number is hit that is not less than 6.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Simple_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -34,10 +34,10 @@ private void uiTakeWhile_Simple_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -54,10 +54,10 @@ private void uiTakeWhile_Simple_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -74,7 +74,7 @@ private void uiTakeWhile_Simple_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -86,13 +86,13 @@ First numbers less than 6:
 1
 3
 
-{% endhighlight %}
+```
 
 ## TakeWhile - Indexed
 This C# example uses the LINQ Indexed TakeWhile method with a dynamic expression to return elements starting from the beginning of the array until a number is hit that is less than its position in the array.
 
 ### LINQ
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Indexed_LINQ_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -109,10 +109,10 @@ private void uiTakeWhile_Indexed_LINQ_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.Linq, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Dynamic
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -129,10 +129,10 @@ private void uiTakeWhile_Indexed_LINQ_Dynamic_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqDynamic, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### LINQ Execute
-{% highlight csharp %}
+```csharp
 private void uiTakeWhile_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 {
 	int[] numbers = {5, 4, 1, 3, 9, 8, 6, 7, 2, 0};
@@ -149,7 +149,7 @@ private void uiTakeWhile_Indexed_LINQ_Execute_Click(object sender, EventArgs e)
 
 	My.Result.Show(My.LinqResultType.LinqExecute, uiResult, sb);
 }
-{% endhighlight %}
+```
 
 ### Result
 {% highlight text %}
@@ -159,4 +159,4 @@ First numbers not less than their position:
 5 
 4
 
-{% endhighlight %}
+```

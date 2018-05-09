@@ -5,7 +5,7 @@ description: Compile a C# expression and return a delegate.
 permalink: eval-compile
 ---
 
-{% include template-h1.html %}
+
 
 ## Description
 {{ page.description }}
@@ -20,7 +20,7 @@ You can return the delegate as a strongly typed function or action:
 - Eval.Compile&lt;TDelegate&gt;(string code, params string[] parameterNames)
 
 ### Example
-{% highlight csharp %}
+```csharp
 // Delegate Func
 var compiled = Eval.Compile<Func<int, int, int>>("{0} + {1}");
 int result = compiled(1, 2);
@@ -32,7 +32,7 @@ compiled(1, 2);
 // Named Parameter
 var compiled = Eval.Compile<Func<int, int, int>>("X + Y", "X", "Y");
 int result = compiled(1, 2);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/MBHlX8' %}
 
 ## Compile and return a delegate
@@ -46,7 +46,7 @@ You can return the delegate as a generic delegate:
 - Eval.Compile(string code, IDictionary&lt;string, Type&gt; nameTypes): Func&lt;IDictionary, object&gt;
 
 ### Example
-{% highlight csharp %}
+```csharp
 // Overload: Up to 9 parameters can be used
 var compiled = Eval.Compile("{0} + {1}", typeof(int), typeof(int));
 object result = compiled(1, 2);
@@ -64,7 +64,7 @@ var types = values.ToDictionary(x => x.Key, x => x.Value.GetType());
 
 var compiled = Eval.Compile("X + Y", types);
 var result = compiled(values);
-{% endhighlight %}
+```
 {% include  component-try-it.html href='https://dotnetfiddle.net/870F71' %}
 
 
