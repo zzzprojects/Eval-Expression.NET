@@ -18,8 +18,8 @@ layout: post
 		<link rel="icon" type="image/png" href="http://entityframework-plus.net/images/logo.png">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/github2.css">
-		<link rel="stylesheet" type="text/css" href="http://entityframework-plus.net/css/default.1.3.css">
+		<link rel="stylesheet" type="text/css" href="/css/github2.css">
+		<link rel="stylesheet" type="text/css" href="/css/default.1.3.css">
 	</head>
 	
 	<body>
