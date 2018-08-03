@@ -7,7 +7,7 @@ A developer seat is a developer working for your company and developing code dir
 
 You don't have to purchase developer seat for front-end developer or back-end developer which doesn't use our product API.
 
-Since you buy developer seat, you can develop an unlimited amount of project within your company.
+Since you buy developer seat, you can develop an unlimited amount of projects within your company.
 
 ### What's the cost for additional developer seat?
 The cost for additional developer seat is usually extremely low. We want to make sure our library is accessible for small and large company.
