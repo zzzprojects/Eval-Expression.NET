@@ -27,7 +27,7 @@ int result = Eval.Execute<int>(@"
     var filter = list.Where(x => x < 4);
     return filter.Sum(x => x);");
 ```
-## Installing & Upgrading
+## Installing
 Download the <a href="/download">NuGet Package</a>
 
 ## Requirements
