@@ -25,6 +25,7 @@ int result = Eval.Execute<int>(@"
     var filter = list.Where(x => x < 4);
     return filter.Sum(x => x);");
 ```
+
 ## Installing
 Download the <a href="/download">NuGet Package</a>
 
@@ -34,7 +35,6 @@ Download the <a href="/download">NuGet Package</a>
 
 - .NET Framework 4.0 or greater
 - .NET Standard 1.3
-
 
 ### Is it that simple?
 
