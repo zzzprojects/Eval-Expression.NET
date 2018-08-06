@@ -1,7 +1,7 @@
 # String Extensions
 
 ## Description
-{{ page.description }}
+Extend the String class with methods to Execute & Compile C# expression.
 
 Under the hood, string extensions use the default context to execute and compile expressions.
 ```csharp
