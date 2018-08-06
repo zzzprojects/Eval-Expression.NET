@@ -1,7 +1,7 @@
 # Eval Manager
 
 ## Description
-{{ page.description }}
+Static manager class for options shared between all instances.
 
 ## Cache
 Gets or sets the cache to use to cache compiled delegate.
