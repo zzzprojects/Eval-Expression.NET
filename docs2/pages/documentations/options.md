@@ -1,7 +1,7 @@
 # Options
 
 ## Description
-{{ page.description }}
+Options to customize the context under which the C# expression is compiled.
 
 ## BindingFlags
 Gets or sets the value of the BindingFlags to use to retrieve member (Constructor, Method, Property, and Field)
