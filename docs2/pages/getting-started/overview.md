@@ -15,9 +15,7 @@ It supports:
 - NET40+
 - NET Standard 1.3
 
-It’s easy to use, and easy to customize.
-
-
+It's easy to use, and easy to customize.
 
 ```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
@@ -44,7 +42,7 @@ Yes,
 
 You add a valid expression and execute it.
 
-That’s why people feel in love so quickly with our library.
+That's why people feel in love so quickly with our library.
 
 ### Who use it?
 
