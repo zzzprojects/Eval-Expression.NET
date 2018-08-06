@@ -1,7 +1,7 @@
 # Compile & Execute
 
 ## Description
-{{ page.description }}
+Compile and execute a C# expression at runtime.
 
 ## Execute
 Execute a C# expression and return the result: 
