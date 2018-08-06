@@ -1,7 +1,7 @@
 # Register & Unregister
 
 ## Description
-{{ page.description }}
+Register and unregister assembly, constant, method, type, and more.
 
 By default, all .NET common class/type/extension methods are already registered.
 
