@@ -1,7 +1,7 @@
 # LINQ Dynamic
 
 ## Description
-{{ page.description }}
+Extend the IEnumerable&lt;T&gt; and IQueryable&lt;T&gt; interface with methods to use LINQ with dynamic expressions.
 
 LINQ (Language Integrated Query) has been introduced in .NET 3.5 and since has been one of the most used features. ORM like Entity Framework takes advantage from this feature and allow you to write type-safe queries.
 
