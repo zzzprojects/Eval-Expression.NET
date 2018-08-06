@@ -1,7 +1,7 @@
 # Eval.Execute
 
 ## Description
-{{ page.description }}
+Execute a C# expression and return the result.
 
 You can specify parameter value to use in the expression from various way:
 
