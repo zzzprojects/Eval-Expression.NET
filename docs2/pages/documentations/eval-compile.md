@@ -1,7 +1,7 @@
 # Eval.Compile
 
 ## Description
-{{ page.description }}
+Compile a C# expression and return a delegate.
 
 Under the hood, the expression is parsed into tokens and then transformed into syntax node before being compiled using Expression Tree.
 
