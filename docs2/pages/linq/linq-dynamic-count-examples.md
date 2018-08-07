@@ -19,7 +19,7 @@ var uniqueFactors = factorsOf300.Distinct().Count();
 
 Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);	
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/2HAQox' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/2HAQox' %}
 
 ### LINQ Execute
 ```csharp
@@ -29,7 +29,7 @@ var uniqueFactors = factorsOf300.Distinct().Execute<int>("Count()");
 
 Console.WriteLine("There are {0} unique factors of 300.", uniqueFactors);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/1Xc6yM' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/1Xc6yM' %}
 
 ### Result
 {% highlight text %}
@@ -50,7 +50,7 @@ var oddNumbers = numbers.Count(n => n % 2 == 1);
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/3LGjG3' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/3LGjG3' %}
 
 ### LINQ Dynamic
 ```csharp
@@ -60,7 +60,7 @@ var oddNumbers = numbers.Count(n => "n % 2 == 1");
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/P2zgkd' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/P2zgkd' %}
 
 ### LINQ Execute
 ```csharp
@@ -70,7 +70,7 @@ var oddNumbers = numbers.Execute<int>("Count(n => n % 2 == 1)");
 
 Console.WriteLine("There are {0} odd numbers in the list.", oddNumbers);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/UY9frV' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/UY9frV' %}
 
 ### Result
 {% highlight text %}
