@@ -17,7 +17,7 @@ var product = products.Where(p => p.ProductID == 12).First();
 
 Console.WriteLine("ProductID : " + product.ProductID+ " ,ProductName : " + product.ProductName+ " ,Category : "+ product.Category+ " ,UnitPrice : "+ product.UnitPrice+" ,UnitsInStock : "+ product.UnitsInStock);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/klY7P0' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/klY7P0' %}
 
 ### LINQ Execute
 ```csharp
@@ -27,7 +27,7 @@ var product = products.Where(p => p.ProductID == 12).Execute<Product>("First()")
 
 Console.WriteLine("ProductID : " + product.ProductID+ " ,ProductName : " + product.ProductName+ " ,Category : "+ product.Category+ " ,UnitPrice : "+ product.UnitPrice+" ,UnitsInStock : "+ product.UnitsInStock);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/BOAG8x' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/BOAG8x' %}
 
 ### Result
 {% highlight text %}
@@ -49,7 +49,7 @@ var startsWithO = strings.First(s => s[0] == 'o');
 
 Console.WriteLine("A string starting with 'o': {0}", startsWithO);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/GjrQL8' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/GjrQL8' %}
 
 ### LINQ Dynamic
 ```csharp
@@ -59,7 +59,7 @@ var startsWithO = strings.First(s => "s[0] == 'o'");
 
 Console.WriteLine("A string starting with 'o': {0}", startsWithO);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/B3H2GQ' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/B3H2GQ' %}
 
 ### LINQ Execute
 ```csharp
@@ -69,7 +69,7 @@ var startsWithO =  strings.Execute<string>("First(s => s[0] == 'o')");
 
 Console.WriteLine("A string starting with 'o': {0}", startsWithO);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/pqhtyM' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/pqhtyM' %}
 
 ### Result
 {% highlight text %}
