@@ -17,7 +17,7 @@ var iAfterE = words.Any(w => w.Contains("ei"));
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/36Tkzn' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/36Tkzn' %}
 
 ### LINQ Dynamic
 ```csharp
@@ -27,7 +27,7 @@ var iAfterE = words.Any(w => "w.Contains('ei')");
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/gXwUhP' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/gXwUhP' %}
 
 ### LINQ Execute
 ```csharp
@@ -37,7 +37,7 @@ var iAfterE = words.Execute<bool>("Any(w => w.Contains('ei'))");
 
 Console.WriteLine("There is a word that contains in the list that contains 'ei': {0}", iAfterE);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/PEGWxp' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/PEGWxp' %}
 
 ### Result
 {% highlight text %}
@@ -69,7 +69,7 @@ foreach (var group in productGroups)
 
 Console.WriteLine("Count After Any : " + newCount);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/GXuk1q' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/GXuk1q' %}
 
 ### LINQ Dynamic
 ```csharp
