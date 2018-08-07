@@ -23,7 +23,7 @@ var context = new EvalContext();
 string code = "Price * Quantity";
 var price = context.Execute<decimal>(code, orderItem);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/tzBdMI' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/tzBdMI' %}
 
 ## Compile
 Compile a C# expression and return a delegate: 
@@ -54,4 +54,4 @@ foreach(var item in list)
     totals += compiled(item);
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/00YSGK' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/00YSGK' %}
