@@ -18,7 +18,7 @@ var match = wordsA.SequenceEqual(wordsB);
 
 Console.WriteLine("The sequences match: {0}", match);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/J7H8eE' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/J7H8eE' %}
 
 ### LINQ Execute
 ```csharp
@@ -30,7 +30,7 @@ var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
 
 Console.WriteLine("The sequences match: {0}", match);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/Ahstcy' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/Ahstcy' %}
 
 ### Result
 {% highlight text %}
@@ -52,7 +52,7 @@ var match = wordsA.SequenceEqual(wordsB);
 
 Console.WriteLine("The sequences match: {0}", match);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/k3qskP' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/k3qskP' %}
 
 ### LINQ Execute
 ```csharp
@@ -63,7 +63,7 @@ var match = wordsA.Execute<bool>("SequenceEqual(wordsB)", new {wordsB});
 
 Console.WriteLine("The sequences match: {0}", match);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/WK4OED' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/WK4OED' %}
 
 ### Result
 {% highlight text %}
