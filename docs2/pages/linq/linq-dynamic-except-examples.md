@@ -22,7 +22,7 @@ foreach (var n in aOnlyNumbers)
 	Console.WriteLine(n.ToString());
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/oynmkt' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/oynmkt' %}
 
 ### LINQ Execute
 ```csharp
@@ -37,7 +37,7 @@ foreach (var n in aOnlyNumbers)
 	Console.WriteLine(n.ToString());
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/uPQUlu' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/uPQUlu' %}
 
 ### Result
 {% highlight text %}
