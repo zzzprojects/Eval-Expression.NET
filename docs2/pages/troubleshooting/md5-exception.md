@@ -2,7 +2,7 @@
 
 ## Problem
 
-You execute a method from the Entity Framework Extensions library, and the following error is thrown:
+You execute a method from the Eval Expression.NET library, and the following error is thrown:
 
 > This implementation is not part of the Windows Platform FIPS validated cryptographic algorithms.
 
