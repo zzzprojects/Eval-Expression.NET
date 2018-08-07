@@ -20,7 +20,7 @@ var fourthLowNum = numbers.Where(n => n > 5).ElementAt(1); // second number is i
 
 Console.WriteLine("Second number > 5: {0}", fourthLowNum);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/ML8HVw' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/ML8HVw' %}
 
 ### LINQ Execute
 ```csharp
@@ -30,7 +30,7 @@ var fourthLowNum = numbers.Where(n => n > 5).Execute<int>("ElementAt(1)"); // se
 
 Console.WriteLine("Second number > 5: {0}", fourthLowNum);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/C77VYn' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/C77VYn' %}
 
 ### Result
 {% highlight text %}
