@@ -17,7 +17,7 @@ var product = doubles.Aggregate((runningProduct, nextFactor) => runningProduct *
 
 Console.WriteLine("Total product of all numbers: {0}", product);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/BZLbt5' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/BZLbt5' %}
 
 ### LINQ Execute
 ```csharp
@@ -50,7 +50,7 @@ var endBalance = attemptedWithdrawals.Aggregate(startBalance, (balance, nextWith
 
 Console.WriteLine("Ending balance: {0}", endBalance);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/LqobT0' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/LqobT0' %}
 
 ### LINQ Execute
 ```csharp
@@ -63,7 +63,7 @@ var endBalance = attemptedWithdrawals.Execute<double>("Aggregate(startBalance, (
 Console.WriteLine("Ending balance: {0}", endBalance);
 
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/p67L8v' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/p67L8v' %}
 
 ### Result
 {% highlight text %}
