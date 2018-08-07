@@ -33,7 +33,7 @@ var list = new List<int>() { 1, 2, 3, 4, 5 };
 var list2 = list.Where(x => "x > 2");
 var list3 = list.Where(x => "x > X", new { X = 2 }); // with parameter
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/S42mkU' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/S42mkU' %}
 
 ## LINQ Dynamic - Ordering and Selecting
 You can use any ordering and selecting method with a dynamic C# expression: 
