@@ -5,7 +5,7 @@ You can evaluate our library for several months before purchasing it.
 
 The trial period stops at the end of the month. When you receive a license expiration error, download the latest version which will automatically extend your trial period.
 
-You can also purchase the library [here](http://eval-expression.net/#pro)
+You can also purchase the library [here](/pricing)
 
 Upon purchase, you will receive a license name and a license key.
 
