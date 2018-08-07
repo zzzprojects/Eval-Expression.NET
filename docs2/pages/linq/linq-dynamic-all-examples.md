@@ -17,7 +17,7 @@ var onlyOdd = numbers.All(n => n % 2 == 1);
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/E82Y4a' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/E82Y4a' %}
 
 ### LINQ Dynamic
 ```csharp
@@ -27,7 +27,7 @@ var onlyOdd = numbers.All(n => "n % 2 == 1");
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/1M0scW' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/1M0scW' %}
 
 ### LINQ Execute
 ```csharp
@@ -37,7 +37,7 @@ var onlyOdd = numbers.Execute<bool>("All(n => n % 2 == 1)");
 
 Console.WriteLine("The list contains only odd numbers: {0}", onlyOdd);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/8kTOjI' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/8kTOjI' %}
 
 ### Result
 {% highlight text %}
@@ -69,7 +69,7 @@ foreach (var group in productGroups)
 
 Console.WriteLine("Count After All : " + newCount);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/COqjUY' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/COqjUY' %}
 
 ### LINQ Dynamic
 ```csharp
