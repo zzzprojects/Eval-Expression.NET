@@ -18,7 +18,7 @@ var averageNum = numbers.Average();
 
 Console.WriteLine("The average number is {0}.", averageNum);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/ytINV0' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/ytINV0' %}
 
 
 ### LINQ Execute
@@ -29,7 +29,7 @@ var averageNum = numbers.Execute<double>("Average()");
 
 Console.WriteLine("The average number is {0}.", averageNum);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/0eEHRS' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/0eEHRS' %}
 
 ### Result
 {% highlight text %}
@@ -50,7 +50,7 @@ var averageLength = words.Average(w => w.Length);
 
 Console.WriteLine("The average word length is {0} characters.", averageLength);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/CjVP6t' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/CjVP6t' %}
 
 ### LINQ Execute
 ```csharp
@@ -60,7 +60,7 @@ var averageLength = words.Execute<double>("Average(w => w.Length)");
 
 Console.WriteLine("The average word length is {0} characters.", averageLength);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/xmIXWV' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/xmIXWV' %}
 
 ### Result
 {% highlight text %}
@@ -84,7 +84,7 @@ foreach (var categorie in categories)
 	Console.WriteLine("Category : " + categorie.Category + " AveragePrice : " +categorie.AveragePrice );
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/XtBI9y' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/XtBI9y' %}
 
 ### LINQ Execute
 ```csharp
