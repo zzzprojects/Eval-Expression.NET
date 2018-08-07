@@ -21,7 +21,7 @@ foreach (var f in uniqueFactors)
 	Console.WriteLine(f.ToString());
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/p6rdJI' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/p6rdJI' %}
 
 ### LINQ Execute
 ```csharp
@@ -36,7 +36,7 @@ foreach (var f in uniqueFactors)
 	Console.WriteLine(f.ToString());
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/uMxKIt' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/uMxKIt' %}
 
 ### Result
 {% highlight text %}
@@ -64,7 +64,7 @@ foreach (var n in categoryNames)
 	Console.WriteLine(n);
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/TZUcdy' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/TZUcdy' %}
 
 ### LINQ Execute
 ```csharp
@@ -78,7 +78,7 @@ foreach (var n in categoryNames)
 	Console.WriteLine(n);
 }
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/gC6H2M' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/gC6H2M' %}
 
 ### Result
 {% highlight text %}
