@@ -17,7 +17,7 @@ var dotProduct = vectorA.Combine(vectorB, (a, b) => a * b).Sum();
 
 Console.WriteLine("Dot product: {0}", dotProduct);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/sqa5uV' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/sqa5uV' %}
 
 ### LINQ Execute
 ```csharp
@@ -29,7 +29,7 @@ var dotProduct = vectorA.Execute<int>("Combine(vectorB, (a, b) => a * b).Sum()",
 
 Console.WriteLine("Dot product: {0}", dotProduct);
 ```
-{% include  component-try-it.html href='https://dotnetfiddle.net/DR5a6p' %}
+{% include component-try-it.html href='https://dotnetfiddle.net/DR5a6p' %}
 
 ### Result
 {% highlight text %}
