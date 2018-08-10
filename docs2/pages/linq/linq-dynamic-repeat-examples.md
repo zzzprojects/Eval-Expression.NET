@@ -1,7 +1,7 @@
 # LINQ Dynamic - Repeat
 
 ## LINQ Dynamic Repeat Examples
-{{ page.description }}
+C# Dynamic LINQ Repeat examples using an Expression Evaluator.
 
 - [Repeat](#repeat)
 
