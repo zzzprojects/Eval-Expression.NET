@@ -1,7 +1,7 @@
 # LINQ Dynamic - FirstOrDefault
 
 ## LINQ Dynamic FirstOrDefault Examples
-{{ page.description }}
+C# Dynamic LINQ FirstOrDefault examples using an Expression Evaluator.
 
 - [FirstOrDefault - Simple](#firstordefault---simple)
 - [FirstOrDefault - Condition](#firstordefault---condition)

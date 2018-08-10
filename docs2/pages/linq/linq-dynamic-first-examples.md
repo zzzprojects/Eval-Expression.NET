@@ -1,7 +1,7 @@
 # LINQ Dynamic - First
 
 ## LINQ Dynamic First Examples
-{{ page.description }}
+C# Dynamic LINQ First examples using an Expression Evaluator.
 
 - [First - Simple](#first---simple)
 - [First - Condition](#first---condition)

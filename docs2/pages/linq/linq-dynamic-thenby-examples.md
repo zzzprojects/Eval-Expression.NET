@@ -1,7 +1,7 @@
 # LINQ Dynamic - ThenBy
 
 ## LINQ Dynamic ThenBy Examples
-{{ page.description }}
+C# Dynamic LINQ ThenBy examples using an Expression Evaluator.
 
 - [ThenBy - Simple](#thenby---simple)
 - [ThenBy - Comparer](#thenby---comparer)

@@ -1,7 +1,7 @@
 # LINQ Dynamic - Union
 
 ## LINQ Dynamic Union Examples
-{{ page.description }}
+C# Dynamic LINQ Union examples using an Expression Evaluator.
 
 - [Union - 1](#where---1)
 - [Union - 2](#where---2)

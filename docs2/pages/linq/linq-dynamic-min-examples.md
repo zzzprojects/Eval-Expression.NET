@@ -1,7 +1,7 @@
 # LINQ Dynamic - Min
 
 ## LINQ Dynamic Min Examples
-{{ page.description }}
+C# Dynamic LINQ Min examples using an Expression Evaluator.
 
 - [Min - Simple](#min---simple)
 - [Min - Projection](#min---projection)

@@ -1,7 +1,7 @@
 # LINQ Dynamic - Reverse
 
 ## LINQ Dynamic Reverse Examples
-{{ page.description }}
+C# Dynamic LINQ Reverse examples using an Expression Evaluator.
 
 - [Reverse](#reverse)
 

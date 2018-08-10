@@ -1,7 +1,7 @@
 # LINQ Dynamic - OfType
 
 ## LINQ Dynamic OfType Examples
-{{ page.description }}
+C# Dynamic LINQ OfType examples using an Expression Evaluator.
 
 - [OfType](#oftype)
 

@@ -1,7 +1,7 @@
 # LINQ Dynamic - Max
 
 ## LINQ Dynamic Max Examples
-{{ page.description }}
+C# Dynamic LINQ Max examples using an Expression Evaluator.
 
 - [Max - Simple](#max---simple)
 - [Max - Projection](#max---projection)

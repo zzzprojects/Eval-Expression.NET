@@ -1,7 +1,7 @@
 # LINQ Dynamic - Where
 
 ## LINQ Dynamic Where Examples
-{{ page.description }}
+C# Dynamic LINQ Where examples using an Expression Evaluator.
 
 - [Where - Simple 1](#where---simple-1)
 - [Where - Simple 2](#where---simple-2)

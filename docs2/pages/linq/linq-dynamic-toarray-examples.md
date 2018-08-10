@@ -1,7 +1,7 @@
 # LINQ Dynamic - ToArray
 
 ## LINQ Dynamic ToArray Examples
-{{ page.description }}
+C# Dynamic LINQ ToArray examples using an Expression Evaluator.
 
 - [ToArray](#toarray)
 

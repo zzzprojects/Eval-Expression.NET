@@ -1,7 +1,7 @@
 # LINQ Dynamic - Take
 
 ## LINQ Dynamic Take Examples
-{{ page.description }}
+C# Dynamic LINQ Take examples using an Expression Evaluator.
 
 - [Take - Simple](#take---simple)
 - [Take - Nested](#take---nested)

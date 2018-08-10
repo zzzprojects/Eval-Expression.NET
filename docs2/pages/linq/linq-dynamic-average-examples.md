@@ -1,7 +1,7 @@
 # LINQ Dynamic - Average
 
 ## LINQ Dynamic Average Examples
-{{ page.description }}
+C# Dynamic LINQ Average examples using an Expression Evaluator.
 
 - [Average - Simple](#average---simple)
 - [Average - Projection](#average---projection)

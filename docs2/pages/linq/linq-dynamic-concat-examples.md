@@ -1,7 +1,7 @@
 # LINQ Dynamic - Concat
 
 ## LINQ Dynamic Concat Examples
-{{ page.description }}
+C# Dynamic LINQ Concat examples using an Expression Evaluator.
 
 - [Concat - 1](#concat---1)
 - [Concat - 2](#concat---2)

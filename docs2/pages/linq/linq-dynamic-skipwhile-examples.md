@@ -1,7 +1,7 @@
 # LINQ Dynamic - SkipWhile
 
 ## LINQ Dynamic SkipWhile Examples
-{{ page.description }}
+C# Dynamic LINQ SkipWhile examples using an Expression Evaluator.
 
 - [SkipWhile - Simple](#skipwhile---simple)
 - [SkipWhile - Indexed](#skipwhile---indexed)

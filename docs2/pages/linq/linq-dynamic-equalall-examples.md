@@ -1,7 +1,7 @@
 # LINQ Dynamic - EqualAll
 
 ## LINQ Dynamic EqualAll Examples
-{{ page.description }}
+C# Dynamic LINQ EqualAll examples using an Expression Evaluator.
 
 - [EqualAll - 1](#equalall---1)
 - [EqualAll - 2](#equalall---2)

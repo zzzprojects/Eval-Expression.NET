@@ -1,7 +1,7 @@
 # LINQ Dynamic - GroupBy
 
 ## LINQ Dynamic GroupBy Examples
-{{ page.description }}
+C# Dynamic LINQ GroupBy examples using an Expression Evaluator.
 
 - [GroupBy - Simple 1](#groupby---simple-1)
 - [GroupBy - Simple 2](#groupby---simple-2)

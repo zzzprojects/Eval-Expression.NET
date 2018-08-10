@@ -1,7 +1,7 @@
 # LINQ Dynamic - Distinct
 
 ## LINQ Dynamic Distinct Examples
-{{ page.description }}
+C# Dynamic LINQ Distinct examples using an Expression Evaluator.
 
 - [Distinct - 1](#distinct---1)
 - [Distinct - 2](#distinct---2)

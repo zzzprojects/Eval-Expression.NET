@@ -1,7 +1,7 @@
 # LINQ Dynamic - Intersect
 
 ## LINQ Dynamic Intersect Examples
-{{ page.description }}
+C# Dynamic LINQ Intersect examples using an Expression Evaluator.
 
 - [Intersect - 1](#intersect---1)
 - [Intersect - 2](#intersect---2)
