@@ -1,7 +1,7 @@
 # LINQ Dynamic - Sum
 
 ## LINQ Dynamic Sum Examples
-{{ page.description }}
+C# Dynamic LINQ Sum examples using an Expression Evaluator.
 
 - [Sum - Simple](#sum---simple)
 - [Sum - Projection](#sum---projection)
