@@ -1,7 +1,7 @@
 # LINQ Dynamic - OrderBy
 
 ## LINQ Dynamic OrderBy Examples
-{{ page.description }}
+C# Dynamic LINQ OrderBy examples using an Expression Evaluator.
 
 - [OrderBy - Simple 1](#orderby---simple-1)
 - [OrderBy - Simple 2](#orderby---simple-2)
