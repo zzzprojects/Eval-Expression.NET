@@ -1,7 +1,7 @@
 # LINQ Dynamic - ToList
 
 ## LINQ Dynamic ToList Examples
-{{ page.description }}
+C# Dynamic LINQ ToList examples using an Expression Evaluator.
 
 - [ToList](#tolist)
 
