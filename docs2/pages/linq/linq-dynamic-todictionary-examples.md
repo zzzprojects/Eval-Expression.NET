@@ -1,7 +1,7 @@
 # LINQ Dynamic - ToDictionary
 
 ## LINQ Dynamic ToDictionary Examples
-{{ page.description }}
+C# Dynamic LINQ ToDictionary examples using an Expression Evaluator.
 
 - [ToDictionary](#todictionary)
 
