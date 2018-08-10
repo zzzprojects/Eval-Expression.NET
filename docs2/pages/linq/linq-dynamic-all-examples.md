@@ -1,7 +1,7 @@
 # LINQ Dynamic - All
 
 ## LINQ Dynamic All Examples
-{{ page.description }}
+C# Dynamic LINQ All examples using an Expression Evaluator.
 
 - [All - Simple](#all---simple)
 - [All - Grouped](#all---grouped)
