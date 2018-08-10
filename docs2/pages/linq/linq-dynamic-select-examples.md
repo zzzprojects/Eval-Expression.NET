@@ -1,7 +1,7 @@
 # LINQ Dynamic - Select
 
 ## LINQ Dynamic Select Examples
-{{ page.description }}
+C# Dynamic LINQ Select examples using an Expression Evaluator.
 
 - [Select - Simple 1](#select---simple-1)
 - [Select - Simple 2](#select---simple-2)
