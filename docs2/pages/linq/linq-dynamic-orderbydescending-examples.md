@@ -1,7 +1,7 @@
 # LINQ Dynamic - OrderByDescending
 
 ## LINQ Dynamic OrderByDescending Examples
-{{ page.description }}
+C# Dynamic LINQ OrderByDescending examples using an Expression Evaluator.
 
 - [OrderByDescending - Simple 1](#orderbydescending---simple-1)
 - [OrderByDescending - Simple 2](#orderbydescending---simple-2)
