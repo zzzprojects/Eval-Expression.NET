@@ -1,7 +1,7 @@
 # LINQ Dynamic - Count
 
 ## LINQ Dynamic Count Examples
-{{ page.description }}
+C# Dynamic LINQ Count examples using an Expression Evaluator.
 
 - [Count - Simple](#count---simple)
 - [Count - Conditional](#count---conditional)
