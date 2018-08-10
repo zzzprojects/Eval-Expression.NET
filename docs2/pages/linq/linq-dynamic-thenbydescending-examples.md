@@ -1,7 +1,7 @@
 # LINQ Dynamic - ThenByDescending
 
 ## LINQ Dynamic ThenByDescending Examples
-{{ page.description }}
+C# Dynamic LINQ ThenByDescending examples using an Expression Evaluator.
 
 - [ThenByDescending - Simple](#thenbydescending---simple)
 - [ThenByDescending - Comparer](#thenbydescending---comparer)
