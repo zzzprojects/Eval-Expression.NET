@@ -1,7 +1,7 @@
 # LINQ Dynamic - Except
 
 ## LINQ Dynamic Except Examples
-{{ page.description }}
+C# Dynamic LINQ Except examples using an Expression Evaluator.
 
 - [Except - 1](#except---1)
 - [Except - 2](#except---2)
