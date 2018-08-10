@@ -1,7 +1,7 @@
 # LINQ Dynamic - Aggregate
 
 ## LINQ Dynamic Aggregate Examples
-{{ page.description }}
+C# Dynamic LINQ Aggregate examples using an Expression Evaluator.
 
 - [Aggregate - Simple](#aggregate---simple)
 - [Aggregate - Seed](#aggregate---seed)
