@@ -1,7 +1,7 @@
 # LINQ Dynamic - TakeWhile
 
 ## LINQ Dynamic TakeWhile Examples
-{{ page.description }}
+C# Dynamic LINQ TakeWhile examples using an Expression Evaluator.
 
 - [TakeWhile - Simple](#takewhile---simple)
 - [TakeWhile - Indexed](#takewhile---indexed)
