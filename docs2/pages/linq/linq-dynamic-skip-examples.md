@@ -1,7 +1,7 @@
 # LINQ Dynamic - Skip
 
 ## LINQ Dynamic Skip Examples
-{{ page.description }}
+C# Dynamic LINQ Skip examples using an Expression Evaluator.
 
 - [Skip - Simple](#skip---simple)
 - [Skip - Nested](#skip---nested)
