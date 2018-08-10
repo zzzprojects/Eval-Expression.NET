@@ -1,7 +1,7 @@
 # LINQ Dynamic - Combine
 
 ## LINQ Dynamic Combine Examples
-{{ page.description }}
+C# Dynamic LINQ Combine examples using an Expression Evaluator.
 
 - [Combine](#combine)
 
