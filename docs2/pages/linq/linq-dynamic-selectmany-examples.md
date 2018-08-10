@@ -1,7 +1,7 @@
 # LINQ Dynamic - SelectMany
 
 ## LINQ Dynamic SelectMany Examples
-C# Dynamic LINQ Where examples using an Expression Evaluator.
+C# Dynamic LINQ SelectMany examples using an Expression Evaluator.
 
 - [SelectMany - Compound from 1](#selectmany---compound-from-1)
 - [SelectMany - Compound from 2](#selectmany---compound-from-2)
