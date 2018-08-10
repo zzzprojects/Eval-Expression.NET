@@ -1,7 +1,7 @@
 # LINQ Dynamic - Range
 
 ## LINQ Dynamic Range Examples
-{{ page.description }}
+C# Dynamic LINQ Range examples using an Expression Evaluator.
 
 - [Range](#range)
 
