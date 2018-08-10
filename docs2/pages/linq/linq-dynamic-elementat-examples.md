@@ -1,7 +1,7 @@
 # LINQ Dynamic - ElementAt
 
 ## LINQ Dynamic ElementAt Examples
-{{ page.description }}
+C# Dynamic LINQ ElementAt examples using an Expression Evaluator.
 
 - [ElementAt](#elementat)
 - [Where - Simple 2](#where---simple-2)
