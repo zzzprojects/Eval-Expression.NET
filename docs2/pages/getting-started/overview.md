@@ -42,7 +42,7 @@ Yes,
 
 You add a valid expression and execute it.
 
-That's why people feel in love so quickly with our library.
+That's why people fall in love so quickly with our library.
 
 ### Who use it?
 

@@ -10,7 +10,7 @@ You can also purchase the library [here](/pricing)
 Upon purchase, you will receive a license name and a license key.
 
 ## Setup License from config file
-The license name and key can be directly be added in the app.config or web.config file in the appSettings section.
+The license name and key can be added directly in the app.config or web.config file in the appSettings section.
 
 
 ```csharp
@@ -39,7 +39,7 @@ EvalManager.AddLicense(licenseName, licenseKey);
 - **WinForm App:** Use the main thread method to activate your license.
 - **Win Service:** Use the OnStart method to activate your license
 
-> The AddLicense must always be set before the first call to the library. Otherwise, you will start the evaluation period
+> The AddLicense must be set before the first call to the library. Otherwise, you will start the evaluation period
 
 ## How can I check if my license is valid?
 The validate method allow you to know whether your license is valid or not.
