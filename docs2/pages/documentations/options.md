@@ -16,7 +16,7 @@ context.BindingFlags = BindingFlags.IgnoreCase | context.BindingFlags
 ```
 
 ## CacheKeyPrefix
-Gets or sets the can key prefix to use to cache compiled delegate in the memory.
+Gets or sets the cache key prefix to use to cache compiled delegate in the memory.
 
 > We recommend always to use a different cache key prefix if you modify the options.
 
