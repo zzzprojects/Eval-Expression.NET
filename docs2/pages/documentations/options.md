@@ -74,7 +74,7 @@ var newExlusiveOrValue = = context.Eval("2^|3"); // return 1;
 ```
 
 ## Clone
-Create a new a shallow copy of the current EvalContext
+Create a new shallow copy of the current EvalContext
 
 > Cloning the EvalContext can be useful to copy all options including all types already registered to use it to change only what's required for the expression to evaluate.
 
