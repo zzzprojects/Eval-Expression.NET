@@ -9,6 +9,11 @@ You can also purchase the library [here](/pricing)
 
 Upon purchase, you will receive a license name and a license key.
 
+## How can I get a free license for a personal or academic purpose?
+We don't offer free licenses.
+
+However, you can benefit from all the prime features for personal or academic projects for free by downloading the trial at the beginning of every month.
+
 ## Setup License from config file
 The license name and key can be added directly in the app.config or web.config file in the appSettings section.
 
