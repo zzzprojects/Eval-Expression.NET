@@ -122,7 +122,8 @@ Royalty-Free | Yes
 Support & Upgrades (1 year) | Yes
 Learn more about the **[PRO Version](https://eval-expression.net/#pro)**
 
-Starting from version 2.x, there is no longer a free limited version.
+- Starting from version 2.x, there is no longer a free limited version.
+- `LINQ` extension method are free with [EF Classic - Community](https://entityframework-classic.net/)
 
 ## Contribute
 The best way to contribute is by **spreading the word** about the library:
