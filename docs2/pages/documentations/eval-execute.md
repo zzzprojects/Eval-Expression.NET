@@ -40,7 +40,7 @@ int result = Eval.Execute<int>("X + Y", expandoObject);
 var values = new Dictionary<string, object>() { {"X", 1}, {"Y", 2} };
 int result = Eval.Execute<int>("X + Y", values);
 ```
-{% include component-try-it.html href='https://dotnetfiddle.net/W9TwcP' %}  
+{% include component-try-it.html href='https://dotnetfiddle.net/xquPID' %}  
 
 ## Execute and return an object result
 You can return the result as an object:
