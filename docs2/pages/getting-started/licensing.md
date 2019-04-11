@@ -25,6 +25,18 @@ The license name and key can be added directly in the app.config or web.config f
 </appSettings>
 ```
 
+## Setup License from appsettings.json file (.NET Core)
+The license name and key can be added directly in the appsettings.json.
+
+```csharp
+{
+  "Z.Expressions.Eval": {
+    "LicenseName": "[licenseName]",
+    "LicenseKey": "[licenseKey]"
+  }
+}
+```
+
 ## Setup License from code
 You can also set the license name and key directly in the code.
 
