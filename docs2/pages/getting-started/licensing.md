@@ -59,7 +59,7 @@ EvalManager.AddLicense(licenseName, licenseKey);
 > The AddLicense must be set before the first call to the library. Otherwise, you will start the evaluation period
 
 ## How can I check if my license is valid?
-The validate method allow you to know whether your license is valid or not.
+The validate method allows you to know whether your license is valid or not.
 
 ```csharp
 string licenseErrorMessage;
