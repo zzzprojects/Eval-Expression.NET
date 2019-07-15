@@ -18,7 +18,7 @@ context.BindingFlags = BindingFlags.IgnoreCase | context.BindingFlags
 ## CacheKeyPrefix
 Gets or sets the cache key prefix to use to cache compiled delegate in the memory.
 
-> We recommend always to use a different cache key prefix if you modify the options.
+> We always recommend to use a different cache key prefix if you modify the options.
 
 ### Example
 ```csharp
@@ -74,7 +74,7 @@ var newExlusiveOrValue = = context.Eval("2^|3"); // return 1;
 ```
 
 ## Clone
-Create a new shallow copy of the current EvalContext
+Create a new shallow copy of the current EvalContext.
 
 > Cloning the EvalContext can be useful to copy all options including all types already registered to use it to change only what's required for the expression to evaluate.
 
