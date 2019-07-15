@@ -1,7 +1,7 @@
 # Contact us
 
 ## I have a question! What should I do?
-Contact us directly with your questions: info@zzzprojects.com _(recommended)_ 
+Contact us directly with your question: info@zzzprojects.com _(recommended)_ 
 
 You can also use the [Issues Tracker](https://github.com/zzzprojects/Eval-Expression.NET/issues).
 
