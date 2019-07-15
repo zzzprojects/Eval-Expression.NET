@@ -23,6 +23,6 @@ The latest version always contains a trial for the current month to allow a comp
 
 #### License Badly Registered
 
-Make sure to follow all recommendation about how to setup your license: [Licensing](/licensing)
+Make sure to follow all recommendations about how to setup your license: [Licensing](/licensing)
 
 Otherwise contact us: info@zzzprojects.com
