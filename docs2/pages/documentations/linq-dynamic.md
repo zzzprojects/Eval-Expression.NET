@@ -3,12 +3,12 @@
 ## Description
 Extend the IEnumerable&lt;T&gt; and IQueryable&lt;T&gt; interface with methods to use LINQ with dynamic expressions.
 
-LINQ (Language Integrated Query) has been introduced in .NET 3.5 and since has been one of the most used features. ORM like Entity Framework takes advantage from this feature and allow you to write type-safe queries.
+Since LINQ (Language Integrated Query) has been introduced in .NET 3.5, it has been one of the most used feature. ORM like Entity Framework takes advantage of this feature and allows you to write type-safe queries.
 
-The theory wants you only to use type-safe queries. However, the reality requires often you to write LINQ with dynamic query expressions.
+In theory, you should only use it to write type-safe queries. However, the reality often requires you to write LINQ with dynamic query expressions.
 
 ## LINQ Dynamic - Predicate
-You can use any LINQ method that support predicate with a dynamic C# expression :
+You can use any LINQ method that supports predicate with a dynamic C# expression :
 
 - Deferred
    - SkipWhile
