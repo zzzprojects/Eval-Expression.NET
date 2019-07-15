@@ -30,9 +30,9 @@ context.CacheKey = Guid.NewGuid().ToString();
 ## IncludeMemberFromAllParameters
 Gets or sets if all members should be included from all parameters.
 
-By default, member are only included when one parameter is specified.
+By default, members are only included when one parameter is specified.
 
-> This configuration can be very useful to disable if you execute multiple expression only once, and you believe they will never be re-used.
+> This configuration can be very useful to disable if you execute multiple expressions only once, and you believe they will never be reused.
 
 ### Example
 ```csharp
@@ -46,7 +46,7 @@ Eval.Execute<bool>("catPropertyName == dogPropertyName", cat, dog);
 ## UseCache
 Gets or sets if compiled delegate shoud be cached in the memory or not. 
 
-> This configuration can be very useful to disable if you execute multiple expression only once, and you believe they will never be re-used.
+> This configuration can be very useful to disable if you execute multiple expressions only once, and you believe they will never be reused.
 
 ### Example
 ```csharp
