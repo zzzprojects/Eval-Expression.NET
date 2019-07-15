@@ -2,7 +2,7 @@
 
 ## What's C# Eval Expression library?
 
-Our library is a lightweight expression evaluator that support nearly everything. You can evaluate or compile almost all possible C# expression including:
+Our library is a lightweight expression evaluator that supports nearly everything. You can evaluate or compile almost all possible C# expressions including:
 
 - Anonymous Type
 - Extension Method
