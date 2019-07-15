@@ -48,7 +48,7 @@ There is a word that contains in the list that contains 'ei': True
 ```
 
 ## Any - Grouped
-This C# example uses the LINQ Any method with a dynamic expression to return a grouped a list of products only for categories that have at least one product that is out of stock.
+This C# example uses the LINQ Any method with a dynamic expression to return a grouped list of products only for categories that have at least one product that is out of stock.
 
 ### LINQ
 ```csharp
