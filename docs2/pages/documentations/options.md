@@ -18,7 +18,7 @@ context.BindingFlags = BindingFlags.IgnoreCase | context.BindingFlags
 ## CacheKeyPrefix
 Gets or sets the cache key prefix to use to cache compiled delegate in the memory.
 
-> We recommend always to use a different cache key prefix if you modify the options.
+> We always recommend to use a different cache key prefix if you modify the options.
 
 ### Example
 ```csharp
@@ -30,9 +30,9 @@ context.CacheKey = Guid.NewGuid().ToString();
 ## IncludeMemberFromAllParameters
 Gets or sets if all members should be included from all parameters.
 
-By default, member are only included when one parameter is specified.
+By default, members are only included when one parameter is specified.
 
-> This configuration can be very useful to disable if you execute multiple expression only once, and you believe they will never be re-used.
+> This configuration can be very useful to disable if you execute multiple expressions only once, and you believe they will never be reused.
 
 ### Example
 ```csharp
@@ -46,7 +46,7 @@ Eval.Execute<bool>("catPropertyName == dogPropertyName", cat, dog);
 ## UseCache
 Gets or sets if compiled delegate shoud be cached in the memory or not. 
 
-> This configuration can be very useful to disable if you execute multiple expression only once, and you believe they will never be re-used.
+> This configuration can be very useful to disable if you execute multiple expressions only once, and you believe they will never be reused.
 
 ### Example
 ```csharp
@@ -74,7 +74,7 @@ var newExlusiveOrValue = = context.Eval("2^|3"); // return 1;
 ```
 
 ## Clone
-Create a new shallow copy of the current EvalContext
+Create a new shallow copy of the current EvalContext.
 
 > Cloning the EvalContext can be useful to copy all options including all types already registered to use it to change only what's required for the expression to evaluate.
 

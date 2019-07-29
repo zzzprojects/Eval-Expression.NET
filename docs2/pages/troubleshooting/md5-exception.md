@@ -18,7 +18,7 @@ The default algorithm to validate the license key & name is not supported with F
 
 Contact us and we will send you a new key supporting FIPS: info@zzzprojects.com
 
-Why don't we generated key compatible with FIPS by default? Because it will not be supported for a client machine with Windows XP or below.
+Why don't we generate a key compatible with FIPS by default? Because it will not be supported for a client machine with Windows XP or below.
 
 #### Disable FIPS
 

@@ -1,14 +1,14 @@
 # FAQ General
 
 ## Which Payment method do you support?
-We support the following payment method:
+We support the following payment methods:
 
 - PayPal
 - Check
 - Bank Transfer
 
 ## Can I purchase this product from a Reseller?
-Yes, just let him know to contact us.
+Yes, just let him know how to contact us.
 
 ## What's your average SLA response and resolution times?
 We try to provide an outstanding support service.

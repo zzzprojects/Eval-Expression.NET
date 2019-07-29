@@ -6,7 +6,7 @@ C# Dynamic LINQ Combine examples using an Expression Evaluator.
 - [Combine](#combine)
 
 ## Combine
-This C# example uses the LINQ Combine method with a dynamic expression to calculates the dot product of two integer vectors. It uses a user-created sequence operator, Combine, to calculate the dot product, passing it a lambda function to multiply two arrays, element by element, and sum the result.
+This C# example uses the LINQ Combine method with a dynamic expression to calculate the dot product of two integer vectors. It uses a user-created sequence operator, Combine, to calculate the dot product, passing it a lambda function to multiply two arrays, element by element, and sum the result.
 
 ### LINQ
 ```csharp

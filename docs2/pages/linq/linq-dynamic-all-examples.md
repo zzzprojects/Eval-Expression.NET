@@ -48,7 +48,7 @@ The list contains only odd numbers: True
 ```
 
 ## All - Grouped
-This C# example uses the LINQ All method with a dynamic expression to return a grouped a list of products only for categories that have all of their products in stock.
+This C# example uses the LINQ All method with a dynamic expression to return a grouped list of products only for categories that have all of their products in stock.
 
 ### LINQ
 ```csharp
