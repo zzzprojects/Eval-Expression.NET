@@ -1,4 +1,7 @@
-# Evaluate, Compile and Execute dynamic C# code and expression at runtime
+# What's Eval Expression.NET?
+Eval Expression.NET improves performance dramatically to access public and private methods, field, property value, or create object instances overusing C# reflection.
+
+It allows you to evaluate, Compile and Execute dynamic C# code and expression at runtime.
 
 *From simple C# math expression...*
 ```csharp
@@ -12,8 +15,6 @@ int result = Eval.Execute<int>(@"
 	return filter.Sum(x => x);");
 ```
 
-> Eval Expression.NET improve dramatically performance to access public and private method, field, property value or to create object instance over using C# reflection.
-
 ## Download
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-v.svg" alt="download" /></a>
 <a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-d.svg" alt="" /></a>
@@ -24,7 +25,7 @@ PM> Install-Package Z.Expressions.Eval
 
 _* PRO Version unlocked for the current month_
 
-Stay updated with latest changes
+Stay updated with the latest changes:
 
 <a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
 <a href="https://www.facebook.com/zzzprojects/" target="_blank"><img src="http://www.zzzprojects.com/images/facebook_like.png" alt="Facebook Like" height="24" /></a>
@@ -95,7 +96,7 @@ foreach(var item in list)
 **[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
 
 ## What's supported?
-Eval Expression.NET support all C# Syntax:
+Eval Expression.NET supports all C# Syntax:
 - All C# Keywords ([MSDN Documentation](https://msdn.microsoft.com/en-us/library/x53a06bb.aspx))
 - All C# Operators ([MSDN Documentation](https://msdn.microsoft.com/en-CA/library/6a71f45d.aspx))
 - Constant Folding
