@@ -139,22 +139,12 @@ A **HUGE THANKS** for your help.
 
 ## More Projects
 
-**Entity Framework**
 - [EntityFramework Extensions](https://entityframework-extensions.net/)
-- [EntityFramework Plus](https://entityframework-plus.net)
-
-**Bulk Operations**
-- [Bulk Operations](https://bulk-operations.net/)
 - [Dapper Plus](https://dapper-plus.net/)
-
-**Expression Evaluator**
-- [Eval-SQL.NET](https://eval-sql.net/)
-- [Eval-Expression.NET](https://eval-expression.net/)
-
-**Utilities**
-- [Extension Methods Library](https://github.com/zzzprojects/Z.ExtensionMethods/)
-- [Html Agility Pack](https://html-agility-pack.net/)
-
-**Need more info?** info@zzzprojects.com
+- [Entity Framework Classic](https://entityframework-classic.net/)
+- [Bulk Operations](https://bulk-operations.net/)
+- [SQL Eval Function](https://eval-sql.net/)
+- and much more! 
+To view all our free and paid librariries visit our [website](https://zzzprojects.com/).
 
 Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
