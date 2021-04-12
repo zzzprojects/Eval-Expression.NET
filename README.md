@@ -25,11 +25,6 @@ PM> Install-Package Z.Expressions.Eval
 
 _* PRO Version unlocked for the current month_
 
-Stay updated with the latest changes:
-
-<a href="https://twitter.com/zzzprojects" target="_blank"><img src="http://www.zzzprojects.com/images/twitter_follow.png" alt="Twitter Follow" height="24" /></a>
-<a href="https://www.facebook.com/zzzprojects/" target="_blank"><img src="http://www.zzzprojects.com/images/facebook_like.png" alt="Facebook Like" height="24" /></a>
-
 ## Eval.Execute
 **Evaluate and execute the code or expression.**
 
@@ -105,7 +100,7 @@ Eval Expression.NET supports all C# Syntax:
 - Lambda Expression
 - Number Suffix
 
-You can even access to C# 6.0 features even if you are using C# 4.0.
+You can even access C# 6.0 features even if you are using C# 4.0.
 - string interpolation
 - typename
 - null conditional member access
@@ -131,7 +126,6 @@ The best way to contribute is by **spreading the word** about the library:
 
  - Blog it
  - Comment it
- - Fork it
  - Star it
  - Share it
  
@@ -139,13 +133,11 @@ A **HUGE THANKS** for your help.
 
 ## More Projects
 
-- [EntityFramework Extensions](https://entityframework-extensions.net/)
+- [Entity Framework Extensions](https://entityframework-extensions.net/)
 - [Dapper Plus](https://dapper-plus.net/)
-- [Entity Framework Classic](https://entityframework-classic.net/)
 - [Bulk Operations](https://bulk-operations.net/)
-- [SQL Eval Function](https://eval-sql.net/)
-- [LINQ To SQL Plus](https://linqtosql-plus.net/)
 - and much more! 
-To view all our free and paid librariries visit our [website](https://zzzprojects.com/).
 
-Contact our outstanding customer support for any request. We usually answer within the next business day, hour, or minutes!
+To view all our free and paid projects, visit our [website](https://zzzprojects.com/).
+
+Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any request. We usually answer within the next day, hour, or minutes!
