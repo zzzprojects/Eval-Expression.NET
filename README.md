@@ -122,6 +122,7 @@ Learn more about the **[PRO Version](https://eval-expression.net/#pro)**
 - `LINQ` extension method is free with [EF Classic - Community](https://entityframework-classic.net/)
 
 ## Contribute
+
 The best way to contribute is by **spreading the word** about the library:
 
  - Blog it
@@ -140,4 +141,4 @@ A **HUGE THANKS** for your help.
 
 To view all our free and paid projects, visit our [website](https://zzzprojects.com/).
 
-Contact our outstanding **[customer support](https://entityframework-extensions.net/contact-us)** for any request. We usually answer within the next day, hour, or minutes!
+Contact our outstanding **[customer support](https://eval-expression.net/contact-us)** for any request. We usually answer within the next day, hour, or minutes!
