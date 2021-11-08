@@ -61,7 +61,7 @@ _Extension Methods_
 string s = "X + Y";
 int result = s.Execute<int>(new { X = 1, Y = 2 });
 ```
-**[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Execute)**
+**[Learn more](https://eval-expression.net/eval-execute)**
 
 ## Eval.Compile
 **Compile the code or expression and return a delegate.**
@@ -88,7 +88,7 @@ foreach(var item in list)
 	int result = compiled(item.Value1, item.Value2);
 }
 ```
-**[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Eval-Compile)**
+**[Learn more]https://eval-expression.net/eval-compile)**
 
 ## What's supported?
 Eval Expression.NET supports all C# Syntax:
@@ -104,8 +104,6 @@ You can even access C# 6.0 features even if you are using C# 4.0.
 - string interpolation
 - typename
 - null conditional member access
-
-**[Learn more](https://github.com/zzzprojects/Eval-Expression.NET/wiki/Syntax-Supported)**
 
 ## PRO
 Every month, a new monthly trial of the PRO Version is available to let you evaluate all its features without limitations.
