@@ -5,10 +5,16 @@ It allows you to evaluate, Compile and Execute dynamic C# code and expression at
 
 *From simple C# math expression...*
 ```csharp
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
 *To complex code to parse.*
 ```csharp
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 int result = Eval.Execute<int>(@"
 	var list = new List<int>() { 1, 2, 3, 4, 5 };
 	var filter = list.Where(x => x < 4);
@@ -33,21 +39,27 @@ _* PRO Version unlocked for the current month_
 _Anonymous Class_
 
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 ```
 
 _Argument Position_
 
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 int result = Eval.Execute<int>("{0} + {1}", 1, 2);
 ```
 
 _Class Member_
 
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 dynamic expandoObject = new ExpandoObject();
 expandoObject.X = 1;
 expandoObject.Y = 2;
@@ -57,7 +69,9 @@ int result = Eval.Execute<int>("X + Y", expandoObject);
 _Extension Methods_
 
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 string s = "X + Y";
 int result = s.Execute<int>(new { X = 1, Y = 2 });
 ```
@@ -70,7 +84,9 @@ int result = s.Execute<int>(new { X = 1, Y = 2 });
 
 *Custom Delegate*
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 var compiled = Eval.Compile<Func<int, int, int>>("X + Y", "X", "Y");
 foreach(var item in list)
 {
@@ -80,7 +96,9 @@ foreach(var item in list)
 
 *Extension Methods*
 ```csharp
-// using Z.Expressions; // Don't forget to include this.
+// @nuget: Z.Expressions.Eval
+using Z.Expressions;
+
 string s = "X + Y";
 var compiled = s.Compile<Func<int, int, int>>("X", "Y");
 foreach(var item in list)
