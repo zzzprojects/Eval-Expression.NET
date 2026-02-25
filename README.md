@@ -22,8 +22,8 @@ int result = Eval.Execute<int>(@"
 ```
 
 ## Download
-<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-v.svg" alt="download" /></a>
-<a href="https://www.nuget.org/packages/Z.Expressions.Eval/" target="_blank"><img src="https://zzzprojects.github.io/images/nuget/eval-expression-net-d.svg" alt="" /></a>
+[![nuget](https://img.shields.io/nuget/v/Z.Expressions.Eval?logo=nuget&style=flat-square)](https://www.nuget.org/packages/Z.Expressions.Eval)
+[![nuget](https://img.shields.io/nuget/dt/Z.Expressions.Eval?logo=nuget&style=flat-square)](https://www.nuget.org/packages/Z.Expressions.Eval)
 
 ```
 PM> Install-Package Z.Expressions.Eval
